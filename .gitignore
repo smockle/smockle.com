@@ -1,0 +1,11 @@
+.DS_Store
+*.orig
+/*.log
+
+# Libraries
+/node_modules
+/bower_components
+
+# Files built with webpack for distribution
+/dist/*
+!/dist/index.html

@@ -1,0 +1,64 @@
+.hero {
+  /*background-image: url('../assets/smockle@2x.jpg');
+  background-size: auto;
+  background-position: 0 0;
+  background-repeat: repeat;*/
+  overflow: hidden;
+  padding-top: 3rem;
+  position: relative;
+  width: 100vw;
+}
+.hero:before {
+  color: #f9f9f9;
+  content: 'smocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmockle';
+  font-family: 'effra';
+  font-size: 6rem;
+  float: left;
+  line-height: 0.7;
+  max-width: 110vw;
+  overflow: hidden;
+  position: absolute;
+  top: -6rem;
+  transform: rotate(-5deg);
+  word-wrap: break-word;
+}
+.wrapper {
+  composes: wrapper from './app.css';
+  background-image: url('../assets/images/hero/silhouette@2x.png');
+  background-size: contain;
+  background-position: 80% center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+.wrapper header {
+  margin-top: -1rem;
+  margin-bottom: 5.25rem;
+  position: relative;
+  right: 12.25rem;
+}
+.wrapper .big {
+  font-size: 5.25rem;
+  margin-bottom: 0;
+}
+.wrapper h1 {
+  margin-bottom: 0;
+}
+.wrapper em {
+  display: block;
+  text-align: center;
+}
+.build, .connect {
+  composes: alternate from './app.css';
+}
+.connectIcons {
+  display: flex;
+  justify-content: space-between;
+}
+.connectIcon {
+  height: 125px;
+  width: 140px;
+}
+.twitterIcon, .gitHubIcon, .dribbbleIcon, .emailIcon, .stackOverflowIcon, .linkedInIcon, .instagramIcon {
+  composes: connectIcon;
+}

@@ -236,7 +236,6 @@ textarea {
 
 a {
   color: var(--color-blue-2);
-  cursor: pointer;
 }
 a:hover {
   color: var(--color-blue-1);

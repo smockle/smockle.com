@@ -68,12 +68,20 @@
 
 .banner {
   background-color: #e4f6f2;
-  padding: 3rem;
   margin-top: 0;
-  text-align: center;
+}
+.bannerWrapper {
+  composes: wrapper from './app.css';
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 3.25rem;
 }
 .banner p {
+  display: inline-block;
   margin-top: 0;
+}
+.banner em {
+  display: inline-block;
 }
 .bannerLink:after {
   content: '→';
@@ -82,7 +90,9 @@
   text-decoration: none;
   vertical-align: middle;
 }
-
+.bannerLink:hover:after {
+  color: #abe7d8;
+}
 
 /*
  * THOUGHT HAVER

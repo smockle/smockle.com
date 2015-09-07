@@ -11,8 +11,8 @@ export default class Home extends App {
           <section className={css.home.hero} id='hero'>
             <div className={css.home.wrapper}>
               <header>
-                <h1 className={css.home.big}>HELLO,</h1>
-                <em>my name is</em>
+                <h1 className={css.home.big}>SALUT!</h1>
+                <em>I’m</em>
                 <h1>Clay Miller.</h1>
               </header>
             </div>
@@ -20,21 +20,21 @@ export default class Home extends App {
 
           <section className={css.home.build} id='work'>
             <div className={css.app.wrapper}>
-              <h1>Build.</h1>
+              <h1>Builder.</h1>
               <p>I build the Internet. My ideal workplace lets me take ownership in my work, learn bleeding-edge technologies, help other people connect and grow, and build things that endure. Diversity, accessibility and empathy are very important to me. I’ll continue developing—learning new skills while honing existing ones—and I’ll share everything I learn.</p>
             </div>
           </section>
 
           <section className={css.home.explore} id='play'>
             <div className={css.app.wrapper}>
-              <h1>Explore.</h1>
+              <h1>Explorer.</h1>
               <p>My hobbies, unabridged: adjusting kerning of neo-grotesque typefaces, reading "I Want My Hat Back" in a local bookstore, engaging with brands on Twitter, savoring smoky whisky, collecting salt, detecting hints of plum in wine, creating Jackson Pollock-esque latte art, waiting for coffee grounds to bloom, geocaching in the great outdoors, comparing Sortino ratios, memorizing Kanji, sampling cow brain burritos, eating vegetarian, practing yoga, training for a half marathon, mapping functors, spinning experimental hip hop records, jamming to freak folk, critiquing postmodern literature, campaigning for social justice, lifting weights, learning about intersectionality, contributing to open source, encoding data in the blockchain, and staring thoughtfully at Impressionist paintings.</p>
             </div>
           </section>
 
           <section className={css.home.connect} id='connect'>
             <div className={css.app.wrapper}>
-              <h1>Connect.</h1>
+                <h1>Thought Haver.</h1>
               <div className={css.home.connectIcons}>
                 <a className={css.home.twitterLink} href='https://twitter.com/smockled' title='Twitter'>
                   <img alt='Twitter' className={css.home.twitterIcon} src={require('../assets/images/connect/twitter.svg')}></img>

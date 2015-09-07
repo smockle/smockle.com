@@ -1,44 +1,45 @@
 .hero {
-  /*background-image: url('../assets/smockle@2x.jpg');
-  background-size: auto;
-  background-position: 0 0;
-  background-repeat: repeat;*/
   overflow: hidden;
   padding-top: 3rem;
   position: relative;
   width: 100vw;
 }
 .hero:before {
-  color: #f9f9f9;
-  content: 'smocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmockle';
+  bottom: 0%;
+  color: #fafafa;
+  content: 'smocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmockle';
   font-family: 'effra';
   font-size: 6rem;
-  float: left;
   line-height: 0.7;
   max-width: 110vw;
   overflow: hidden;
   position: absolute;
-  top: -6rem;
+  top: 0%;
   transform: rotate(-5deg);
   word-wrap: break-word;
 }
 .wrapper {
   composes: wrapper from './app.css';
-  background-image: url('../assets/images/hero/silhouette@2x.png');
-  background-size: contain;
-  background-position: 80% center;
-  background-repeat: no-repeat;
   position: relative;
+  text-align: center;
   z-index: 1;
 }
+@media (min-width: 50em) {
+  .wrapper {
+    background-image: url('../assets/images/hero/silhouette@2x.png');
+    background-size: contain;
+    background-position: 80% center;
+    background-repeat: no-repeat;
+    text-align: left;
+  }
+}
 .wrapper header {
-  margin-top: -1rem;
-  margin-bottom: 5.25rem;
+  display: inline-block;
+  margin-bottom: 3rem;
   position: relative;
-  right: 12.25rem;
 }
 .wrapper .big {
-  font-size: 5.25rem;
+  font-size: 5rem;
   margin-bottom: 0;
 }
 .wrapper h1 {
@@ -53,11 +54,24 @@
 }
 .connectIcons {
   display: flex;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+@media (min-width: 30em) {
+  .connectIcons {
+    justify-content: space-around;
+  }
 }
 .connectIcon {
-  height: 125px;
-  width: 140px;
+  height: auto;
+  margin: 1rem;
+  width: 5rem;
+}
+@media (min-width: 30em) {
+  .connectIcon {
+    margin: 0;
+    width: 5rem;
+  }
 }
 .twitterIcon, .gitHubIcon, .dribbbleIcon, .emailIcon, .stackOverflowIcon, .linkedInIcon, .instagramIcon {
   composes: connectIcon;

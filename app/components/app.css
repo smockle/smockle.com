@@ -297,7 +297,17 @@ input[type=submit]:hover:active {
    margin-top: 0;
  }
  html {
-   font-size: 16px;
+   font-size: 10px;
+ }
+ @media (min-width: 25em) {
+   html {
+     font-size: 12px;
+   }
+ }
+ @media (min-width: 50em) {
+   html {
+     font-size: 16px;
+   }
  }
  body {
    color: var(--color-gray-2);
@@ -342,12 +352,12 @@ input[type=submit]:hover:active {
 .wrapper {
   margin: 0 auto;
   max-width: 45.75rem;
-  padding: 4rem 4rem 4.25rem 4rem;
+  padding: 4rem 3.5rem 4.25rem 3.5rem;
   position: relative;
   z-index: 1;
 }
 .alternate {
-  background-color: var(--color-white-1);
+  background-color: var(--color-blue-0);
   position: relative;
   z-index: 1;
 }

@@ -5,7 +5,7 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 let config = {
   plugins: [
     // allow css to be `import`ed
-    new ExtractTextPlugin('style.css', { allChunks: true }),
+    new ExtractTextPlugin('[name].css'),
 
     // minify all assets
     new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false }})

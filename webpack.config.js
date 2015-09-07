@@ -30,7 +30,7 @@ config.plugins = config.plugins.concat([
 config.postcss = [
   require('postcss-custom-properties')(),
   require('postcss-font-variant')(),
-  require('autoprefixer-core')
+  require('autoprefixer')
 ];
 
 config.resolve = {

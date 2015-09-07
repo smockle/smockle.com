@@ -25,6 +25,10 @@ export default class Home extends App {
             </div>
           </section>
 
+          <section className={css.home.banner} id='banner'>
+              <p>I just started blogging! #NewYearsResolutions <em><a className={css.home.bannerLink} href='https://blog.smockle.com' title='Read my first post'>Read my first post</a></em></p>
+          </section>
+
           <section className={css.home.explore} id='play'>
             <div className={css.app.wrapper}>
               <h1>Explorer.</h1>
@@ -34,7 +38,7 @@ export default class Home extends App {
 
           <section className={css.home.connect} id='connect'>
             <div className={css.app.wrapper}>
-                <h1>Thought Haver.</h1>
+                <h1>Thought-Haver.</h1>
               <div className={css.home.connectIcons}>
                 <a className={css.home.twitterLink} href='https://twitter.com/smockled' title='Twitter'>
                   <img alt='Twitter' className={css.home.twitterIcon} src={require('../assets/images/connect/twitter.svg')}></img>

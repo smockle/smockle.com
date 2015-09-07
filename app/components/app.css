@@ -236,6 +236,7 @@ textarea {
 
 a {
   color: var(--color-blue-2);
+  cursor: pointer;
 }
 a:hover {
   color: var(--color-blue-1);
@@ -357,7 +358,7 @@ input[type=submit]:hover:active {
   z-index: 1;
 }
 .alternate {
-  background-color: var(--color-blue-0);
+  background-color: #f8f8f8;
   position: relative;
   z-index: 1;
 }

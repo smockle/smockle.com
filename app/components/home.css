@@ -1,3 +1,7 @@
+/*
+ * HERO
+ */
+
 .hero {
   overflow: hidden;
   padding-top: 3rem;
@@ -49,9 +53,41 @@
   display: block;
   text-align: center;
 }
+
+/*
+ * BUILDER
+ */
+
 .build, .connect {
   composes: alternate from './app.css';
 }
+
+/*
+ * BANNER
+ */
+
+.banner {
+  background-color: #e4f6f2;
+  padding: 3rem;
+  margin-top: 0;
+  text-align: center;
+}
+.banner p {
+  margin-top: 0;
+}
+.bannerLink:after {
+  content: '→';
+  color: #84dcc6;
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+
+/*
+ * THOUGHT HAVER
+ */
+
 .connectIcons {
   display: flex;
   flex-flow: row wrap;

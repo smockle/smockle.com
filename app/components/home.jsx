@@ -32,13 +32,6 @@ export default class Home extends App {
             </div>
           </section>
 
-          <section className={css.home.banner} id='banner'>
-              <div className={css.home.bannerWrapper}>
-                <p>I just started blogging! <small>#NewYearsResolutions</small></p>
-                <em><a className={css.home.bannerLink} href='https://blog.smockle.com' title='Read my first post'>Read my first post</a></em>
-              </div>
-          </section>
-
           <section className={css.home.connect} id='connect'>
             <div className={css.app.wrapper}>
                 <h1>Thought-Haver.</h1>

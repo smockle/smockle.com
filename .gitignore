@@ -9,3 +9,11 @@
 # Files built with webpack for distribution
 /dist/*
 !/dist/index.html
+!/dist/favicon.ico
+!/dist/apple-touch-icon.png
+!/dist/tile.png
+!/dist/tile-wide.png
+!/dist/browserconfig.xml
+!/dist/crossdomain.xml
+!/dist/robots.txt
+!/dist/humans.txt

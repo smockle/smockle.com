@@ -11,6 +11,7 @@ config.entry = {
   ],
   vendor: [
     'react',
+    'react-dom',
     'normalize.css',
     'fontloader'
   ]

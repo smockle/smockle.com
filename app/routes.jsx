@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import App from 'app';
 import Home from 'home';
 import { Router } from 'react-router';
@@ -11,4 +12,4 @@ let routes = {
   ]
 };
 
-React.render(<Router children={routes} history={createHistory()} />, document.getElementById("app"));
+ReactDOM.render(<Router children={routes} history={createHistory()} />, document.getElementById("app"));

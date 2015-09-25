@@ -17,6 +17,7 @@
     "postcss-font-variant": "^1.2.0",
     "postcss-loader": "^0.6.0",
     "react": "v0.14.0-beta3",
+    "react-dom": "^0.14.0-rc1",
     "react-router": "v1.0.0-beta4",
     "style-loader": "^0.12.3"
   },

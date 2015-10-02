@@ -1,7 +1,8 @@
+/* @flow */
 import normalize from 'normalize.css';
 import styles from './app.css';
 import React, {Component} from 'react';
-import fontloader from 'fontloader';
+import fontloader from '../../node_modules/fontloader/fontloader';
 import {Router, Route, Link} from 'react-router';
 
 export default class App extends Component {

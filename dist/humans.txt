@@ -12,4 +12,5 @@
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    Nginx, Node.js, React, CSS Modules
+    Nginx, Node.js, React, CSS Modules, AWS, Mocha, Istanbul, Travis CI, Code
+    Climate, Coveralls

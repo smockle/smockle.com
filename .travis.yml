@@ -11,7 +11,7 @@ cache:
   directories:
   - node_modules
 before_install:
-- npm install -g npm@3.0-latest
+- npm install -g npm@3
 after_script:
 - npm run coverage
 - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js

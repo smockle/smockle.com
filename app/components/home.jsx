@@ -1,4 +1,4 @@
-import App from 'app';
+import App from './app';
 import {default as appcss} from './app.css';
 import {default as homecss} from './home.css';
 let css = {app: appcss, home: homecss};

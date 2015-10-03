@@ -6,6 +6,9 @@
 /node_modules
 /bower_components
 
+# Coverage
+/coverage
+
 # Files built with webpack for distribution
 /dist/*
 !/dist/index.html

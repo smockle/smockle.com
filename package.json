@@ -28,7 +28,7 @@
     "chai": "3.3.0",
     "codeclimate-test-reporter": "0.1.1",
     "coveralls": "2.11.4",
-    "istanbul": "git://github.com/gotwarlost/istanbul.git#master",
+    "istanbul": "https://github.com/gotwarlost/istanbul.git#master",
     "jsdom": "6.5.1",
     "mocha": "2.3.3",
     "node-libs-browser": "0.5.3",

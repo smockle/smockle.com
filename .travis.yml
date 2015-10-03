@@ -1,3 +1,19 @@
 language: node_js
 node_js:
 - '4.0'
+notifications:
+  email:
+    recipients:
+    - clay@smockle.com
+    on_success: change
+    on_failure: always
+cache:
+  directories:
+  - node_modules
+after_script:
+- npm run coverage
+- cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+- codeclimate < ./coverage/lcov.info
+env:
+  global:
+    secure: J+Pc5Zbta7tH/9RTOBbkE0rmb6DsYGgtZoEf6LdVKA2xupTcIdxA7PPFCseLhD3HA8DnQr5NVcu21DBL7dX7CCdeWl+AI5k2BnViGeYO8vEet5d1EMRB9fcX6ZS4MxI5WR2N4n/TNWzhEuqWnkzAJdVY/QgsYMiwHEK5DAjUIyNa4i/9ztMv5nwdJkZmyFY4L32u3k+7nGAfuZksQPN5BH2j3jtgW+xH7XlominuQ28GE43Hd1H/QJmapPKHhpzSvsxiqmd20W1s7tnUjClD1g5OcjIpRDipUc9ULimCI+c7tybxulKQaOSOxfTyZkyBKtzMA+jV2yLrdBzf6vXXl7ulwoIijkE1PeAsVOWepmLuHY68KaueBuJPk7/ZoaPFGTFybryCeV1toitCEcbePhxLs7lmVXoo3+YLnxMr4D44vwONLCZQ1j9zsvMa9gdFW/ofmtXDYJwWJjAPv/Qywp8G8G2+gx8sfVtLQA45IVZO1X/dR4HaJJo0a0Vu9ckIqjCqRqE8OAMCl+haJhEFBuULSAypfh4Vm1KlQ21gQLHzHcq/Zd+DcEhn26YtK2tMshfWhGkdcibk8bOfrr0NBjJMTJaqRlYU/MgWm75Q2aGQnZEctJLdwe+/f7Ympstq8+vF253JJXUiPltzN36z412J1k7HUMFY7ZSekXYXxbs=

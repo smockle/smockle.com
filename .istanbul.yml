@@ -1,0 +1,6 @@
+verbose: false
+instrumentation:
+    root: .
+    extensions: ['.js', '.jsx', '.css']
+hooks:
+    hook-run-in-context: true

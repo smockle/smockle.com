@@ -32,7 +32,7 @@
     "chai": "3.3.0",
     "codeclimate-test-reporter": "0.1.1",
     "coveralls": "2.11.4",
-    "istanbul": "https://github.com/gotwarlost/istanbul.git#master",
+    "istanbul": "0.3.21",
     "jsdom": "6.5.1",
     "mocha": "2.3.3",
     "react-addons-test-utils": "0.14.0-rc1",

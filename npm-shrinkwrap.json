@@ -1023,9 +1023,9 @@
       "resolved": "https://registry.npmjs.org/fastparse/-/fastparse-1.1.1.tgz"
     },
     "fbjs": {
-      "version": "0.2.1",
-      "from": "fbjs@>=0.2.0 <0.3.0",
-      "resolved": "https://registry.npmjs.org/fbjs/-/fbjs-0.2.1.tgz"
+      "version": "0.3.1",
+      "from": "fbjs@>=0.3.1 <0.4.0",
+      "resolved": "https://registry.npmjs.org/fbjs/-/fbjs-0.3.1.tgz"
     },
     "file-loader": {
       "version": "0.8.4",
@@ -3085,19 +3085,19 @@
       "resolved": "https://registry.npmjs.org/range-parser/-/range-parser-1.0.2.tgz"
     },
     "react": {
-      "version": "0.14.0-rc1",
-      "from": "react@0.14.0-rc1",
-      "resolved": "https://registry.npmjs.org/react/-/react-0.14.0-rc1.tgz"
+      "version": "0.14.0",
+      "from": "react@0.14.0",
+      "resolved": "https://registry.npmjs.org/react/-/react-0.14.0.tgz"
     },
     "react-addons-test-utils": {
-      "version": "0.14.0-rc1",
-      "from": "react-addons-test-utils@0.14.0-rc1",
-      "resolved": "https://registry.npmjs.org/react-addons-test-utils/-/react-addons-test-utils-0.14.0-rc1.tgz"
+      "version": "0.14.0",
+      "from": "react-addons-test-utils@0.14.0",
+      "resolved": "https://registry.npmjs.org/react-addons-test-utils/-/react-addons-test-utils-0.14.0.tgz"
     },
     "react-dom": {
-      "version": "0.14.0-rc1",
-      "from": "react-dom@0.14.0-rc1",
-      "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-0.14.0-rc1.tgz"
+      "version": "0.14.0",
+      "from": "react-dom@0.14.0",
+      "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-0.14.0.tgz"
     },
     "react-hot-api": {
       "version": "0.4.7",
@@ -3117,28 +3117,9 @@
       }
     },
     "react-router": {
-      "version": "1.0.0-rc1",
-      "from": "react-router@1.0.0-rc1",
-      "resolved": "https://registry.npmjs.org/react-router/-/react-router-1.0.0-rc1.tgz",
-      "dependencies": {
-        "history": {
-          "version": "1.9.0",
-          "from": "history@>=1.9.0 <2.0.0",
-          "resolved": "https://registry.npmjs.org/history/-/history-1.9.0.tgz",
-          "dependencies": {
-            "deep-equal": {
-              "version": "1.0.1",
-              "from": "deep-equal@>=1.0.1 <2.0.0",
-              "resolved": "https://registry.npmjs.org/deep-equal/-/deep-equal-1.0.1.tgz"
-            },
-            "qs": {
-              "version": "4.0.0",
-              "from": "qs@>=4.0.0 <5.0.0",
-              "resolved": "https://registry.npmjs.org/qs/-/qs-4.0.0.tgz"
-            }
-          }
-        }
-      }
+      "version": "1.0.0-rc3",
+      "from": "react-router@1.0.0-rc3",
+      "resolved": "https://registry.npmjs.org/react-router/-/react-router-1.0.0-rc3.tgz"
     },
     "readable-stream": {
       "version": "2.0.2",
@@ -3617,6 +3598,11 @@
       "version": "1.6.9",
       "from": "type-is@>=1.6.6 <1.7.0",
       "resolved": "https://registry.npmjs.org/type-is/-/type-is-1.6.9.tgz"
+    },
+    "ua-parser-js": {
+      "version": "0.7.9",
+      "from": "ua-parser-js@>=0.7.9 <0.8.0",
+      "resolved": "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.9.tgz"
     },
     "uglify-js": {
       "version": "2.4.24",

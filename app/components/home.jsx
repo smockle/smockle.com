@@ -3,6 +3,8 @@ import {default as appcss} from './app.css';
 import {default as homecss} from './home.css';
 let css = {app: appcss, home: homecss};
 import React from 'react';
+import picturefill from 'picturefill';
+require('picturefill/src/plugins/typesupport/pf.type');
 
 export default class Home extends App {
   render() {
@@ -15,6 +17,12 @@ export default class Home extends App {
                 <em>I’m</em>
                 <h1>Clay Miller.</h1>
               </header>
+              <picture className={css.home.profile}>
+                  <source media="(min-width: 50em)" srcSet={require('../assets/images/hero/silhouette.webp') + ' 485w, ' + require('../assets/images/hero/silhouette@2x.webp') + ' 970w'} type="image/webp" />
+                  <source media="(min-width: 50em)" srcSet={require('../assets/images/hero/silhouette.jpf') + ' 485w, ' + require('../assets/images/hero/silhouette@2x.jpf') + ' 970w'} type="image/jp2" />
+                  <source media="(min-width: 50em)" srcSet={require('../assets/images/hero/silhouette.png') + ' 485w, ' + require('../assets/images/hero/silhouette@2x.png') + ' 970w'} type="image/png" />
+                  <img alt="Clay Miller" srcSet="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+              </picture>
             </div>
           </section>
 

@@ -24,17 +24,27 @@
 }
 .wrapper {
   composes: wrapper from './app.css';
+  align-items: center;
+  display: flex;
+  justify-content: center;
   position: relative;
   text-align: center;
   z-index: 1;
 }
 @media (min-width: 50em) {
   .wrapper {
-    background-image: url('../assets/images/hero/silhouette@2x.png');
-    background-size: contain;
-    background-position: 80% center;
-    background-repeat: no-repeat;
-    text-align: left;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+.profile {
+  display: inline-block;
+  vertical-align: middle;
+}
+@media (min-width: 50em) {
+  .profile {
+    width: 55%;
   }
 }
 .wrapper header {

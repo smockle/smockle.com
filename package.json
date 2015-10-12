@@ -17,6 +17,7 @@
     "history": "^1.12.3",
     "node-libs-browser": "^0.5.3",
     "normalize.css": "^3.0.3",
+    "picturefill": "^3.0.1",
     "postcss-custom-properties": "^5.0.0",
     "postcss-font-variant": "^2.0.0",
     "postcss-loader": "^0.6.0",

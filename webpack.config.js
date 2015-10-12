@@ -13,7 +13,9 @@ config.entry = {
     'react',
     'react-dom',
     'normalize.css',
-    'fontloader'
+    'fontloader',
+    'picturefill',
+    'picturefill/src/plugins/typesupport/pf.type'
   ]
 };
 
@@ -47,7 +49,7 @@ config.resolve = {
 
 // parsers
 config.module.loaders = config.module.loaders.concat([
-  { test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.woff2$|\.ttf$|\.wav$|\.mp3$/, loader: 'file' }
+  { test: /\.jpe?g$|\.gif$|\.png$|\.jpf$|\.webp$|\.svg$|\.woff$|\.woff2$|\.ttf$|\.wav$|\.mp3$/, loader: 'file' }
 ]);
 
 export default config;

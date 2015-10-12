@@ -35,12 +35,11 @@ function propagateToGlobal (window) {
   }
 }
 
-// ensure requiring css not to throw
-require.extensions['.css'] = function() {
-  return null;
-};
-
-// ensure requiring svg not to throw
-require.extensions['.svg'] = function() {
-  return null;
-};
+// don't throw when unrequirable mimetypes are required
+Object.assign(require.extensions, {
+  '.css': () => null,
+  '.svg': () => null,
+  '.png': () => null,
+  '.jpf': () => null,
+  '.webp': () => null
+});

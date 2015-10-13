@@ -1,0 +1,28 @@
+# Test against this version of Node.js
+environment:
+  nodejs_version: "4.2.1"
+
+# build cache to preserve files/folders between builds
+cache:
+  - node_modules                    # local npm modules
+  - %APPDATA%\npm-cache             # npm cache
+
+# scripts that run after cloning repository
+install:
+  # Install node 4.2.1
+  - ps: Install-Product node $env:nodejs_version
+  # Install npm 3.3.6
+  - npm install -g npm@3.3.6
+  # install modules
+  - npm install
+
+# to run your custom scripts instead of automatic tests
+test_script:
+  # Output useful info for debugging.
+  - node --version
+  - npm --version
+  # run tests
+  - npm test
+
+# Don't build with msbuild.
+build: off

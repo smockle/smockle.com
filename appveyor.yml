@@ -4,8 +4,9 @@ init:
 
 # build cache to preserve files/folders between builds
 cache:
-  - node_modules -> package.json          # local npm modules
-  - '%APPDATA%\npm-cache -> package.json' # npm cache
+  - C:\Users\appveyor\AppData\Roaming\npm\node_modules -> package.json  # global npm modules
+  - C:\Users\appveyor\AppData\Roaming\npm-cache -> package.json         # npm cache
+  - node_modules -> package.json                                        # local npm modules
 
 # scripts that run after cloning repository
 install:

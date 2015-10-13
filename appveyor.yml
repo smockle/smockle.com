@@ -1,16 +1,16 @@
-# Test against this version of Node.js
-environment:
-  nodejs_version: "4.2.1"
+# scripts that are called at very beginning, before repo cloning
+init:
+  - git config --global core.autocrlf input
 
 # build cache to preserve files/folders between builds
 cache:
   - node_modules                    # local npm modules
-  - %APPDATA%\npm-cache             # npm cache
+  - '%APPDATA%\npm-cache'           # npm cache
 
 # scripts that run after cloning repository
 install:
   # Install node 4.2.1
-  - ps: Install-Product node $env:nodejs_version
+  - ps: Install-Product node 4.2.1
   # Install npm 3.3.6
   - npm install -g npm@3.3.6
   # install modules

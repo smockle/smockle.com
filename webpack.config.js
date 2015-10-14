@@ -1,7 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
 
-var production = process.env.NODE_ENV === 'production';
+let production = process.env.NODE_ENV === 'production';
 let config = production ? require('./webpack.prod.config.js') : require('./webpack.dev.config.js');
 
 // webpack input

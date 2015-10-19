@@ -387,9 +387,9 @@
       "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.1.tgz"
     },
     "braces": {
-      "version": "1.8.1",
+      "version": "1.8.2",
       "from": "braces@>=1.8.0 <2.0.0",
-      "resolved": "https://registry.npmjs.org/braces/-/braces-1.8.1.tgz"
+      "resolved": "https://registry.npmjs.org/braces/-/braces-1.8.2.tgz"
     },
     "breakable": {
       "version": "1.0.0",
@@ -3591,9 +3591,9 @@
       "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.0.tgz"
     },
     "style-loader": {
-      "version": "0.12.4",
-      "from": "style-loader@>=0.12.4 <0.13.0",
-      "resolved": "https://registry.npmjs.org/style-loader/-/style-loader-0.12.4.tgz"
+      "version": "0.13.0",
+      "from": "style-loader@>=0.13.0 <0.14.0",
+      "resolved": "https://registry.npmjs.org/style-loader/-/style-loader-0.13.0.tgz"
     },
     "success-symbol": {
       "version": "0.1.0",

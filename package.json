@@ -4,6 +4,7 @@
   "description": "Isomorphic app built with React.",
   "main": "app/main.js",
   "dependencies": {
+    "appcache-webpack-plugin": "^1.2.0",
     "autoprefixer": "^6.0.3",
     "babel": "^5.8.23",
     "babel-core": "^5.8.25",

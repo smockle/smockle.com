@@ -1,5 +1,6 @@
 import path from 'path';
 import webpack from 'webpack';
+import AppCachePlugin from 'appcache-webpack-plugin';
 
 let production = process.env.NODE_ENV === 'production';
 let config = production ? require('./webpack.prod.config.js') : require('./webpack.dev.config.js');
@@ -25,11 +26,6 @@ config.output = {
   filename: 'app.js'
 };
 
-config.plugins = config.plugins.concat([
-  // create vendor chunk
-  new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js')
-]);
-
 config.postcss = [
   require('postcss-custom-properties')(),
   require('postcss-font-variant')(),
@@ -50,6 +46,24 @@ config.resolve = {
 // parsers
 config.module.loaders = config.module.loaders.concat([
   { test: /\.jpe?g$|\.gif$|\.png$|\.jpf$|\.webp$|\.svg$|\.woff$|\.woff2$|\.ttf$|\.wav$|\.mp3$/, loader: 'file' }
+]);
+
+config.plugins = config.plugins.concat([
+  // create vendor chunk
+  new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
+
+  new AppCachePlugin({
+    cache: [
+      '/',
+      'favicon.ico',
+      'apple-touch-icon.png',
+      'tile.png',
+      'tile-wide.png',
+      'humans.txt'
+    ],
+    network: ['*'],  // No network access allowed!
+    output: 'offline.appcache'
+  })
 ]);
 
 export default config;

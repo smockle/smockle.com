@@ -39,12 +39,13 @@
     "mocha": "^2.3.3",
     "react-addons-test-utils": "^0.14.0",
     "sinon": "^1.17.1",
-    "sinon-chai": "^2.8.0"
+    "sinon-chai": "^2.8.0",
+    "snyk": "^0.5.3"
   },
   "scripts": {
     "build": "NODE_ENV=production babel-node $(npm bin)/webpack",
     "start": "NODE_ENV=development babel-node $(npm bin)/webpack-dev-server",
-    "test": "mocha --require ./test/test-init --compilers js:babel/register --recursive",
+    "test": "mocha --require ./test/test-init --compilers js:babel/register --recursive && snyk test",
     "coverage": "$(npm bin)/istanbul cover $(npm bin)/_mocha -- --require ./test/test-init --compilers js:babel/register --recursive",
     "shrinkwrap": "rm -Rf node_modules && rm -f npm-shrinkwrap.json && npm i && npm shrinkwrap --dev"
   },

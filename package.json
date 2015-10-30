@@ -45,7 +45,7 @@
     "react-addons-test-utils": "^0.14.0",
     "sinon": "^1.17.1",
     "sinon-chai": "^2.8.0",
-    "snyk": "^0.6.0"
+    "snyk": "^1.0.1"
   },
   "scripts": {
     "build": "NODE_ENV=production babel-node $(npm bin)/webpack",

@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 import fontloader from '../../node_modules/fontloader/fontloader';
 import {Router, Route, Link} from 'react-router';
 
-export default class App extends Component {
+class App extends Component {
   componentDidMount() {
     document.fonts.load('1em Effra')
   	.then(function() {
@@ -29,3 +29,4 @@ export default class App extends Component {
     )
   }
 }
+export default App;

@@ -6,7 +6,7 @@ import React from 'react';
 import picturefill from 'picturefill';
 require('picturefill/src/plugins/typesupport/pf.type');
 
-export default class Home extends App {
+class Home extends App {
   render() {
       return (
         <div className={css.home.home}>
@@ -72,3 +72,4 @@ export default class Home extends App {
       );
     }
 }
+export default Home;

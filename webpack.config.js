@@ -1,9 +1,16 @@
 import path from 'path';
 import webpack from 'webpack';
 import AppCachePlugin from 'appcache-webpack-plugin';
+import {default as production} from './webpack.prod.config';
+import {default as development} from './webpack.dev.config';
 
-let production = process.env.NODE_ENV === 'production';
-let config = production ? require('./webpack.prod.config.js') : require('./webpack.dev.config.js');
+const configs = {
+  production: production,
+  development: development
+};
+let config = configs.hasOwnProperty(process.env.NODE_ENV) ?
+             configs[process.env.NODE_ENV] :
+             configs[development];
 
 // webpack input
 config.entry = {
@@ -66,4 +73,4 @@ config.plugins = config.plugins.concat([
   })
 ]);
 
-export default config;
+module.exports = config;

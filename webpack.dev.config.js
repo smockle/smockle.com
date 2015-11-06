@@ -15,8 +15,8 @@ let config = {
 
   module: {
     loaders: [
-      { test: /\.jsx$/, loaders: [ 'react-hot', 'babel-loader' ], include: path.join(__dirname, 'app') },
-      { test: /\.css$/, loader: 'style-loader!css-loader?module&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader' }
+      { test: /\.jsx$/, loaders: [ 'react-hot', 'babel' ], include: path.join(__dirname, 'app') },
+      { test: /\.css$/, loader: 'style!css?module&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss' }
     ]
   },
 

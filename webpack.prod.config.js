@@ -14,7 +14,7 @@ let config = {
   module: {
     loaders: [
       { test: /\.jsx$/, loaders: [ 'babel-loader' ], include: path.join(__dirname, 'app') },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?module&importLoaders=1&localIdentName=[name]__[hash:base64:5]!postcss-loader') }
+      { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css?module&importLoaders=1&localIdentName=[name]__[hash:base64:5]!postcss') }
     ]
   }
 }

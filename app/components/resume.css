@@ -1,0 +1,28 @@
+h2 { margin-bottom: 0; }
+h3 {
+  color: #777;
+  margin-bottom: 0;
+  margin-top: 1.5rem;
+}
+ul { margin-top: 0.5rem; }
+date {
+  color: #777;
+  font-style: italic;
+}
+
+.wrapper {
+  composes: wrapper from './app.css';
+  max-width: 50rem;
+  padding: 4rem 3.5rem 4.25rem 3.5rem;
+}
+
+/* HERO */
+.hero { composes: alternate from './app.css'; }
+.header { text-align: center; }
+
+/* EDUCATION */
+.education { composes: alternate from './app.css'; }
+
+/* SKILLS */
+.skills { composes: alternate from './app.css'; }
+.ol li + li { margin-top: 1.5rem; }

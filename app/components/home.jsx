@@ -1,12 +1,24 @@
-import App from './app';
 import {default as appcss} from './app.css';
 import {default as homecss} from './home.css';
 let css = {app: appcss, home: homecss};
 import React from 'react';
-import picturefill from 'picturefill';
-require('picturefill/src/plugins/typesupport/pf.type');
 
-class Home extends App {
+class Home extends React.Component {
+  componentDidMount() {
+    document.fonts.load('1em Effra')
+    .then(function() {
+      document.body.classList.add(css.app['sans-loaded']);
+    });
+    document.fonts.load('1em Freight Text Pro')
+    .then(function() {
+      document.body.classList.add(css.app['serif-loaded']);
+    });
+    // document.fonts.load('1em Source Code Pro')
+    // .then(function() {
+    //   document.body.classList.add(css.app['monospace-loaded']);
+    // });
+  }
+
   render() {
       return (
         <div className={css.home.home}>

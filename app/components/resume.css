@@ -1,15 +1,20 @@
 h2 { margin-bottom: 0; }
 h3 {
-  color: #777;
+  color: #ccc;
   margin-bottom: 0;
   margin-top: 1.5rem;
 }
 ul { margin-top: 0.5rem; }
 date {
-  color: #777;
+  color: #ccc;
   font-style: italic;
 }
-
+.flex {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
 .wrapper {
   composes: wrapper from './app.css';
   max-width: 50rem;
@@ -19,6 +24,11 @@ date {
 /* HERO */
 .hero { composes: alternate from './app.css'; }
 .header { text-align: center; }
+
+/* WORK */
+.block + .block { margin-top: 3rem; }
+.flex h2 { width: calc(100% - 240px); }
+.flex date { width: 240px; }
 
 /* EDUCATION */
 .education { composes: alternate from './app.css'; }

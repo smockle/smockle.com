@@ -24,17 +24,19 @@ class Resume extends React.Component {
           <header className={css.resume.header}>
             <h1>Clay Miller</h1>
             <div>
+
               <span style={{margin: '0 10px'}}>/</span>
+              
             </div>
             <p>I build the Internet. My ideal workplace lets me take ownership in my work, learn bleeding-edge technologies, help people connect and grow, and build things that endure. Diversity, accessibility and empathy are very important to me. I’ll continue developing—learning new skills while honing existing ones—and I’ll share everything I learn.</p>
           </header>
         </div>
       </section>
 
-      <section id="work">
+      <section id="work" className={css.resume.work}>
         <div className={css.resume.wrapper}>
           <h1>Work.</h1>
-          <div>
+          <div className={css.resume.block}>
             <div className={css.resume.flex}>
               <h2>Xamarin</h2>
               <date>2014-03-17—</date>
@@ -57,12 +59,11 @@ class Resume extends React.Component {
               <li>Increased Qualys <a href="https://www.ssllabs.com/ssltest/analyze.html?d=evolve.xamarin.com&latest">SSL Labs score</a> from a D to an A+.</li>
             </ul>
           </div>
-          <div>
+          <div className={css.resume.block}>
             <div className={css.resume.flex}>
               <h2>Auburn University Career Center</h2>
               <date>2014-01-13 — 2014-05-02</date>
             </div>
-
             <div>Web Developer</div>
             <h3>Highlights</h3>
             <ul>
@@ -70,10 +71,11 @@ class Resume extends React.Component {
               <li>Integrated feeds from Twitter, the University Calendar and the Career Center Blog.</li>
             </ul>
           </div>
-          <div>
-            <h2>ACLU of Alabama</h2>
-            <date>2013-08-05 — 2013-12-16</date>
-
+          <div className={css.resume.block}>
+            <div className={css.resume.flex}>
+              <h2>ACLU of Alabama</h2>
+              <date>2013-08-05 — 2013-12-16</date>
+            </div>
             <div>Web Developer (Freelance)</div>
             <div>
               <p>The ACLU is our nation's guardian of liberty, working daily in courts, legislatures and communities to defend and preserve the individual rights and liberties.</p>
@@ -84,9 +86,11 @@ class Resume extends React.Component {
             <li>Delivered comprehensive documentation.</li>
             </ul>
           </div>
-          <div>
-            <h2>Auburn University OIT</h2>
-            <date>2011-08-22 — 2013-12-20</date>
+          <div className={css.resume.block}>
+            <div className={css.resume.flex}>
+              <h2>Auburn University OIT</h2>
+              <date>2011-08-22 — 2013-12-20</date>
+            </div>
             <div>Web Developer</div>
             <div>
               <p>The Auburn University Office of Information Technology provides centralized computing services and resources to the Auburn University community.</p>
@@ -106,9 +110,10 @@ class Resume extends React.Component {
         <div className={css.resume.wrapper}>
           <h1>Education.</h1>
           <div>
-            <h2>Auburn University</h2>
-            <date>2010-08-18 — 2014-12-13</date>
-
+            <div className={css.resume.flex}>
+              <h2>Auburn University</h2>
+              <date>2010-08-18 — 2014-12-13</date>
+            </div>
             <div>BS in Software Engineering; Spanish concentration</div>
             <h3>Courses</h3>
             <ul className={css.resume.courses}>

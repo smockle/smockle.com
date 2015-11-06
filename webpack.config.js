@@ -62,6 +62,7 @@ config.plugins = config.plugins.concat([
   new AppCachePlugin({
     cache: [
       '/',
+      '/resume',
       'favicon.ico',
       'apple-touch-icon.png',
       'tile.png',

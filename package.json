@@ -54,7 +54,7 @@
   "scripts": {
     "build": "NODE_ENV=production babel-node ./node_modules/.bin/webpack",
     "start": "NODE_ENV=development babel-node $(npm bin)/webpack-dev-server",
-    "test": "mocha --require ./test/test-init --compilers js:babel-core/register --recursive && snyk test",
+    "test": "mocha --require ./test/test-init --compilers js:babel-core/register --recursive",
     "coverage": "$(npm bin)/istanbul cover $(npm bin)/_mocha -- --require ./test/test-init --compilers js:babel-core/register --recursive",
     "shrinkwrap": "rm -Rf node_modules && rm -f npm-shrinkwrap.json && npm i && npm shrinkwrap --dev"
   },

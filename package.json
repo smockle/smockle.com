@@ -5,7 +5,7 @@
   "main": "app/main.js",
   "dependencies": {
     "appcache-webpack-plugin": "^1.2.0",
-    "autoprefixer": "^6.0.3",
+    "autoprefixer": "^6.2.1",
     "babel": "^6.0.14",
     "babel-cli": "^6.0.14",
     "babel-core": "^6.0.14",

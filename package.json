@@ -42,7 +42,7 @@
     "chai": "^3.3.0",
     "codeclimate-test-reporter": "github:smockle/javascript-test-reporter",
     "coveralls": "^2.11.4",
-    "eslint-plugin-react": "^4.0.0",
+    "eslint-plugin-react": "^4.1.0",
     "istanbul": "^0.4.0",
     "jsdom": "^8.0.1",
     "mocha": "^2.3.3",

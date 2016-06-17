@@ -22,7 +22,7 @@
     "extract-text-webpack-plugin": "^1.0.0",
     "file-loader": "^0.8.4",
     "fontloader": "^1.2.2",
-    "history": "^1.12.3",
+    "history": "^2.0.2",
     "node-libs-browser": "^1.0.0",
     "normalize.css": "^3.0.3",
     "picturefill": "^3.0.1",

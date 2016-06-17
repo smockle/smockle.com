@@ -9,7 +9,7 @@
     "babel": "^6.0.14",
     "babel-cli": "^6.0.14",
     "babel-core": "^6.0.14",
-    "babel-eslint": "^5.0.0",
+    "babel-eslint": "^6.0.4",
     "babel-loader": "^6.0.1",
     "babel-plugin-transform-class-constructor-call": "^6.0.14",
     "babel-plugin-transform-es2015-block-scoping": "^6.0.14",

@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router } from 'react-router';
-import createHistory from 'history/lib/createBrowserHistory';
+import { Router, browserHistory } from 'react-router';
 
 import Home from 'home';
 import Resume from 'resume';
@@ -16,4 +15,4 @@ const routes = [
   }
 ];
 
-ReactDOM.render(<Router history={createHistory()} routes={routes} />, document.getElementById("app"));
+ReactDOM.render(<Router history={browserHistory} routes={routes} />, document.getElementById("app"));

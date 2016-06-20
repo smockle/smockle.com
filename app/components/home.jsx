@@ -48,7 +48,7 @@ class Home extends React.Component {
           <section className={css.home.explore} id='play'>
             <div className={css.app.wrapper}>
               <h1>Explorer.</h1>
-              <p>My hobbies, unabridged: adjusting kerning of neo-grotesque typefaces, reading "I Want My Hat Back" in a local bookstore, engaging with brands on Twitter, savoring smoky whisky, collecting salt, detecting hints of plum in wine, creating Jackson Pollock-esque latte art, waiting for coffee grounds to bloom, geocaching in the great outdoors, comparing Sortino ratios, memorizing Kanji, sampling cow brain burritos, eating vegetarian, practing yoga, training for a half marathon, mapping functors, spinning experimental hip hop records, jamming to freak folk, critiquing postmodern literature, campaigning for social justice, lifting weights, learning about intersectionality, contributing to open source, encoding data in the blockchain, and staring thoughtfully at Impressionist paintings.</p>
+              <p>My hobbies, unabridged: adjusting kerning of neo-grotesque typefaces, reading "I Want My Hat Back" in a local bookstore, engaging with brands on Twitter, savoring smoky whisky, detecting hints of plum in wine, creating Jackson Pollock-esque latte art, waiting for coffee grounds to bloom, hiking in the great outdoors, comparing Fama-French factor loads, sampling Napoletana pizza, training for a 10K, mapping functors, spinning experimental hip hop records, jamming to freak folk, critiquing postmodern literature, signing petitions, learning about intersectionality, contributing to open source, and staring thoughtfully at Impressionist paintings.</p>
             </div>
           </section>
 

@@ -8,7 +8,10 @@ let config = {
     new ExtractTextPlugin('[name].css'),
 
     // minify all assets
-    new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false }})
+    new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false }}),
+
+    // set environment to production
+    new webpack.DefinePlugin({ 'process.env.NODE_ENV': '"production"' })
   ],
 
   module: {

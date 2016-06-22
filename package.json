@@ -57,7 +57,7 @@
     "coverage": "istanbul cover ./node_modules/.bin/_mocha -- --require ./test/test-init --compilers js:babel-register --recursive",
     "shrinkwrap": "rm -Rf node_modules && rm -f npm-shrinkwrap.json && npm i && npm shrinkwrap --dev",
     "deploy": "npm run snyk-protect && NODE_ENV=production babel-node ./node_modules/.bin/webpack && cd dist && aws s3 sync . s3://smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=2629000' --exclude '*.html' && aws s3 sync . s3://smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=0, no-cache' --exclude '*' --include '*.html'",
-    "snyk-protect": "snyk protect",
+    "snyk-protect": "snyk protect -d",
     "prepublish": "npm run snyk-protect"
   },
   "repository": {

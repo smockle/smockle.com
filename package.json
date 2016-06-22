@@ -43,7 +43,7 @@
     "react-router": "^2.4.1",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
-    "snyk": "git://github.com/smockle/snyk.git#master",
+    "snyk": "github:smockle/snyk#master",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"

@@ -3957,7 +3957,7 @@
     "snyk": {
       "version": "1.16.0",
       "from": "smockle/snyk#master",
-      "resolved": "git://github.com/smockle/snyk.git#9f462e4b8efdc98e0e17f0c8f12e91c6f600c7bb",
+      "resolved": "git://github.com/smockle/snyk.git#f84397eb42f69858f87aed1f15092f4d84ccde10",
       "dependencies": {
         "lodash": {
           "version": "3.10.1",
@@ -4321,9 +4321,9 @@
       "resolved": "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.10.tgz"
     },
     "uglify-js": {
-      "version": "2.6.3",
+      "version": "2.6.4",
       "from": "uglify-js@>=2.6.0 <3.0.0",
-      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-2.6.3.tgz",
+      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-2.6.4.tgz",
       "dependencies": {
         "async": {
           "version": "0.2.10",

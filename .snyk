@@ -2,15 +2,15 @@ version: v1.5.0
 ignore:
   'npm:minimatch:20160620':
     - recursive-readdir > minimatch:
-        reason: No available upgrade or path
-        expires: '2016-07-23T07:34:58.561Z'
+        reason: No available upgrade or patch
+        expires: '2016-07-23T07:56:07.933Z'
     - snyk > recursive-readdir > minimatch:
-        reason: No available upgrade or path
-        expires: '2016-07-23T07:34:58.562Z'
+        reason: No available upgrade or patch
+        expires: '2016-07-23T07:56:07.933Z'
     - mocha > glob > minimatch:
-        reason: No available upgrade or path
-        expires: '2016-07-23T07:34:58.562Z'
+        reason: No available upgrade or patch
+        expires: '2016-07-23T07:56:07.933Z'
 patch:
   'npm:request:20160119':
     - coveralls > request:
-        patched: '2016-06-23T07:33:52.726Z'
+        patched: '2016-06-23T07:55:12.789Z'

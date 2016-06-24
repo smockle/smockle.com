@@ -1,10 +1,32 @@
 version: v1.5.0
-ignore:
+ignore: {}
+patch:
   'npm:minimatch:20160620':
-    - recursive-readdir > minimatch:
-        reason: No available upgrade or patch
-        expires: '2016-07-23T14:19:34.469Z'
-    - snyk > recursive-readdir > minimatch:
-        reason: No available upgrade or patch
-        expires: '2016-07-23T14:19:34.469Z'
-patch: {}
+    - babel-cli > chokidar > fsevents > node-pre-gyp > tar-pack > rimraf > glob > minimatch:
+        patched: '2016-06-24T05:40:39.751Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > tar-pack > rimraf > glob > minimatch:
+        patched: '2016-06-24T05:40:39.751Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > tar > fstream > rimraf > glob > minimatch:
+        patched: '2016-06-24T05:40:39.751Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > tar > fstream > rimraf > glob > minimatch:
+        patched: '2016-06-24T05:40:39.751Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > tar-pack > tar > fstream > rimraf > glob > minimatch:
+        patched: '2016-06-24T05:40:39.751Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > rimraf > glob > minimatch:
+        patched: '2016-06-24T05:40:39.751Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > tar-pack > fstream > rimraf > glob > minimatch:
+        patched: '2016-06-24T05:40:39.751Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > tar-pack > fstream > rimraf > glob > minimatch:
+        patched: '2016-06-24T05:40:39.751Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > tar-pack > fstream-ignore > fstream > rimraf > glob > minimatch:
+        patched: '2016-06-24T05:40:39.751Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > tar-pack > fstream-ignore > fstream > rimraf > glob > minimatch:
+        patched: '2016-06-24T05:40:39.751Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > tar-pack > tar > fstream > rimraf > glob > minimatch:
+        patched: '2016-06-24T05:40:39.751Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > rimraf > glob > minimatch:
+        patched: '2016-06-24T05:40:39.751Z'
+    - webpack > watchpack > chokidar > fsevents > node-pre-gyp > tar-pack > fstream-ignore > minimatch:
+        patched: '2016-06-24T05:40:39.751Z'
+    - babel-cli > chokidar > fsevents > node-pre-gyp > tar-pack > fstream-ignore > minimatch:
+        patched: '2016-06-24T05:40:39.751Z'

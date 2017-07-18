@@ -504,7 +504,17 @@ input[type=submit]:hover:active {
 }
 
 /*
- * THOUGHT HAVER
+ * CURATOR
+ */
+ @media (min-width: 50em) {
+   .mobile-only { display: none; }
+ }
+ @media (max-width: 50em) {
+   .desktop-only { display: none; }
+ }
+
+/*
+ * NETWORKER
  */
 
 .connectIcons {

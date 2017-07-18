@@ -1,0 +1,6 @@
+src/*
+!src/silhouette.png
+!src/silhouette@2x.png
+!src/silhouette.psd
+!src/favicon.sketch
+g

@@ -1,3 +1,4 @@
+node_modules
 src/*
 !src/silhouette.png
 !src/silhouette@2x.png

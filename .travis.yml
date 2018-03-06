@@ -5,3 +5,13 @@ notifications:
   email:
     on_success: change
     on_failure: always
+env:
+  global:
+    # include $HOME/.local/bin for `aws`
+    - PATH=$HOME/.local/bin:$PATH
+deploy:
+  # deploy develop to the staging environment
+  - provider: script
+    script: ls public && pip -V
+    on:
+      branch: master

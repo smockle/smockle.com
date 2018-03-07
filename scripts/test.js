@@ -1,26 +1,17 @@
-const amphtmlValidator = require("amphtml-validator");
-const fs = require("fs");
-const path = require("path");
+#!/usr/bin/env node
 
-amphtmlValidator
-  .getInstance()
-  .then(validator => {
-    const input = fs.readFileSync(
-      path.join(__dirname, "../public/index.amp.html"),
-      "utf8"
-    );
-    const result = validator.validateString(input);
-    (result.status === "PASS" ? console.log : console.error)(result.status);
-    for (var ii = 0; ii < result.errors.length; ii++) {
-      var error = result.errors[ii];
-      var msg = `line ${error.line}, col ${error.col}: ${
-        error.message
-      }${error.specUrl !== null && ` (see ${error.specUrl})`}`;
-      (error.severity === "ERROR" ? console.error : console.warn)(msg);
-    }
-    process.exit(result.status !== "PASS" ? 1 : 0);
-  })
-  .catch(error => {
-    console.error(error);
-    process.exit(1);
-  });
+const gulp = require("gulp");
+const expect = require("gulp-expect-file");
+const gulpAmpValidator = require("gulp-amphtml-validator");
+
+gulp.task("amphtml:validate", () => {
+  return gulp
+    .src("public/index.amp.html")
+    .pipe(expect(["public/index.amp.html"]))
+    .pipe(gulpAmpValidator.validate())
+    .pipe(gulpAmpValidator.format())
+    .pipe(gulpAmpValidator.failAfterError());
+});
+
+gulp.task("test", ["amphtml:validate"]);
+gulp.start("test");

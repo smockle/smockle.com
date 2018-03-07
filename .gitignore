@@ -1,8 +1,7 @@
 node_modules
-public/index.amp.html
-src/*
-!src/index.amp.html
-!src/silhouette.png
-!src/silhouette@2x.png
-!src/silhouette.psd
-!src/favicon.sketch
+public
+spec/*
+!spec/silhouette.png
+!spec/silhouette@2x.png
+!spec/silhouette.psd
+!spec/favicon.sketch

@@ -1,4 +1,5 @@
 node_modules
+public/index.amp.html
 src/*
 !src/index.amp.html
 !src/silhouette.png

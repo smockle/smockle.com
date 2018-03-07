@@ -463,6 +463,9 @@ body.serif-loaded {
   .hero .profile {
     width: 55%;
   }
+  .hero .profile .profile {
+    width: auto;
+  }
 }
 .hero .wrapper header {
   display: inline-block;

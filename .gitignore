@@ -1,5 +1,6 @@
 node_modules
 src/*
+!src/index.amp.html
 !src/silhouette.png
 !src/silhouette@2x.png
 !src/silhouette.psd

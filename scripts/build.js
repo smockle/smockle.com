@@ -16,7 +16,8 @@ gulp.task("static", () =>
     .src([
       "src/**/*.{appcache,css,html,ico,jpf,js,png,svg,txt,webp,woff,woff2,xml}",
       "!src/index.css",
-      "!src/index.amp.html"
+      "!src/index.amp.html",
+      "!src/*.test.js"
     ])
     .pipe(gulp.dest("public"))
 );

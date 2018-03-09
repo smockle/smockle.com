@@ -2,8 +2,6 @@
 
 const gulp = require("gulp");
 const del = require("del");
-const zopfli = require("gulp-zopfli");
-const { compress: brotli } = require("gulp-brotli");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cleanCSS = require("gulp-clean-css");
@@ -21,25 +19,6 @@ gulp.task("static", () =>
       "!src/index.amp.html",
       "!src/*.test.js"
     ])
-    .pipe(gulp.dest("public"))
-);
-
-gulp.task("gzip", () =>
-  gulp
-    .src("src/**/*.{css,ico,svg}")
-    .pipe(zopfli())
-    .pipe(gulp.dest("public"))
-);
-
-gulp.task("brotli", () =>
-  gulp
-    .src("src/**/*.{css,ico,svg}")
-    .pipe(
-      brotli({
-        extension: "br",
-        quality: 11
-      })
-    )
     .pipe(gulp.dest("public"))
 );
 
@@ -70,5 +49,5 @@ gulp.task("amphtml", () =>
     )
 );
 
-gulp.task("build", ["clean", "static", "gzip", "brotli", "css", "amphtml"]);
+gulp.task("build", ["clean", "static", "css", "amphtml"]);
 gulp.start("build");

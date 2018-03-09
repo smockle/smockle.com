@@ -9,13 +9,11 @@
     "express": "^4.16.2",
     "gulp": "^3.9.1",
     "gulp-amphtml-validator": "^1.0.2",
-    "gulp-brotli": "^1.2.1",
     "gulp-clean-css": "^3.9.2",
     "gulp-expect-file": "0.0.7",
     "gulp-jest": "^4.0.2",
     "gulp-postcss": "^7.0.1",
     "gulp-replace": "^0.6.1",
-    "gulp-zopfli": "^1.0.0",
     "jest-cli": "^22.4.2",
     "jest-puppeteer-preset": "^2.0.0",
     "puppeteer": "^1.1.1"
@@ -26,12 +24,9 @@
     "test": "node scripts/test.js",
     "test:staging": "echo 'Skipping staging tests'",
     "test:production": "echo 'Skipping production tests'",
-    "deploy:staging":
-      "cd public && aws s3 sync . s3://staging.smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=2629000' --exclude '*.html' && aws s3 sync . s3://staging.smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=0, no-cache' --exclude '*' --include '*.html'",
-    "promote":
-      "aws s3 sync s3://staging.smockle.com s3://smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=2629000' --exclude '*.html' && aws s3 sync s3://staging.smockle.com s3://smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=0, no-cache' --exclude '*' --include '*.html'",
-    "deploy:production":
-      "cd public && aws s3 sync . s3://smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=2629000' --exclude '*.html' && aws s3 sync . s3://smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=0, no-cache' --exclude '*' --include '*.html'"
+    "deploy:staging": "cd public && aws s3 sync . s3://staging.smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=2629000' --exclude '*.html' && aws s3 sync . s3://staging.smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=0, no-cache' --exclude '*' --include '*.html'",
+    "promote": "aws s3 sync s3://staging.smockle.com s3://smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=2629000' --exclude '*.html' && aws s3 sync s3://staging.smockle.com s3://smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=0, no-cache' --exclude '*' --include '*.html'",
+    "deploy:production": "cd public && aws s3 sync . s3://smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=2629000' --exclude '*.html' && aws s3 sync . s3://smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=0, no-cache' --exclude '*' --include '*.html'"
   },
   "repository": {
     "type": "git",

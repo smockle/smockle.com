@@ -12,7 +12,13 @@ exports.handler = (event, context, callback) => {
   const header = headers["x-compression"] && headers["x-compression"][0].value;
 
   // Append file extension to request URI
-  if (header && extensions.get(header)) {
+  if (
+    header &&
+    extensions.get(header) &&
+    (request.uri.indexOf(".css") > -1 ||
+      request.uri.indexOf(".ico") > -1 ||
+      request.uri.indexOf(".svg") > -1)
+  ) {
     request.uri += extensions.get(header);
   }
 

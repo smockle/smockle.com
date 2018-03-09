@@ -1,6 +1,9 @@
 language: node_js
 node_js:
 - '8'
+cache:
+  directories:
+    - node_modules
 notifications:
   email:
     on_success: change
@@ -32,6 +35,9 @@ jobs:
       deploy:
       - provider: script
         script: npm run deploy:staging
+        skip_cleanup: true
+        on:
+          branch: master
     - stage: test staging
       script: npm run test:staging
     - stage: deploy to production
@@ -40,5 +46,8 @@ jobs:
       deploy:
       - provider: script
         script: npm run promote
+        skip_cleanup: true
+        on:
+          branch: master
     - stage: test production
       script: npm run test:production

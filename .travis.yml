@@ -26,6 +26,7 @@ jobs:
     - stage: unit tests
       script: npm test
     - stage: deploy to staging
+      script: skip
       deploy:
       - provider: script
         script:
@@ -37,6 +38,7 @@ jobs:
     - stage: test staging
       script: npm run test:staging
     - stage: deploy to production
+      script: skip
       deploy:
       - provider: script
         script:

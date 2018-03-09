@@ -27,11 +27,10 @@ jobs:
       script: npm test
     - stage: deploy to staging
       script: skip
+      before_deploy: pip install --user awscli
       deploy:
       - provider: script
-        script:
-          - pip install --user awscli
-          - npm run deploy:staging
+        script: npm run deploy:staging
         skip_cleanup: true
         on:
           branch: master
@@ -39,15 +38,12 @@ jobs:
       script: npm run test:staging
     - stage: deploy to production
       script: skip
+      before_deploy: pip install --user awscli
       deploy:
       - provider: script
-        script:
-          - pip install --user awscli
-          - npm run deploy:production
+        script: npm run deploy:production
         skip_cleanup: true
         on:
           branch: master
     - stage: test production
       script: npm run test:production
-
-

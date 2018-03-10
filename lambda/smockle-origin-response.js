@@ -9,7 +9,7 @@ exports.handler = (event, context, callback) => {
   Object.assign(response.headers, {
     "strict-transport-security": [{
       key: "Strict-Transport-Security",
-      value: "max-age= 63072000; includeSubdomains; preload"
+      value: "max-age=63072000; includeSubdomains; preload"
     }],
     "content-security-policy": [{
       key: "Content-Security-Policy",

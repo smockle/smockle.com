@@ -26,9 +26,12 @@
     "test": "node scripts/test.js",
     "test:staging": "sonarwhal https://staging.smockle.com",
     "test:production": "sonarwhal https://www.smockle.com",
-    "deploy:staging": "cd public && aws s3 sync . s3://staging.smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=2629000' --exclude '*.html' && aws s3 sync . s3://staging.smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=0, no-cache' --exclude '*' --include '*.html'",
-    "promote": "aws s3 sync s3://staging.smockle.com s3://www.smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=2629000' --exclude '*.html' && aws s3 sync s3://staging.smockle.com s3://www.smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=0, no-cache' --exclude '*' --include '*.html'",
-    "deploy:production": "cd public && aws s3 sync . s3://www.smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=2629000' --exclude '*.html' && aws s3 sync . s3://www.smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=0, no-cache' --exclude '*' --include '*.html'"
+    "deploy:staging":
+      "cd public && aws s3 sync . s3://staging.smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=2629000' --exclude '*.html' && aws s3 sync . s3://staging.smockle.com --region us-west-2 --acl public-read --cache-control 'public, must-revalidate, proxy-revalidate, max-age=0' --exclude '*' --include '*.html'",
+    "promote":
+      "aws s3 sync s3://staging.smockle.com s3://www.smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=2629000' --exclude '*.html' && aws s3 sync s3://staging.smockle.com s3://www.smockle.com --region us-west-2 --acl public-read --cache-control 'public, must-revalidate, proxy-revalidate, max-age=0' --exclude '*' --include '*.html'",
+    "deploy:production":
+      "cd public && aws s3 sync . s3://www.smockle.com --region us-west-2 --acl public-read --cache-control 'max-age=2629000' --exclude '*.html' && aws s3 sync . s3://www.smockle.com --region us-west-2 --acl public-read --cache-control 'public, must-revalidate, proxy-revalidate, max-age=0' --exclude '*' --include '*.html'"
   },
   "repository": {
     "type": "git",

@@ -5,6 +5,7 @@
     "formatters": "stylish",
     "rules": {
         "content-type": "off",
+        "http-cache": "warning",
         "ssllabs": "off",
         "x-content-type-options": "off"
     }

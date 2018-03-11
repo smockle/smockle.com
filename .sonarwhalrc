@@ -12,7 +12,6 @@
         "html-checker": "warning",
         "http-cache": "warning",
         "http-compression": "warning",
-        "image-optimization-cloudinary": "warning",
         "manifest-app-name": "error",
         "manifest-exists": "warning",
         "manifest-file-extension": "warning",
@@ -26,7 +25,7 @@
         "no-vulnerable-javascript-libraries": "warning",
         "ssllabs": "off",
         "strict-transport-security": "warning",
-        "x-content-type-options": "warning",
+        "x-content-type-options": "off",
         "validate-set-cookie-header": "warning"
     }
 }

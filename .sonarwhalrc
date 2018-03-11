@@ -2,5 +2,31 @@
     "extends": [
         "web-recommended"
     ],
-    "formatters": "stylish"
+    "formatters": "stylish",
+    "rules": {
+        "apple-touch-icons": "warning",
+        "axe": "warning",
+        "content-type": "warning",
+        "disown-opener": "warning",
+        "highest-available-document-mode": "warning",
+        "html-checker": "warning",
+        "http-cache": "warning",
+        "http-compression": "warning",
+        "image-optimization-cloudinary": "warning",
+        "manifest-app-name": "error",
+        "manifest-exists": "warning",
+        "manifest-file-extension": "warning",
+        "manifest-is-valid": "warning",
+        "meta-charset-utf-8": "warning",
+        "no-disallowed-headers": "warning",
+        "no-friendly-error-pages": "warning",
+        "no-html-only-headers": "warning",
+        "no-http-redirects": "warning",
+        "no-protocol-relative-urls": "warning",
+        "no-vulnerable-javascript-libraries": "warning",
+        "ssllabs": "off",
+        "strict-transport-security": "warning",
+        "x-content-type-options": "warning",
+        "validate-set-cookie-header": "warning"
+    }
 }

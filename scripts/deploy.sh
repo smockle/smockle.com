@@ -3,6 +3,10 @@
 # Abort if any command exits with error
 set -e
 
+# By default, Bash takes the error status of the last item in pipeline
+# Instead, exit when any item in the pipeline fails
+set -o pipefail
+
 # Change to directory containing compiled files
 cd public
 
@@ -29,14 +33,31 @@ aws s3 sync "${SOURCE}" "${TARGET}" --region us-west-2 --acl public-read --cache
 # + 'Content-Type: text/html; charset=utf-8'
 aws s3 sync "${SOURCE}" "${TARGET}" --region us-west-2 --acl public-read --cache-control 'public, must-revalidate, proxy-revalidate, max-age=0' --content-type='text/html; charset=utf-8' --exclude '*' --include '*.html'
 
-# Invalidate target
+invalidate_and_wait() {
+  # Get distribution id
+  local DISTRIBUTION_ID="${1}"
+  aws cloudfront create-invalidation --distribution-id "${DISTRIBUTION_ID}" --paths / /\*
+
+  # Get invalidation id
+  local INVALIDATION_ID=$(aws cloudfront list-invalidations --distribution-id "${DISTRIBUTION_ID}" | grep -m 1 "Id" | cut -d"\"" -f4)
+
+  # Wait for invalidation to complete
+  if [ -n "${INVALIDATION_ID}" ]; then
+    aws cloudfront wait invalidation-completed --distribution-id "${DISTRIBUTION_ID}" --id "${INVALIDATION_ID}"
+    echo "Invalidation complete!"
+  fi
+}
+
+# Invalidate the distribution that corresponds with TARGET
 if [ "${TARGET}" == "s3://staging.smockle.com" ] && [ -n "${STAGING_DISTRIBUTION_ID}" ]; then
-  aws cloudfront create-invalidation --distribution-id "${STAGING_DISTRIBUTION_ID}" --paths / /\*
+  invalidate_and_wait "${STAGING_DISTRIBUTION_ID}"
 elif [ "${TARGET}" == "s3://www.smockle.com" ] && [ -n "${PRODUCTION_DISTRIBUTION_ID}" ]; then
-  aws cloudfront create-invalidation --distribution-id "${PRODUCTION_DISTRIBUTION_ID}" --paths / /\*
+  invalidate_and_wait "${PRODUCTION_DISTRIBUTION_ID}"
 else
   echo "Could not create invalidation. Check that STAGING_DISTRIBUTION_ID and PRODUCTION_DISTRIBUTION_ID are set."
 fi
+
+unset -f invalidate_and_wait
 
 unset -v SOURCE
 unset -v TARGET

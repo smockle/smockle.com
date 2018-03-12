@@ -30,9 +30,9 @@ aws s3 sync "${SOURCE}" "${TARGET}" --region us-west-2 --acl public-read --cache
 aws s3 sync "${SOURCE}" "${TARGET}" --region us-west-2 --acl public-read --cache-control 'public, must-revalidate, proxy-revalidate, max-age=0' --content-type='text/html; charset=utf-8' --exclude '*' --include '*.html'
 
 # Invalidate target
-if [ "${TARGET}" == "s3://staging.smockle.com" ] && [-n "${STAGING_DISTRIBUTION_ID}"]; then
+if [ "${TARGET}" == "s3://staging.smockle.com" ] && [ -n "${STAGING_DISTRIBUTION_ID}" ]; then
   aws cloudfront create-invalidation --distribution-id "${STAGING_DISTRIBUTION_ID}" --paths / /\*
-elif [ "${TARGET}" == "s3://staging.smockle.com" ] && [-n "${PRODUCTION_DISTRIBUTION_ID}"]; then
+elif [ "${TARGET}" == "s3://staging.smockle.com" ] && [ -n "${PRODUCTION_DISTRIBUTION_ID}" ]; then
   aws cloudfront create-invalidation --distribution-id "${PRODUCTION_DISTRIBUTION_ID}" --paths / /\*
 else
   echo "Could not create invalidation. Check that STAGING_DISTRIBUTION_ID and PRODUCTION_DISTRIBUTION_ID are set."

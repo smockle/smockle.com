@@ -5,6 +5,7 @@
     "axe": "off",
     "content-type": "off",
     "ssllabs": "off",
+    "manifest-exists": "off",
     "x-content-type-options": "off",
     "http-cache": "warning",
     "http-compression": "warning"

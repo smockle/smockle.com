@@ -8,7 +8,9 @@ set -e
 set -o pipefail
 
 # Change to directory containing compiled files
-cd public
+if [ -d "public" ]; then
+  cd public
+fi
 
 SOURCE=$1
 TARGET=$2

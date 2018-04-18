@@ -1,12 +1,12 @@
 {
-    "extends": [
-        "web-recommended"
-    ],
-    "formatters": "stylish",
-    "rules": {
-        "content-type": "off",
-        "http-cache": "warning",
-        "ssllabs": "off",
-        "x-content-type-options": "off"
-    }
+  "extends": ["web-recommended"],
+  "formatters": "stylish",
+  "rules": {
+    "axe": "off",
+    "content-type": "off",
+    "ssllabs": "off",
+    "x-content-type-options": "off",
+    "http-cache": "warning",
+    "http-compression": "warning"
+  }
 }

@@ -15,7 +15,7 @@ describe("index.amp.html", () => {
 
   it("has links in the 'Networker.' section", async () => {
     const length = await page.$$eval("#connect a", x => x.length);
-    expect(length).toBe(5);
+    expect(length).toBe(6);
   });
 
   it("has no missing 'alt' attributes", async () => {

@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="140px" height="125px" viewBox="0 0 140 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-    <!-- Generator: Sketch Beta 3.4 (15009) - http://www.bohemiancoding.com/sketch -->
-    <title>stack-overflow</title>
-    <desc>Created with Sketch Beta.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Desktop-HD-Copy-3" sketch:type="MSArtboardGroup" transform="translate(-838.000000, -2716.000000)" fill="#444444">
-            <g id="Connect" sketch:type="MSLayerGroup" transform="translate(0.000000, 2499.000000)">
-                <g id="Group" transform="translate(140.000000, 217.000000)" sketch:type="MSShapeGroup">
-                    <g id="Group-+-Stack-Overflow" transform="translate(698.000000, 0.000000)">
-                        <path d="M100.013346,108.909869 L100.013346,71.6049104 L108.777151,71.6049104 L108.783618,117.916415 L29.5070796,117.916415 L29.50902,71.565737 L38.2805862,71.565737 L38.2805862,108.909869 L100.013346,108.909869 Z M46.5711293,89.0830363 L90.7277708,89.0830363 L90.7277708,98.0875899 L46.5711293,98.0875899 L46.5711293,89.0830363 Z M90.3649299,86.5157759 L46.5711293,84.0611354 L47.0490963,75.0691969 L90.8428968,77.5245014 L90.3649299,86.5157759 Z M89.1942666,76.9154725 L46.5711293,66.3028206 L48.6388699,57.5518977 L91.2620072,68.1638856 L89.1942666,76.9154725 Z M92.4522741,65.0367057 L53.3967492,44.5497195 L57.3879994,36.5311386 L96.4435243,57.0181248 L92.4522741,65.0367057 Z M100.076862,55.4171476 L67.047989,25.7948087 L72.818518,19.0138394 L105.848038,48.6355143 L100.076862,55.4171476 Z M108.741888,47.3105132 L84.1120387,10.056679 L91.3701508,5 L116,42.2538342 L108.741888,47.3105132 Z" id="Stack-Overflow"></path>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg"><path d="M90.474 105.306v-36.01h8.511L98.992 114H22l.002-44.743h8.52v36.05h59.952zm-51.902-19.14h42.884v8.694H38.571v-8.693h.001zm42.532-2.477l-42.533-2.37.464-8.681 42.532 2.37-.464 8.679v.002zm-1.136-9.267L38.57 64.176l2.009-8.448 41.394 10.244-2.008 8.448.002.002zm3.163-11.468L45.2 43.178l3.876-7.74 37.93 19.776-3.876 7.74zm7.405-9.285L58.459 25.074l5.604-6.546L96.14 47.123l-5.605 6.546zm8.415-7.825L75.031 9.882 82.08 5 106 40.962l-7.049 4.882z" fill="#444" fill-rule="evenodd"/></svg>

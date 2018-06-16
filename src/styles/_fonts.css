@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Effra";
+  src: url("fonts/Effra-Bold.woff2") format("woff2"),
+    url("fonts/Effra-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Freight Text Pro";
+  src: url("fonts/FreightTextPro-Book.woff2") format("woff2"),
+    url("fonts/FreightTextPro-Book.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Freight Text Pro";
+  src: url("fonts/FreightTextPro-BookItalic.woff2") format("woff2"),
+    url("fonts/FreightTextPro-BookItalic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Freight Text Pro";
+  src: url("fonts/FreightTextPro-Bold.woff2") format("woff2"),
+    url("fonts/FreightTextPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Source Code Pro";
+  src: url("fonts/SourceCodePro-Regular.woff2") format("woff2"),
+    url("fonts/SourceCodePro-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}

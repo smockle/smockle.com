@@ -1,0 +1,126 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Effra", sans-serif;
+  font-weight: 700;
+  line-height: 120%;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+img {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+hr {
+  border: none;
+  border-bottom: 2px solid #eee;
+}
+
+sub {
+  line-height: 0;
+}
+
+sup {
+  line-height: 0;
+}
+
+dl {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+dt {
+  font-weight: 700;
+  flex: 0 1 calc(30% - 10px);
+  overflow: hidden;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+dd {
+  flex: 0 1 calc(70% - 10px);
+  margin-left: 0;
+}
+
+mark {
+  background-color: #fcf0c5;
+  padding: 0 0.4rem;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+blockquote {
+  border-left: 3px solid #444;
+  font-style: italic;
+  left: calc(-1.5rem - 3px);
+  margin: 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+blockquote cite {
+  display: block;
+}
+
+pre {
+  background-color: #eee;
+  border-radius: 0;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+pre::selection,
+pre code::selection {
+  background-color: #5db6aa;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.1rem;
+  line-height: 140%;
+}
+
+a {
+  color: #26856d;
+}
+
+a:hover {
+  color: #5db6aa;
+}

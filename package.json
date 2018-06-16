@@ -17,6 +17,7 @@
     "gulp-replace": "^0.6.1",
     "jest-cli": "^22.4.2",
     "jest-puppeteer-preset": "^2.0.0",
+    "postcss-import": "^11.1.0",
     "puppeteer": "^1.1.1",
     "sonarwhal": "^1.0.0"
   },
@@ -27,8 +28,7 @@
     "test:staging": "sonarwhal https://staging.smockle.com",
     "test:production": "sonarwhal https://www.smockle.com",
     "deploy:staging": "bash scripts/deploy.sh . s3://staging.smockle.com",
-    "promote":
-      "bash scripts/deploy.sh s3://staging.smockle.com s3://www.smockle.com",
+    "promote": "bash scripts/deploy.sh s3://staging.smockle.com s3://www.smockle.com",
     "deploy:production": "bash scripts/deploy.sh . s3://www.smockle.com"
   },
   "repository": {

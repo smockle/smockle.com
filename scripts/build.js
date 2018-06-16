@@ -14,7 +14,7 @@ gulp.task("clean", () => del(["public/**/*"]));
 gulp.task("static", () =>
   gulp
     .src([
-      "src/**/*.{appcache,css,html,ico,jpf,js,png,svg,txt,webp,woff,woff2,xml}",
+      "src/**/*.{css,html,ico,jpf,js,png,svg,txt,webp,woff,woff2,xml}",
       "!src/index.css",
       "!src/index.amp.html",
       "!src/*.test.js"

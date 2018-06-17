@@ -1,7 +1,4 @@
 @import "normalize.css";
-:root {
-  --color-background: #f8f8f8;
-}
 
 .alternate { background-color: var(--color-background); }
 

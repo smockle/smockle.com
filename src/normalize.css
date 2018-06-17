@@ -1,6 +1,7 @@
 :root {
   --border-width: 3px;
   --border-radius: 0;
+  --color-background: #f8f8f8;
   --color-white: #eee;
   --color-gray: #aaa;
   --color-text: #444;
@@ -58,10 +59,7 @@
   font-style: normal;
 }
 
-/* a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0} */
-
 html { font-size: 12px; }
-@media (min-width: 50em) { html { font-size: 13px; } }
 @media (min-width: 75em) { html { font-size: 14px; } }
 
 body {
@@ -75,7 +73,7 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-title);
-  font-variant-numeric: oldstyle-nums diagonal-fractions;
+  font-variant-numeric: oldstyle-nums;
   font-weight: 700;
 }
 h1 {
@@ -92,12 +90,12 @@ h2:not(:first-of-type), h3:not(:first-of-type), h4:not(:first-of-type) { margin-
 h1 { margin-bottom: 3rem; }
 h2, h3, h4 { margin-bottom: calc(var(--margin) * 0.75); }
 
-a { color: var(--color-accent); }
+a, a:visited { color: var(--color-accent); }
 a:hover { color: var(--color-accent-hover); }
 
 p {
   font-size: var(--font-size);
-  font-variant-numeric: oldstyle-nums diagonal-fractions;
+  font-variant-numeric: oldstyle-nums;
   line-height: var(--font-line-height);
   margin-top: var(--margin);
 }
@@ -105,6 +103,7 @@ time { font-variant-numeric: normal; }
 p:not(:last-of-type) { margin-bottom: var(--margin); }
 
 ul, ol {
+  margin-left: 0;
   padding-left: var(--margin-list);
 }
 li {
@@ -143,7 +142,7 @@ pre, code, kbd {
   margin: 0;
 }
 pre { padding: calc(var(--margin) / 2) var(--margin); }
-code, kbd { padding: calc(var(--margin) / 4); }
+code, kbd { padding: 0 calc(var(--margin) / 4); }
 pre code { padding: 0; }
 
 table, thead, tbody, tr, th, td {
@@ -156,7 +155,8 @@ table {
   margin-top: var(--margin-list);
 }
 table:not(:last-of-type) { margin-bottom: var(--margin-list); }
-th, td {
+table th, table tr:nth-child(even) { background-color: var(--color-background); }
+table th, table td {
   border: 1px solid var(--color-gray);
   margin: 0;
   padding: calc(var(--margin) / 2);
@@ -176,11 +176,10 @@ hr {
   position: relative;
   width: calc(100% - (15px * 2));
 }
-@media (min-width: 30em) { .wrapper { width: calc(40em - (15px * 2)) } }
 @media (min-width: 45em) {
   .wrapper {
     padding-left: 30px;
     padding-right: 30px;
-    width: calc(45em - (30px * 2));
+    width: calc(50em - (30px * 2));
   }
 }

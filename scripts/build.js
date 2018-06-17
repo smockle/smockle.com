@@ -3,6 +3,7 @@
 const gulp = require("gulp");
 const del = require("del");
 const postcss = require("gulp-postcss");
+const postcssImport = require("postcss-import");
 const autoprefixer = require("autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 const replace = require("gulp-replace");
@@ -16,6 +17,7 @@ gulp.task("static", () =>
     .src([
       "src/**/*.{css,html,ico,jpf,js,png,svg,txt,webp,woff,woff2,xml}",
       "!src/index.css",
+      "!src/normalize.css",
       "!src/index.amp.html",
       "!src/*.test.js"
     ])
@@ -26,7 +28,12 @@ gulp.task("static", () =>
 gulp.task("css", () =>
   gulp
     .src("src/index.css")
-    .pipe(postcss([autoprefixer({ browsers: ["last 2 versions"] })]))
+    .pipe(
+      postcss([
+        postcssImport(),
+        autoprefixer({ browsers: ["last 2 versions"] })
+      ])
+    )
     .pipe(gulp.dest("public"))
 );
 
@@ -34,7 +41,12 @@ gulp.task("css", () =>
 gulp.task("amphtml", () =>
   gulp
     .src("src/index.css")
-    .pipe(postcss([autoprefixer({ browsers: ["last 2 versions"] })]))
+    .pipe(
+      postcss([
+        postcssImport(),
+        autoprefixer({ browsers: ["last 2 versions"] })
+      ])
+    )
     .pipe(cleanCSS())
     .on("data", ({ contents: css }) =>
       gulp

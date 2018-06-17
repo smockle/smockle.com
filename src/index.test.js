@@ -14,7 +14,7 @@ describe("index.html", () => {
   });
 
   it("has links in the 'Networker.' section", async () => {
-    const length = await page.$$eval("#connect a", x => x.length);
+    const length = await page.$$eval("#networker a", x => x.length);
     expect(length).toBe(6);
   });
 

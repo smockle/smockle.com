@@ -122,7 +122,7 @@ img {
 blockquote {
   border-left: var(--border-width) solid var(--color-text);
   font-style: italic;
-  padding-left: var(--margin-list);
+  padding-left: calc(var(--margin-list) / 2);
   margin: 0;
 }
 

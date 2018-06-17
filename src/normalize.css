@@ -176,6 +176,7 @@ hr {
   position: relative;
   width: calc(100% - (15px * 2));
 }
+@media (min-width: 30em) { .wrapper { width: calc(40em - (15px * 2)); } }
 @media (min-width: 45em) {
   .wrapper {
     padding-left: 30px;

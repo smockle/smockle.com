@@ -16,7 +16,7 @@
   --margin: 1em;
   --margin-list: calc(var(--margin) * 1.75);
   --font-size: 1.5rem;
-  --font-line-height: 1.8;
+  --font-line-height: 1.7;
 }
 
 @font-face {

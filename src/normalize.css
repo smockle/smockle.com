@@ -17,6 +17,7 @@
   --margin-list: calc(var(--margin) * 1.75);
   --font-size: 1.5rem;
   --font-line-height: 1.7;
+  --font-line-height-title: calc(var(--font-line-height) * 0.7);
 }
 
 @font-face {
@@ -75,6 +76,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-title);
   font-variant-numeric: oldstyle-nums;
   font-weight: 700;
+  line-height: var(--font-line-height-title);
 }
 h1 {
   font-size: calc(var(--font-size) * 2);

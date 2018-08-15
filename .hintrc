@@ -1,7 +1,7 @@
 {
   "extends": ["web-recommended"],
-  "formatters": "stylish",
-  "rules": {
+  "formatters": ["stylish"],
+  "hints": {
     "axe": "off",
     "content-type": "off",
     "ssllabs": "off",

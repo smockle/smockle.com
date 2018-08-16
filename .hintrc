@@ -8,6 +8,8 @@
     "manifest-exists": "off",
     "x-content-type-options": "off",
     "http-cache": "warning",
-    "http-compression": "warning"
+    "http-compression": "warning",
+    "sri": "warning",
+    "html-checker": "warning"
   }
 }

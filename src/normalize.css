@@ -4,59 +4,43 @@
   --color-background: #f8f8f8;
   --color-white: #eee;
   --color-gray: #aaa;
-  --color-text: #444;
+  --color-text: #333;
   --color-accent: #26856d;
   --color-accent-hover: #5db6aa;
   --color-selection: #e4f6f2;
   --color-highlight: #fcf0c5;
   --font-system: -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-title: "Effra", sans-serif;
-  --font-body: "Freight Text Pro", serif;
-  --font-code: "SF Mono", "Operator Mono", "Source Code Pro", Menlo, monospace;
-  --margin: 1em;
+  --font-title: "Lato", sans-serif;
+  --font-body: "Yrsa", serif;
+  --font-code: "SF Mono", Menlo, monospace;
+  --margin: 1.16em;
   --margin-list: calc(var(--margin) * 1.75);
-  --font-size: 1.5rem;
-  --font-line-height: 1.7;
+  --font-size: 1.6rem;
+  --font-line-height: 1.42;
   --font-line-height-title: calc(var(--font-line-height) * 0.7);
 }
 
 @font-face {
-  font-family: "Effra";
-  src: url("fonts/Effra-Bold.woff2") format("woff2"),
-    url("fonts/Effra-Bold.woff") format("woff");
+  font-family: "Lato";
+  src: local("Lato"),
+    url("fonts/lato-black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yrsa";
+  src: local("Yrsa"),
+    url("fonts/yrsa-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Yrsa";
+  src:  local("Yrsa"),
+    url("fonts/yrsa-bold.woff2") format("woff2");
   font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Freight Text Pro";
-  src: url("fonts/FreightTextPro-Book.woff2") format("woff2"),
-    url("fonts/FreightTextPro-Book.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Freight Text Pro";
-  src: url("fonts/FreightTextPro-BookItalic.woff2") format("woff2"),
-    url("fonts/FreightTextPro-BookItalic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Freight Text Pro";
-  src: url("fonts/FreightTextPro-Bold.woff2") format("woff2"),
-    url("fonts/FreightTextPro-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Source Code Pro";
-  src: url("fonts/SourceCodePro-Regular.woff2") format("woff2"),
-    url("fonts/SourceCodePro-Regular.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -68,6 +52,9 @@ body {
   font-family: var(--font-body);
   font-kerning: normal;
   margin: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection { background-color: var(--color-selection); }
@@ -75,11 +62,11 @@ body {
 h1, h2, h3, h4 {
   font-family: var(--font-title);
   font-variant-numeric: oldstyle-nums;
-  font-weight: 700;
+  font-weight: 900;
   line-height: var(--font-line-height-title);
 }
 h1 {
-  font-size: calc(var(--font-size) * 2);
+  font-size: calc(var(--font-size) * 1.8);
   text-align: center;
 }
 h2 { font-size: calc(var(--font-size) * 1.66); }
@@ -139,7 +126,7 @@ pre, code, kbd {
   background-color: var(--color-white);
   border-radius: var(--border-radius);
   font-family: var(--font-code);
-  font-size: calc(var(--font-size) * 0.9);
+  font-size: calc(var(--font-size) * 0.75);
   line-height: var(--font-line-height);
   margin: 0;
 }

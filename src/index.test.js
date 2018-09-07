@@ -8,14 +8,12 @@ describe("index.html", () => {
   });
 
   it("has introduction", async () => {
-    await expect(page).toMatch(
-      "I love making connections between people and ideas."
-    );
+    await expect(page).toMatch("I love long-term thinking");
   });
 
   it("has links in the 'Networker.' section", async () => {
     const length = await page.$$eval("#networker a", x => x.length);
-    expect(length).toBe(6);
+    expect(length).toBe(5);
   });
 
   it("has no missing 'alt' attributes", async () => {

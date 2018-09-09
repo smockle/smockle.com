@@ -28,7 +28,7 @@ exports.handler = (event, context, callback) => {
     Object.assign(response.headers, {
       "content-security-policy": [{
         key: "Content-Security-Policy",
-        value: "default-src 'none'; script-src https://cdn.ampproject.org:* 'sha256-142eq1eu1F72n61w3ZQR93gtzPl3QIkkwmlmJNA/rSs='; connect-src 'self'; worker-src 'self'; img-src 'self'; font-src 'self'; style-src 'self' 'sha256-REavevORfV0b+/DCILFjSFHno1CzQ8IjJI9hkNXIlsY=' 'sha256-+Cc4j4lNk91U1LKPK/OiXM+ubKj5qJBP4aJ/x4PD/wY=' 'sha256-+Cc4j4lNk91U1LKPK/OiXM+ubKj5qJBP4aJ/x4PD/wY=' 'sha256-0+eUWXEzIzayXtwbs4qgGqcUroB222vieZ1QP7fQ6so=' 'sha256-H+MZMHAjxtX51BD5NQvR2VBEYdZkra7aCuCgN0suCfk=';"
+        value: "default-src 'none'; script-src https://cdn.ampproject.org:* 'sha256-142eq1eu1F72n61w3ZQR93gtzPl3QIkkwmlmJNA/rSs='; connect-src 'self'; worker-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'sha256-REavevORfV0b+/DCILFjSFHno1CzQ8IjJI9hkNXIlsY=' 'sha256-+Cc4j4lNk91U1LKPK/OiXM+ubKj5qJBP4aJ/x4PD/wY=' 'sha256-+Cc4j4lNk91U1LKPK/OiXM+ubKj5qJBP4aJ/x4PD/wY=' 'sha256-0+eUWXEzIzayXtwbs4qgGqcUroB222vieZ1QP7fQ6so=' 'sha256-H+MZMHAjxtX51BD5NQvR2VBEYdZkra7aCuCgN0suCfk=';"
       }],
       "x-frame-options": [{
         key: "X-Frame-Options",

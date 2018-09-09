@@ -9,17 +9,17 @@
   width: 100vw;
 }
 .hero:before {
-  bottom: 0%;
+  bottom: -20%;
   color: #fafafa;
   content: "smocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmockle";
   font-family: var(--font-title);
-  font-size: 6rem;
+  font-size: 5.85rem;
   left: -10vw;
   line-height: 0.7;
   max-width: 110vw;
   overflow: hidden;
   position: absolute;
-  top: 0%;
+  top: -20%;
   transform: rotate(-5deg);
   word-wrap: break-word;
 }

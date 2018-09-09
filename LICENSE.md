@@ -10,9 +10,9 @@
 
 ## SPDX-License-Identifier: CC-BY-4.0
 
-- [**`src/images/email.svg`**](src/images/email.svg), [**`src/images/rss.svg`**](src/images/rss.svg), [**`src/images/github.svg`**](src/images/github.svg), [**`src/images/linkedin.svg`**](src/images/linkedin.svg) and [**`src/images/twitter.svg`**](src/images/twitter.svg) are licensed under a [Creative Commons Attribution 4.0 International License](LICENSE-CC-BY-4.0) ([https://creativecommons.org/licenses/by/4.0/legalcode.txt](https://creativecommons.org/licenses/by/4.0/legalcode.txt)).
+- [**`src/images/email.svg`**](src/images/email.svg), [**`src/images/rss.svg`**](src/images/rss.svg), [**`src/images/github.svg`**](src/images/github.svg), [**`src/images/linkedin.svg`**](src/images/linkedin.svg) and [**`src/images/twitter.svg`**](src/images/twitter.svg) are licensed under a [Creative Commons Attribution 4.0 International License](LICENSE-CC-BY-4.0) ([https://creativecommons.org/licenses/by/4.0/legalcode](https://creativecommons.org/licenses/by/4.0/legalcode)).
 
-- Non-code text content in [**`src/index.amp.html`**](src/index.amp.html) and [**`src/index.html`**](src/index.html) is licensed under a [Creative Commons Attribution 4.0 International License](LICENSE-CC-BY-4.0) ([https://creativecommons.org/licenses/by/4.0/legalcode.txt](https://creativecommons.org/licenses/by/4.0/legalcode.txt)).
+- Non-code text content in [**`src/index.amp.html`**](src/index.amp.html) and [**`src/index.html`**](src/index.html) is licensed under a [Creative Commons Attribution 4.0 International License](LICENSE-CC-BY-4.0) ([https://creativecommons.org/licenses/by/4.0/legalcode](https://creativecommons.org/licenses/by/4.0/legalcode)).
 
 - All brand icons are trademarks of their respective owners. The use of these trademarks does not indicate endorsement of the trademark holder by this project, nor vice versa.
 

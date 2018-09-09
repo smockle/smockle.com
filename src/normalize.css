@@ -22,7 +22,8 @@
 
 @font-face {
   font-family: "Lato";
-  src: local("Lato"),
+  src: local("Lato Black"),
+       local("Lato-Black"),
     url("fonts/lato-black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
@@ -30,7 +31,8 @@
 
 @font-face {
   font-family: "Yrsa";
-  src: local("Yrsa"),
+  src: local("Yrsa Regular"),
+       local("Yrsa-Regular"),
     url("fonts/yrsa-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -38,7 +40,8 @@
 
 @font-face {
   font-family: "Yrsa";
-  src:  local("Yrsa"),
+  src: local("Yrsa Bold"),
+       local("Yrsa-Bold"),
     url("fonts/yrsa-bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;

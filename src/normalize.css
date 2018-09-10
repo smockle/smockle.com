@@ -3,7 +3,7 @@
   --border-radius: 0;
   --color-background: #f8f8f8;
   --color-white: #eee;
-  --color-gray: #aaa;
+  --color-gray: #888;
   --color-text: #333;
   --color-accent: #26856d;
   --color-accent-hover: #5db6aa;
@@ -16,6 +16,7 @@
   --margin: 1.16em;
   --margin-list: calc(var(--margin) * 1.75);
   --font-size: 1.6rem;
+  --font-size-hint: calc(var(--font-size) * 0.8);
   --font-line-height: 1.42;
   --font-line-height-title: calc(var(--font-line-height) * 0.7);
 }
@@ -157,8 +158,14 @@ table th, table td {
 mark { background-color: var(--color-highlight); }
 
 hr {
-  border: var(--border-radius);
-  border-bottom: var(--border-width) solid var(--color-white);
+  border: 0;
+}
+hr::before {
+  content: "⁂";
+  color: var(--color-gray);
+  display: flex;
+  font-size: var(--font-size-hint);
+  justify-content: center;
 }
 
 .wrapper {

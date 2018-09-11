@@ -1,6 +1,7 @@
 @import "normalize.css";
 
-.alternate { background-color: var(--color-background); }
+.alternate { background-color: var(--color-background-alternate); }
+section:not(.alternate) { background-color: var(--color-background); }
 
 .hero {
   overflow: hidden;
@@ -10,7 +11,7 @@
 }
 .hero:before {
   bottom: -20%;
-  color: #fafafa;
+  color: var(--color-background-alternate);
   content: "smocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmockle";
   font-family: var(--font-title);
   font-size: 5.85rem;
@@ -44,6 +45,7 @@
   }
   .hero .profile .profile { width: auto; }
 }
+.hero .profile { filter: var(--filter-profile); }
 
 @media (min-width: 50em) { .mobile-only { display: none; } }
 @media (max-width: 50em) { .desktop-only { display: none; } }
@@ -58,5 +60,6 @@
 .network-icon {
   height: auto;
   width: 5rem;
+  filter: var(--filter-icon);
 }
 @media (max-width: 30em) { .network-icon { margin: 1rem; } }

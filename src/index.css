@@ -1,5 +1,16 @@
 @import "normalize.css";
 
+body,
+body[theme-light] {
+  --filter-profile: none;
+  --filter-icon: none;
+}
+
+body[theme-dark] {
+  --filter-profile: brightness(0.9);
+  --filter-icon: brightness(3.25);
+}
+
 .alternate { background-color: var(--color-background-alternate); }
 section:not(.alternate) { background-color: var(--color-background); }
 

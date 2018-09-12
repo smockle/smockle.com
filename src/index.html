@@ -20,10 +20,12 @@
         <h1>Clay Miller.</h1>
       </header>
       <picture class="profile">
-        <source media="(min-width: 50em)" srcSet="images/silhouette.webp 485w, images/silhouette@2x.webp 970w" sizes="(min-width: 50em) 485px, 0px" type="image/webp"
-        />
-        <source media="(min-width: 50em)" srcSet="images/silhouette.jpf 485w, images/silhouette@2x.jpf 970w" sizes="(min-width: 50em) 485px, 0px" type="image/jp2" />
-        <source media="(min-width: 50em)" srcSet="images/silhouette.png 485w, images/silhouette@2x.png 970w" sizes="(min-width: 50em) 485px, 0px" type="image/png" />
+        <source media="(min-width: 50em)" srcSet="images/silhouette.webp 485w, images/silhouette@2x.webp 970w" sizes="(min-width: 50em) 485px, 0px"
+          type="image/webp" />
+        <source media="(min-width: 50em)" srcSet="images/silhouette.jpf 485w, images/silhouette@2x.jpf 970w" sizes="(min-width: 50em) 485px, 0px"
+          type="image/jp2" />
+        <source media="(min-width: 50em)" srcSet="images/silhouette.png 485w, images/silhouette@2x.png 970w" sizes="(min-width: 50em) 485px, 0px"
+          type="image/png" />
         <img alt="Clay Miller" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
       </picture>
     </div>
@@ -32,9 +34,11 @@
   <section class="alternate" id="builder">
     <div class="wrapper">
       <h1>Builder.</h1>
-      <p>Currently, I develop web-based projects at Microsoft. I focus on human-computer interaction and assistive technologies. I write a lot of TypeScript.</p>
+      <p>Currently, I develop web-based projects at Microsoft. I focus on human-computer interaction and assistive
+        technologies. I write a lot of TypeScript.</p>
 
-      <p>I love long-term thinking, and I enjoy working on projects with lasting impact. To discern what lasts, I study ideas and behaviors that have persisted throughout history. I write about this at <a href="https://blog.smockle.com">blog.smockle.com</a>.</p>
+      <p>I love long-term thinking, and I enjoy working on projects with lasting impact. To discern what lasts, I study
+        ideas and behaviors that have persisted throughout history. I write about this at <a href="https://blog.smockle.com">blog.smockle.com</a>.</p>
 
       <p>Drop me a line, especially if you have a book or podcast recommendation!</p>
     </div>
@@ -43,7 +47,8 @@
   <section id="curator">
     <div class="wrapper">
       <h1>Explorer.</h1>
-      <p>This year, I’m perusing classic works of philosophy, starting with the ancient Greeks. My first purchase was <i>The Collected Dialogues of Plato: Including the Letters</i> (eds. Hamilton & Cairns).</p>
+      <p>This year, I’m perusing classic works of philosophy, starting with the ancient Greeks. My first purchase was
+        <i>The Collected Dialogues of Plato: Including the Letters</i> (eds. Hamilton & Cairns).</p>
 
       <p>Here is the <a href="https://blog.smockle.com/2018/09/08/philosophy-reading-list.html">complete reading list</a>.</p>
     </div>
@@ -70,6 +75,31 @@
         </a>
       </div>
     </div>
+  </section>
+
+  <section class="footer alternate" id="footer">
+    <div class="wrapper">
+      <div class="site-meta">
+        &copy;
+        <script>document.write(new Date().getFullYear())</script> Clay Miller&#32;~&#32;
+        <a href="#" data-theme="dark" class="theme-toggle theme-toggle-dark">Dark</a>
+        <a href="#" data-theme="light" class="theme-toggle theme-toggle-light">Light</a>
+      </div>
+    </div>
+    <script>
+      const toggleTheme = (event) => {
+        event.preventDefault();
+        const theme = event.target.getAttribute("data-theme");
+        document.body.setAttribute("data-theme", theme);
+        sessionStorage.setItem("theme", theme);
+      }
+      const theme = sessionStorage.getItem("theme");
+      if (theme) {
+        document.body.setAttribute("data-theme", theme);
+      }
+      const themeToggles = Array.from(document.querySelectorAll(".theme-toggle"));
+      themeToggles.forEach((themeToggle) => themeToggle.addEventListener("click", toggleTheme));
+    </script>
   </section>
 
   <script>

@@ -74,3 +74,13 @@ section:not(.alternate) { background-color: var(--color-background); }
   filter: var(--filter-icon);
 }
 @media (max-width: 30em) { .network-icon { margin: 1rem; } }
+
+.footer .wrapper {
+  padding-top: 0;
+}
+.footer .site-meta {
+  color: var(--color-text-alternate);
+  font-size: var(--font-size-hint);
+  font-style: italic;
+  text-align: center;
+}

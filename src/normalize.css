@@ -52,6 +52,14 @@ body[data-theme="dark"] {
   --color-highlight: var(--color-yellow-dark1);
 }
 
+body .theme-toggle.theme-toggle-dark,
+body[data-theme="light"] .theme-toggle.theme-toggle-dark { display: inline; }
+body[data-theme="dark"] .theme-toggle.theme-toggle-dark { display: none; }
+
+body .theme-toggle.theme-toggle-light,
+body[data-theme="light"] .theme-toggle.theme-toggle-light { display: none; }
+body[data-theme="dark"] .theme-toggle.theme-toggle-light { display: inline; }
+
 @font-face {
   font-family: "Lato";
   src: local("Lato Black"),

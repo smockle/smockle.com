@@ -7,9 +7,9 @@ set -e
 # Instead, exit when any item in the pipeline fails
 set -o pipefail
 
-# Change to directory containing compiled files
-if [ -d "public" ]; then
-  cd public
+# Change to directory containing files
+if [ -d "src" ]; then
+  cd src
 fi
 
 SOURCE=$1

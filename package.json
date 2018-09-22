@@ -4,29 +4,16 @@
   "description": "Main website of Clay Miller (Smockle): https://smockle.com",
   "dependencies": {},
   "devDependencies": {
-    "@hint/configuration-web-recommended": "^1.1.0",
-    "autoprefixer": "^9.1.5",
-    "del": "^3.0.0",
     "express": "^4.16.2",
-    "gulp": "^3.9.1",
-    "gulp-amphtml-validator": "^1.0.2",
-    "gulp-clean-css": "^3.9.2",
-    "gulp-expect-file": "1.0.0",
-    "gulp-jest": "^4.0.2",
-    "gulp-postcss": "^8.0.0",
-    "gulp-replace": "^1.0.0",
-    "hint": "^3.2.0",
-    "jest-cli": "^23.6.0",
-    "jest-puppeteer-preset": "^3.3.1",
-    "postcss-import": "^12.0.0",
-    "puppeteer": "^1.1.1"
+    "jest": "^23.6.0",
+    "jest-puppeteer": "^3.3.1",
+    "puppeteer": "^1.8.0"
   },
   "scripts": {
-    "start": "npm run build && node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
-    "test:staging": "hint https://staging.smockle.com",
-    "test:production": "hint https://www.smockle.com",
+    "start": "node scripts/start.js",
+    "test": "NODE_ENV=development jest",
+    "test:staging": "NODE_ENV=staging jest",
+    "test:production": "NODE_ENV=production jest",
     "deploy:staging": "bash scripts/deploy.sh . s3://staging.smockle.com",
     "promote": "bash scripts/deploy.sh s3://staging.smockle.com s3://www.smockle.com",
     "deploy:production": "bash scripts/deploy.sh . s3://www.smockle.com"
@@ -40,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/smockle/www.smockle.com/issues"
   },
-  "homepage": "https://github.com/smockle/www.smockle.com#readme"
+  "homepage": "https://github.com/smockle/www.smockle.com#readme",
+  "jest": {
+    "preset": "jest-puppeteer"
+  }
 }

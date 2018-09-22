@@ -1,34 +1,44 @@
-#!/usr/bin/env node
+const sites = {
+  development: "http://localhost:3000",
+  staging: "https://staging.smockle.com",
+  production: "https://www.smockle.com"
+};
+const site = sites[process.env.NODE_ENV] || "http://localhost:3000";
 
-const gulp = require("gulp");
-const jest = require("gulp-jest").default;
-const expect = require("gulp-expect-file");
-const gulpAmpValidator = require("gulp-amphtml-validator");
+describe("index.html", () => {
+  beforeAll(async () => {
+    await page.goto(site);
+  });
 
-gulp.task("html", () => {
-  return gulp
-    .src("src/index.test.js", { read: false })
-    .pipe(
-      jest({
-        bail: true,
-        roots: ["<rootDir>/src"]
-      })
-    )
-    .once("error", error => {
-      console.error(error);
-      process.exit(1);
-    })
-    .once("end", () => process.exit());
+  it("has welcome message", async () => {
+    await expect(page).toMatch("SALUT!");
+  });
+
+  it("has introduction", async () => {
+    await expect(page).toMatch("I love long-term thinking");
+  });
+
+  it("has links in the 'Networker.' section", async () => {
+    const length = await page.$$eval("#networker a", x => x.length);
+    expect(length).toBe(4);
+  });
+
+  it("has no missing 'alt' attributes", async () => {
+    const alts = await page.$$eval("img", images =>
+      Array.from(images, ({ alt }) => alt)
+    );
+    alts.forEach((alt = "") => {
+      expect(typeof alt).toBe("string");
+      expect(alt).not.toBe("");
+    });
+  });
+
+  it("has no console warnings or errors", async () => {
+    page.on("console", async ({ _type: type, _text: message }) => {
+      if (["warning", "error"].includes(type)) {
+        await expect(message).toBeNull();
+      }
+    });
+    await page.goto(site);
+  });
 });
-
-gulp.task("amphtml", () => {
-  return gulp
-    .src("public/index.amp.html")
-    .pipe(expect(["public/index.amp.html"]))
-    .pipe(gulpAmpValidator.validate())
-    .pipe(gulpAmpValidator.format())
-    .pipe(gulpAmpValidator.failAfterError());
-});
-
-gulp.task("test", ["html", "amphtml"]);
-gulp.start("test");

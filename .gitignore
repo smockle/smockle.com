@@ -1,7 +1,1 @@
 node_modules
-public
-spec/*
-!spec/silhouette.png
-!spec/silhouette@2x.png
-!spec/silhouette.psd
-!spec/favicon.sketch

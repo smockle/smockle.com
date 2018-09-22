@@ -24,10 +24,8 @@ stages:
 jobs:
   include:
     - stage: unit tests
-      before_script: npm run build
       script: npm test
     - stage: deploy to staging
-      before_script: npm run build
       script: skip
       before_deploy: pip install --user awscli
       deploy:

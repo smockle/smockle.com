@@ -25,4 +25,13 @@ describe("index.amp.html", () => {
       expect(alt).not.toBe("");
     });
   });
+
+  it("has no console warnings or errors", async () => {
+    page.on("console", async ({ _type: type, _text: message }) => {
+      if (["warning", "error"].includes(type)) {
+        await expect(message).toBeNull();
+      }
+    });
+    await page.goto("http://localhost:3000");
+  });
 });

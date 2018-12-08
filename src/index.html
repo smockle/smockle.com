@@ -6,13 +6,14 @@
   <title>Smockle | I’m Clay Miller. Builder. Explorer. Thought-Haver.</title>
   <meta name="description" content="I’m Clay Miller. Builder. Explorer. Thought-Haver.">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="supported-color-schemes" content="light dark">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="index.css">
   <link rel="amphtml" href="index.amp.html">
 </head>
 
 <body>
-  <section class="hero" id="hero">
+  <section class="hero alternate" id="hero">
     <div class="wrapper">
       <header>
         <h1 class="big">SALUT!</h1>
@@ -31,7 +32,7 @@
     </div>
   </section>
 
-  <section class="alternate" id="builder">
+  <section id="builder">
     <div class="wrapper">
       <h1>Builder.</h1>
       <p>Currently, I develop web-based projects at Microsoft. I focus on human-computer interaction and assistive
@@ -44,7 +45,7 @@
     </div>
   </section>
 
-  <section id="curator">
+  <section class="alternate" id="curator">
     <div class="wrapper">
       <h1>Explorer.</h1>
       <p>This year, I’m perusing classic works of philosophy, starting with the ancient Greeks. My first purchase was
@@ -54,7 +55,7 @@
     </div>
   </section>
 
-  <section class="alternate" id="networker">
+  <section id="networker">
     <div class="wrapper">
       <h1>Thought-Haver.</h1>
       <div class="network-icons">
@@ -74,29 +75,13 @@
     </div>
   </section>
 
-  <section class="footer alternate" id="footer">
+  <section class="footer" id="footer">
     <div class="wrapper">
       <div class="site-meta">
         &copy;
-        <script>document.write(new Date().getFullYear())</script> Clay Miller&#32;~&#32;
-        <a href="#" data-theme="dark" class="theme-toggle theme-toggle-dark">Dark</a>
-        <a href="#" data-theme="light" class="theme-toggle theme-toggle-light">Light</a>
+        <script>document.write(new Date().getFullYear())</script> Clay Miller
       </div>
     </div>
-    <script>
-      const toggleTheme = (event) => {
-        event.preventDefault();
-        const theme = event.target.getAttribute("data-theme");
-        document.body.setAttribute("data-theme", theme);
-        sessionStorage.setItem("theme", theme);
-      }
-      const theme = sessionStorage.getItem("theme");
-      if (theme) {
-        document.body.setAttribute("data-theme", theme);
-      }
-      const themeToggles = Array.from(document.querySelectorAll(".theme-toggle"));
-      themeToggles.forEach((themeToggle) => themeToggle.addEventListener("click", toggleTheme));
-    </script>
   </section>
 
   <script>

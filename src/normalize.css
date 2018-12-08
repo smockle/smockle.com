@@ -3,7 +3,8 @@
   --color-neutral-light1: #ddd; /* dark: text */
   --color-neutral: #757575; /* light & dark: text-alt */
   --color-neutral-dark1: #222; /* light: text */
-  --color-neutral-dark2: #081010; /* dark: bg-alt */
+  --color-neutral-dark2: #1E1E1E; /* dark: bg */
+  --color-neutral-dark3: #081010; /* dark: bg-alt */
 
   --color-green-light2: #e4f6f2; /* light: selection */
   --color-green-light1: #84dcc6; /* dark: accent-alt */
@@ -29,19 +30,8 @@
   --font-line-height-title: calc(var(--font-line-height) * 0.7);
 }
 
-body,
-body[data-theme="light"] {
-  --color-background: white;
-  --color-background-alternate: var(--color-neutral-light2);
-  --color-text: var(--color-neutral-dark1);
-  --color-text-alternate: var(--color-neutral);
-  --color-accent: var(--color-green-dark1);
-  --color-accent-alternate: var(--color-green);
-  --color-selection: var(--color-green-light2);
-  --color-highlight: var(--color-yellow);
-}
 @media (prefers-color-scheme: light) {
-  body {
+  :root {
     --color-background: white;
     --color-background-alternate: var(--color-neutral-light2);
     --color-text: var(--color-neutral-dark1);
@@ -53,20 +43,10 @@ body[data-theme="light"] {
   }
 }
 
-body[data-theme="dark"] {
-  --color-background: black;
-  --color-background-alternate: var(--color-neutral-dark2);
-  --color-text: var(--color-neutral-light1);
-  --color-text-alternate: var(--color-neutral);
-  --color-accent: var(--color-green);
-  --color-accent-alternate: var(--color-green-light1);
-  --color-selection: var(--color-green-dark2);
-  --color-highlight: var(--color-yellow-dark1);
-}
 @media (prefers-color-scheme: dark) {
-  body {
-    --color-background: black;
-    --color-background-alternate: var(--color-neutral-dark2);
+  :root {
+    --color-background: var(--color-neutral-dark2);
+    --color-background-alternate: var(--color-neutral-dark3);
     --color-text: var(--color-neutral-light1);
     --color-text-alternate: var(--color-neutral);
     --color-accent: var(--color-green);
@@ -75,14 +55,6 @@ body[data-theme="dark"] {
     --color-highlight: var(--color-yellow-dark1);
   }
 }
-
-body .theme-toggle.theme-toggle-dark,
-body[data-theme="light"] .theme-toggle.theme-toggle-dark { display: inline; }
-body[data-theme="dark"] .theme-toggle.theme-toggle-dark { display: none; }
-
-body .theme-toggle.theme-toggle-light,
-body[data-theme="light"] .theme-toggle.theme-toggle-light { display: none; }
-body[data-theme="dark"] .theme-toggle.theme-toggle-light { display: inline; }
 
 @font-face {
   font-family: "Lato";

@@ -1,14 +1,17 @@
 @import "normalize.css";
 
-body,
-body[data-theme="light"] {
-  --filter-profile: none;
-  --filter-icon: none;
+@media (prefers-color-scheme: light) {
+  :root {
+    --filter-profile: none;
+    --filter-icon: none;
+  }
 }
 
-body[data-theme="dark"] {
-  --filter-profile: brightness(0.9);
-  --filter-icon: brightness(3.25);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --filter-profile: brightness(0.9);
+    --filter-icon: brightness(3.25);
+  }
 }
 
 .alternate { background-color: var(--color-background-alternate); }
@@ -22,7 +25,7 @@ section:not(.alternate) { background-color: var(--color-background); }
 }
 .hero:before {
   bottom: -20%;
-  color: var(--color-background-alternate);
+  color: var(--color-background);
   content: "smocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmockle";
   font-family: var(--font-title);
   font-size: 5.85rem;

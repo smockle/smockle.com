@@ -3,8 +3,8 @@
   --color-neutral-light1: #ddd; /* dark: text */
   --color-neutral: #757575; /* light & dark: text-alt */
   --color-neutral-dark1: #222; /* light: text */
-  --color-neutral-dark2: #1E1E1E; /* dark: bg-alt */
-  --color-neutral-dark3: #081010; /* dark: bg */
+  --color-neutral-dark2: #1E1E1E; /* dark: bg */
+  --color-neutral-dark3: #081010; /* dark: bg-alt */
 
   --color-green-light2: #e4f6f2; /* light: selection */
   --color-green-light1: #84dcc6; /* dark: accent-alt */
@@ -55,8 +55,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--color-neutral-dark3);
-    --color-background-alternate: var(--color-neutral-dark2);
+    --color-background: var(--color-neutral-dark2);
+    --color-background-alternate: var(--color-neutral-dark3);
     --color-text: var(--color-neutral-light1);
     --color-text-alternate: var(--color-neutral);
     --color-accent: var(--color-green);

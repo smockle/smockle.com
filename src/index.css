@@ -4,22 +4,28 @@
   /* TODO: Remove these when 'prefers-color-scheme' has broader support */
   --filter-profile: none;
   --filter-icon: none;
+  --color-section: var(--color-background);
+  --color-section-alternate: var(--color-background-alternate);
 }
 @media (prefers-color-scheme: light) {
   :root {
     --filter-profile: none;
     --filter-icon: none;
+    --color-section: var(--color-background);
+    --color-section-alternate: var(--color-background-alternate);
   }
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --filter-profile: brightness(0.9);
     --filter-icon: brightness(3.25);
+    --color-section: var(--color-background-alternate);
+    --color-section-alternate: var(--color-background);
   }
 }
 
-.alternate { background-color: var(--color-background-alternate); }
-section:not(.alternate) { background-color: var(--color-background); }
+.alternate { background-color: var(--color-section-alternate); }
+section:not(.alternate) { background-color: var(--color-section); }
 
 .hero {
   overflow: hidden;
@@ -29,7 +35,7 @@ section:not(.alternate) { background-color: var(--color-background); }
 }
 .hero:before {
   bottom: -20%;
-  color: var(--color-background-alternate);
+  color: var(--color-section-alternate);
   content: "smocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmockle";
   font-family: var(--font-title);
   font-size: 5.85rem;

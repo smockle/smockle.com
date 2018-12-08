@@ -1,12 +1,16 @@
 @import "normalize.css";
 
+:root {
+  /* TODO: Remove these when 'prefers-color-scheme' has broader support */
+  --filter-profile: none;
+  --filter-icon: none;
+}
 @media (prefers-color-scheme: light) {
   :root {
     --filter-profile: none;
     --filter-icon: none;
   }
 }
-
 @media (prefers-color-scheme: dark) {
   :root {
     --filter-profile: brightness(0.9);
@@ -25,7 +29,7 @@ section:not(.alternate) { background-color: var(--color-background); }
 }
 .hero:before {
   bottom: -20%;
-  color: var(--color-background);
+  color: var(--color-background-alternate);
   content: "smocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmockle";
   font-family: var(--font-title);
   font-size: 5.85rem;

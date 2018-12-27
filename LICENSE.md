@@ -1,6 +1,6 @@
 ### SPDX-License-Identifier: MIT
 
-**Except as otherwise noted (below and/or in individual files), this project is copyrighted (c) 2016-2018 Clay Miller and licensed under the [MIT License](LICENSE-MIT) ([online](https://opensource.org/licenses/MIT)).**
+**Except as otherwise noted (below and/or in individual files), this project is copyrighted (c) 2016-2019 Clay Miller and licensed under the [MIT License](LICENSE-MIT) ([online](https://opensource.org/licenses/MIT)).**
 
 ### SPDX-License-Identifier: OFL-1.1
 

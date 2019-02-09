@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
-
-# Abort if any command exits with error
-set -e
-
-# By default, Bash takes the error status of the last item in pipeline
-# Instead, exit when any item in the pipeline fails
-set -o pipefail
+set -eo pipefail
 
 # Change to directory containing files
 if [ -d "src" ]; then
@@ -41,7 +35,8 @@ invalidate_and_wait() {
   aws cloudfront create-invalidation --distribution-id "${DISTRIBUTION_ID}" --paths / /\*
 
   # Get invalidation id
-  local INVALIDATION_ID=$(aws cloudfront list-invalidations --distribution-id "${DISTRIBUTION_ID}" | grep -m 1 "Id" | cut -d"\"" -f4)
+  local INVALIDATION_ID
+  INVALIDATION_ID=$(aws cloudfront list-invalidations --distribution-id "${DISTRIBUTION_ID}" | grep -m 1 "Id" | cut -d"\"" -f4)
 
   # Wait for invalidation to complete
   if [ -n "${INVALIDATION_ID}" ]; then

@@ -1,232 +1,132 @@
+/* Variables */
 :root {
-  --color-neutral-light2: #f8f8f8; /* light: bg-alt */
-  --color-neutral-light1: #ddd; /* dark: text */
-  --color-neutral: #757575; /* light & dark: text-alt */
-  --color-neutral-dark1: #222; /* light: text */
-  --color-neutral-dark2: #1E1E1E; /* dark: bg */
-  --color-neutral-dark3: #081010; /* dark: bg-alt */
-
-  --color-green-light2: #e4f6f2; /* light: selection */
-  --color-green-light1: #84dcc6; /* dark: accent-alt */
-  --color-green: #5CBBA3; /* light: accent-alt; dark: accent */
-  --color-green-dark1: #26856d; /* light: accent */
-  --color-green-dark2: rgba(228, 246, 242, 0.15); /* dark: selection */
-
-  --color-yellow: #fcf0c5; /* light: highlight */
-  --color-yellow-dark1: #423E34; /* dark: highlight */
-
-  --border-width: 3px;
-  --border-radius: 0;
-
-  --font-system: -apple-system, BlinkMacSystemFont, sans-serif;
   --font-title: "Lato", sans-serif;
-  --font-body: "Yrsa", serif;
+  --font-body: "Crimson Pro S", serif;
   --font-code: "SF Mono", Menlo, monospace;
-
-  --margin: 1.6rem;
-  --font-size: 1.6rem;
-  --font-size-hint: calc(var(--font-size) * 0.8);
-  --font-line-height: 1.42;
-  --font-line-height-title: calc(var(--font-line-height) * 0.7);
-
-  /* TODO: Remove these when 'prefers-color-scheme' has broader support */
+}
+/* @media (prefers-color-scheme: no-preference), (prefers-color-scheme: light) { */
+:root {
   --color-background: white;
-  --color-background-alternate: var(--color-neutral-light2);
-  --color-text: var(--color-neutral-dark1);
-  --color-text-alternate: var(--color-neutral);
-  --color-accent: var(--color-green-dark1);
-  --color-accent-alternate: var(--color-green);
-  --color-selection: var(--color-green-light2);
-  --color-highlight: var(--color-yellow);
+  --color-text: #222;
+  --color-text-alternate: #757575;
+  --color-accent: #26856d;
+  --color-accent-alternate: #5CBBA3;
+  --filter-logo: none;
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-background: white;
-    --color-background-alternate: var(--color-neutral-light2);
-    --color-text: var(--color-neutral-dark1);
-    --color-text-alternate: var(--color-neutral);
-    --color-accent: var(--color-green-dark1);
-    --color-accent-alternate: var(--color-green);
-    --color-selection: var(--color-green-light2);
-    --color-highlight: var(--color-yellow);
-  }
-}
-
+/* } */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--color-neutral-dark2);
-    --color-background-alternate: var(--color-neutral-dark3);
-    --color-text: var(--color-neutral-light1);
-    --color-text-alternate: var(--color-neutral);
-    --color-accent: var(--color-green);
-    --color-accent-alternate: var(--color-green-light1);
-    --color-selection: var(--color-green-dark2);
-    --color-highlight: var(--color-yellow-dark1);
+    --color-background: #1E1E1E;
+    --color-text: #ddd;
+    --color-text-alternate: #757575;
+    --color-accent: #5CBBA3;
+    --color-accent-alternate: #84dcc6;
+    --filter-logo: saturate(1000%) hue-rotate(-15deg) brightness(0.55);
   }
 }
 
+/* Fonts */
 @font-face {
   font-family: "Lato";
-  src: local("Lato Black"),
-       local("Lato-Black"),
+  src: local("Lato Black"), local("Lato-Black"),
     url("fonts/lato-black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
 }
-
 @font-face {
-  font-family: "Yrsa";
-  src: local("Yrsa Regular"),
-       local("Yrsa-Regular"),
-    url("fonts/yrsa-regular.woff2") format("woff2");
+  font-family: "Crimson Pro S";
+  src: local("CrimsonProS Regular"), local("CrimsonProS-Regular"),
+    url("fonts/crimsonpros-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
-  font-family: "Yrsa";
-  src: local("Yrsa Bold"),
-       local("Yrsa-Bold"),
-    url("fonts/yrsa-bold.woff2") format("woff2");
+  font-family: "Crimson Pro S";
+  src: local("CrimsonProS Italic"), local("CrimsonProS-Italic"),
+    url("fonts/crimsonpros-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Crimson Pro S";
+  src: local("CrimsonProS Bold"), local("CrimsonProS-Bold"),
+    url("fonts/crimsonpros-bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 
-html { font-size: 12px; }
-@media (min-width: 75em) { html { font-size: 14px; } }
-
-body {
-  background: var(--color-background); 
-  color: var(--color-text);
+/* Base */
+html, body, div, span, object, iframe, h1, h2, h3, h4, p, blockquote, pre, a, address, cite, code, em, img, kbd, small, strike, strong, sub, sup, b, u, i, center, ol, ul, li, form, label, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, figure, footer, header, menu, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html {
   font-family: var(--font-body);
-  font-kerning: normal;
-  margin: 0;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-size: 20px;
+  line-height: 1.3;
 }
+@media (max-width: 50em) { html { padding: 1rem; } }
+@media (min-width: 50em) { html {
+  font-size: 22px;
+  padding: 2em 0 0 0;
+} }
+@media (min-width: 50em) { .wrapper {
+  max-width: 675px;
+  margin-left: auto;
+  margin-right: auto;
+}}
 
-::selection { background-color: var(--color-selection); }
-
-h1, h2, h3, h4 {
-  font-family: var(--font-title);
-  font-variant-numeric: oldstyle-nums;
-  font-weight: 900;
-  line-height: var(--font-line-height-title);
-}
-h1 {
-  font-size: calc(var(--font-size) * 1.8);
-  text-align: center;
-}
-h2 { font-size: calc(var(--font-size) * 1.66); }
-h3 { font-size: calc(var(--font-size) * 1.33); }
-h4 { font-size: calc(var(--font-size) * 1.16); }
-
-h1:first-of-type, h2:first-of-type, h3:first-of-type, h4:first-of-type { margin-top: 0; }
-h1:not(:first-of-type) { margin-top: 3rem; }
-h2:not(:first-of-type), h3:not(:first-of-type), h4:not(:first-of-type) { margin-top: calc(var(--margin) * 1.45); }
-h1 { margin-bottom: 3rem; }
-h2, h3, h4 { margin-bottom: calc(var(--margin) * 1.425); }
-
-a, a:visited { color: var(--color-accent); }
-a:hover { color: var(--color-accent-alternate); }
-
-p {
-  font-size: var(--font-size);
-  font-variant-numeric: oldstyle-nums;
-  line-height: var(--font-line-height);
-  margin-top: var(--margin);
-}
-time { font-variant-numeric: normal; }
-p:not(:last-of-type) { margin-bottom: var(--margin); }
-
-ul, ol {
-  margin: 0;
-  padding-left: 2.25rem;
+/* Spacing */
+h1, h2, h3, h4, p, i, ul, ol, blockquote, pre, table, figure, audio, video {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 li {
-  font-size: var(--font-size);
-  line-height: calc(var(--font-line-height) * 0.9);
-  margin-top: calc(var(--margin) * 0.5);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
-li:not(:last-of-type) { margin-bottom: calc(var(--margin) * 0.5); }
-
-img {
-  display: block;
-  max-height: 100%;
-  max-width: 100%;
+article,
+main + footer {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
-blockquote {
-  border-left: var(--border-width) solid var(--color-text);
+/* Font Size */
+h1, h2, h3, h4 {
+  font-family: var(--font-title);
+  line-height: 1.05;
+}
+h1 { font-size: 1.9em; }
+h2 { font-size: 1.25em; }
+
+/* Color & Style */
+a, a:hover {
+  color: unset;
+}
+a:not(:hover) { text-decoration: none; }
+:not(h1, h2, h3, h4) > a:not(:hover) { color: var(--color-accent); }
+:not(h1, h2, h3, h4) > a:hover { color: var(--color-accent-alternate); }
+em {
   font-style: italic;
-  padding-left: 1.1rem;
-  margin: 0 0 0 0.925rem;
 }
-
-figure {
-  margin-top: var(--margin);
-  margin-left: 0;
-  margin-right: 0;
-}
-figure:not(:last-of-type) { margin-bottom: var(--margin); }
-
-pre, code, kbd {
-  background-color: var(--color-background-alternate);
-  border: 0;
-  border-radius: var(--border-radius);
-  font-family: var(--font-code);
-  font-size: calc(var(--font-size) * 0.75);
-  line-height: var(--font-line-height);
-  margin: 0;
-}
-pre { padding: calc(var(--margin) / 2) var(--margin); }
-code, kbd { padding: 0 calc(var(--margin) / 4); }
-pre code { padding: 0; }
-
-table, thead, tbody, tr, th, td {
-  font-size: calc(var(--font-size) * 0.75);
-  text-align: left;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  margin-top: var(--margin);
-}
-table:not(:last-of-type) { margin-bottom: var(--margin); }
-table th, table tr:nth-child(even) { background-color: var(--color-background-alternate); }
-table th, table td {
-  border: 1px solid var(--color-text-alternate);
-  margin: 0;
-  padding: calc(var(--margin) / 2);
-}
-
-mark { background-color: var(--color-highlight); }
-
 hr {
   border: 0;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 hr::before {
   content: "⁂";
   color: var(--color-text-alternate);
   display: flex;
-  font-size: var(--font-size-hint);
   justify-content: center;
 }
-
-.wrapper {
-  margin-right: auto;
-  margin-left: auto;
-  padding: 3rem 15px;
-  position: relative;
-  width: calc(100% - (15px * 2));
+img.logo {
+  display: block;
+  filter: var(--filter-logo);
 }
-@media (min-width: 30em) { .wrapper { width: calc(40em - (15px * 2)); } }
-@media (min-width: 45em) {
-  .wrapper {
-    padding-left: 30px;
-    padding-right: 30px;
-    width: calc(50em - (30px * 2));
-  }
-}
+@media (max-width: 50em) { ul, ol { padding-left: 1.5em; } }
+@media (min-width: 50em) { ul, ol { padding-left: 2em; } }

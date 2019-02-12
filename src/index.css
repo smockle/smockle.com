@@ -1,33 +1,30 @@
 @import "normalize.css";
 
-:root {
-  /* TODO: Remove these when 'prefers-color-scheme' has broader support */
-  --filter-profile: none;
-  --filter-icon: none;
-  --color-section: var(--color-background);
-  --color-section-alternate: var(--color-background-alternate);
-}
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: no-preference), (prefers-color-scheme: light) { */
   :root {
-    --filter-profile: none;
-    --filter-icon: none;
     --color-section: var(--color-background);
-    --color-section-alternate: var(--color-background-alternate);
+    --color-section-alternate: #f8f8f8;
   }
-}
+/* } */
 @media (prefers-color-scheme: dark) {
   :root {
-    --filter-profile: brightness(0.9);
-    --filter-icon: brightness(3.25);
-    --color-section: var(--color-background-alternate);
+    --color-section: #081010;
     --color-section-alternate: var(--color-background);
   }
 }
 
-.alternate { background-color: var(--color-section-alternate); }
+section {
+  overflow: auto;
+}
+section .wrapper {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 section:not(.alternate) { background-color: var(--color-section); }
+.alternate { background-color: var(--color-section-alternate); }
 
 .hero {
+  margin-top: -2rem;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -38,7 +35,7 @@ section:not(.alternate) { background-color: var(--color-section); }
   color: var(--color-section-alternate);
   content: "smocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmocklesmockle";
   font-family: var(--font-title);
-  font-size: 5.85rem;
+  font-size: 3.7rem;
   left: -10vw;
   line-height: 0.7;
   max-width: 110vw;
@@ -51,49 +48,46 @@ section:not(.alternate) { background-color: var(--color-section); }
 .hero .wrapper {
   display: flex;
   justify-content: space-between;
-  z-index: 1;
+  position: relative;
 }
-.hero h1 { margin: 0; }
-.hero .big { font-size: 5rem; }
-.hero em {
+.hero header .big { font-size: 3.7rem; }
+.hero header em {
   display: block;
-  font-size: var(--font-size);
-  margin-top: calc(var(--margin) * 0.4);
-  margin-bottom: calc(var(--margin) * 0.4);
+  margin-top: -0.75rem;
+  margin-bottom: -0.75rem;
 }
-@media (max-width: 50em) { .hero header { margin: 0 auto; } }
+@media (max-width: 50em) {
+  .hero header { margin: 0 auto; }
+}
 @media (min-width: 50em) {
   .hero .profile {
     margin-bottom: -3rem;
-    width: 55%;
+    width: auto;
   }
-  .hero .profile .profile { width: auto; }
+  .hero .profile img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 }
-.hero .profile { filter: var(--filter-profile); }
-
-@media (min-width: 50em) { .mobile-only { display: none; } }
-@media (max-width: 50em) { .desktop-only { display: none; } }
 
 .network-icons {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-left: -5px;
+  margin-bottom: -5px;
 }
-@media (min-width: 30em) { .network-icons { justify-content: space-around; } }
-
+.network-icons a {
+  flex-basis: 20%;
+}
 .network-icon {
+  width: 3.7rem;
   height: auto;
-  width: 5rem;
-  filter: var(--filter-icon);
 }
-@media (max-width: 30em) { .network-icon { margin: 1rem; } }
 
-.footer .wrapper {
-  padding-top: 0;
-}
-.footer .site-meta {
+.site-meta {
   color: var(--color-text-alternate);
-  font-size: var(--font-size-hint);
+  font-size: 0.8rem;
   font-style: italic;
-  text-align: center;
+  line-height: 1.44;
 }

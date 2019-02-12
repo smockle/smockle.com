@@ -6,7 +6,7 @@
 
 - [`src/fonts/lato-black.woff2`](src/fonts/lato-black.woff2) is copyrighted (c) 2010-2015, Łukasz Dziedzic (dziedzic@typoland.com), with Reserved Font Name Lato, and is licensed under the [SIL Open Font License, Version 1.1](LICENSE-OFL-1.1) ([online](https://scripts.sil.org/OFL)).
 
-- [`src/fonts/yrsa-bold.woff2`](src/fonts/yrsa-bold.woff2) and [`src/fonts/yrsa-regular.woff2`](src/fonts/yrsa-regular.woff2) are copyrighted (c) 2016 Yrsa and Rasa Project Authors (info@rosettatype.com) and are licensed under the [SIL Open Font License, Version 1.1](LICENSE-OFL-1.1) ([online](https://scripts.sil.org/OFL)).
+- [`src/fonts/crimsonpros-regular.woff2`](src/fonts/crimsonpros-regular.woff2), [`src/fonts/crimsonpros-bold.woff2`](src/fonts/crimsonpros-bold.woff2) and [`src/fonts/crimsonpros-italic.woff2`](src/fonts/crimsonpros-italic.woff2) are copyrighted (c) 2012-2018 The Crimson Project Developers and are licensed under the [SIL Open Font License, Version 1.1](LICENSE-OFL-1.1) ([online](https://scripts.sil.org/OFL)).
 
 ### SPDX-License-Identifier: CC-BY-4.0
 
@@ -18,4 +18,4 @@
 
 ### All Rights Reserved
 
-- [`src/images/silhouette.jpf`](src/images/silhouette.jpf), [`src/images/silhouette.png`](src/images/silhouette.png), [`src/images/silhouette.webp`](src/images/silhouette.webp), [`src/images/silhouette@2x.jpf`](src/images/silhouette@2x.jpf), [`src/images/silhouette@2x.png`](src/images/silhouette@2x.png), [`src/images/silhouette@2x.webp`](src/images/silhouette@2x.webp), [`src/apple-touch-icon.png`](src/apple-touch-icon.png), [`src/favicon.ico`](src/favicon.ico), [`src/tile-wide.png`](src/tile-wide.png) and [`src/tile.png`](src/tile.png) are copyrighted (c) 2016-2018 Clay Miller, All Rights Reserved.
+- [`src/images/silhouette.jpf`](src/images/silhouette.jpf), [`src/images/silhouette.png`](src/images/silhouette.png), [`src/images/silhouette.webp`](src/images/silhouette.webp), [`src/images/silhouette@2x.jpf`](src/images/silhouette@2x.jpf), [`src/images/silhouette@2x.png`](src/images/silhouette@2x.png), [`src/images/silhouette@2x.webp`](src/images/silhouette@2x.webp), [`src/apple-touch-icon.png`](src/apple-touch-icon.png), [`src/favicon.ico`](src/favicon.ico), [`src/tile-wide.png`](src/tile-wide.png) and [`src/tile.png`](src/tile.png) are copyrighted (c) 2016-2019 Clay Miller, All Rights Reserved.

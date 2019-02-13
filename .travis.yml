@@ -7,7 +7,7 @@ cache:
 notifications:
   email:
     on_success: change
-    on_failure: always
+    on_failure: change
 env:
   global:
     - PATH=$HOME/.local/bin:$PATH

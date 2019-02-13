@@ -7,8 +7,9 @@
 /* @media (prefers-color-scheme: no-preference), (prefers-color-scheme: light) { */
 :root {
   --color-background: white;
+  --color-background-alternate: #F8F8F8;
   --color-text: #222;
-  --color-text-alternate: #757575;
+  --color-text-alternate: #858590;
   --color-accent: #26856d;
   --color-accent-alternate: #5CBBA3;
   --filter-logo: none;
@@ -16,9 +17,10 @@
 /* } */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: #1E1E1E;
+    --color-background: #1F2023;
+    --color-background-alternate: #081010;
     --color-text: #ddd;
-    --color-text-alternate: #757575;
+    --color-text-alternate: #858590;
     --color-accent: #5CBBA3;
     --color-accent-alternate: #84dcc6;
     --filter-logo: saturate(1000%) hue-rotate(-15deg) brightness(0.55);
@@ -72,16 +74,20 @@ html {
 @media (min-width: 50em) {
   html {
     font-size: 22px;
-    padding: 2em 0 0 0;
   }
 }
 @media (max-width: 50em) {
-  .wrapper {
-    margin: 0.8rem;
+  main > :not(:only-child) > *,
+  main > :only-child > * > *,
+  body > :not(main) > * {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 @media (min-width: 50em) {
-  .wrapper {
+  main > :not(:only-child) > *,
+  main > :only-child > * > *,
+  body > :not(main) > * {
     max-width: 675px;
     margin-left: auto;
     margin-right: auto;
@@ -97,9 +103,14 @@ li {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-article,
-main + footer {
+main > :not(:only-child) > :first-child,
+main > :only-child > * > :first-child,
+body > :not(main) > :first-child {
   margin-top: 2rem;
+}
+main > :not(:only-child) > :last-child,
+main > :only-child > * > :last-child,
+body > :not(main) > :last-child {
   margin-bottom: 2rem;
 }
 

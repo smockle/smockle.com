@@ -1,7 +1,9 @@
 {
   "name": "www.smockle.com",
-  "version": "2.0.0",
+  "private": true,
   "description": "Main website of Clay Miller (Smockle): https://smockle.com",
+  "version": "3.0.0",
+  "author": "Clay Miller <clay@smockle.com> (http://www.smockle.com)",
   "dependencies": {},
   "devDependencies": {
     "express": "^4.16.2",
@@ -9,6 +11,7 @@
     "jest-puppeteer": "^4.0.0",
     "puppeteer": "^1.8.0"
   },
+  "license": "SEE LICENSE IN LICENSE.md",
   "scripts": {
     "start": "node scripts/start.js",
     "test": "NODE_ENV=development jest",
@@ -20,10 +23,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smockle/www.smockle.com.git"
+    "url": "git+https://github.com/smockle/www.git"
   },
-  "author": "Clay Miller <clay@smockle.com> (http://www.smockle.com)",
-  "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
     "url": "https://github.com/smockle/www.smockle.com/issues"
   },

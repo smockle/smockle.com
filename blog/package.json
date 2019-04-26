@@ -1,0 +1,39 @@
+{
+  "name": "smockle.com",
+  "private": true,
+  "description": "Main website of Clay Miller (Smockle): https://www.smockle.com",
+  "version": "3.0.0",
+  "author": "Clay Miller <clay@smockle.com> (http://www.smockle.com)",
+  "dependencies": {
+    "gatsby": "^2.3.31",
+    "gatsby-image": "^2.0.40",
+    "gatsby-plugin-manifest": "^2.0.29",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sharp": "^2.0.35",
+    "gatsby-source-filesystem": "^2.0.32",
+    "gatsby-transformer-remark": "^2.3.12",
+    "gatsby-transformer-sharp": "^2.1.18",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0"
+  },
+  "devDependencies": {},
+  "license": "SEE LICENSE IN LICENSE.md",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smockle/www.git"
+  },
+  "bugs": {
+    "url": "https://github.com/smockle/www/issues"
+  },
+  "homepage": "https://github.com/smockle/www#readme"
+}

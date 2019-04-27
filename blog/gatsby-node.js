@@ -1,3 +1,4 @@
+// @ts-check
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 
@@ -31,7 +32,7 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.fields.slug,
-        component: path.resolve("./src/pages/blog/post.js"),
+        component: path.resolve("./src/templates/post.tsx"),
         context: {
           // Data passed to context is available
           // in page queries as GraphQL variables.

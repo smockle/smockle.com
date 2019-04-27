@@ -17,51 +17,51 @@ Next, I added a directory named `hooks` to the root of my project. Inside `hooks
 
 `docker-ee` version `17.x` is installed by default on Docker Hub build infrastructure. The `docker manifest` command was added in `docker-ee` version `18.x`. My **`pre_build`** hook updates `docker-ee` and [prepares for multi-arch builds][5]:
 
-    #!/bin/bash
-    apt-get -y update
-    apt-get -y --only-upgrade install docker-ee
-    docker run \
-      --rm \
-      --privileged \
-      multiarch/qemu-user-static:register --reset
+	#!/bin/bash
+	apt-get -y update
+	apt-get -y --only-upgrade install docker-ee
+	docker run \
+	  --rm \
+	  --privileged \
+	  multiarch/qemu-user-static:register --reset
 
 My **`build`** hook builds and tags images for `armhf` and `amd64` processors. A `build` tag is also created, to support the “Build Tag” option set in the Docker Hub UI:
 
-    #!/bin/bash
-    docker build \
-      --build-arg ARCH="armhf" \
-      -t smockle/ddns53:arm \
-      -f $DOCKERFILE_PATH .
-
-    docker build \
-      --build-arg ARCH="amd64" \
-      -t smockle/ddns53:amd64 \
-      -t smockle/ddns53:$DOCKER_TAG \
-      -f $DOCKERFILE_PATH .
+	#!/bin/bash
+	docker build \
+	  --build-arg ARCH="armhf" \
+	  -t smockle/ddns53:arm \
+	  -f $DOCKERFILE_PATH .
+	
+	docker build \
+	  --build-arg ARCH="amd64" \
+	  -t smockle/ddns53:amd64 \
+	  -t smockle/ddns53:$DOCKER_TAG \
+	  -f $DOCKERFILE_PATH .
 
 My **`pre_push`** hook pushes the architecture-specific images:
 
-    #!/bin/bash
-    docker push smockle/ddns53:arm
-    docker push smockle/ddns53:amd64
+	#!/bin/bash
+	docker push smockle/ddns53:arm
+	docker push smockle/ddns53:amd64
 
 The non-overridable **`push`** step pushes the `build` tag². Finally, my **`post_push`** hook creates a Docker image manifest and publishes it as `latest`:
 
-    #!/bin/bash
-    docker manifest create \
-      smockle/ddns53:latest \
-      smockle/ddns53:amd64 \
-      smockle/ddns53:arm
-
-    docker manifest annotate \
-      smockle/ddns53:latest \
-      smockle/ddns53:arm --os linux --arch arm
-
-    docker manifest annotate \
-      smockle/ddns53:latest \
-      smockle/ddns53:amd64 --os linux --arch amd64
-
-    docker manifest push --purge smockle/ddns53:latest
+	#!/bin/bash
+	docker manifest create \
+	  smockle/ddns53:latest \
+	  smockle/ddns53:amd64 \
+	  smockle/ddns53:arm
+	
+	docker manifest annotate \
+	  smockle/ddns53:latest \
+	  smockle/ddns53:arm --os linux --arch arm
+	
+	docker manifest annotate \
+	  smockle/ddns53:latest \
+	  smockle/ddns53:amd64 --os linux --arch amd64
+	
+	docker manifest push --purge smockle/ddns53:latest
 
 I committed and pushed the `hooks` directory. Back in the Docker Hub UI, I set “Repository Links” to “Enable for Base Image” to rebuild whenever my base image is updated:
 
@@ -69,7 +69,7 @@ I committed and pushed the `hooks` directory. Back in the Docker Hub UI, I set �
 
 I clicked “Save and Build” and waited for the build to complete. After a few minutes, my build succeeded—making my migration from Travis CI to Docker Hub Automated Builds a success³.
 
----
+---- 
 
 ¹ For example, [smockle/ddns53][6]
 
@@ -77,9 +77,9 @@ I clicked “Save and Build” and waited for the build to complete. After a few
 
 ³ As an added bonus, READMEs displayed in the Docker Hub are now updated automatically.
 
-[1]: https://blog.smockle.com/2019/04/21/keeping-systems-up-to-date.html
-[2]: https://docs.docker.com/docker-hub/builds/
-[3]: https://docs.docker.com/engine/reference/commandline/manifest/
-[4]: https://docs.docker.com/docker-hub/builds/advanced/#custom-build-phase-hooks
-[5]: https://hub.docker.com/r/multiarch/qemu-user-static/#binfmt_misc-register
-[6]: https://cloud.docker.com/u/smockle/repository/docker/smockle/ddns53
+[1]:	https://blog.smockle.com/2019/04/21/keeping-systems-up-to-date.html
+[2]:	https://docs.docker.com/docker-hub/builds/
+[3]:	https://docs.docker.com/engine/reference/commandline/manifest/
+[4]:	https://docs.docker.com/docker-hub/builds/advanced/#custom-build-phase-hooks
+[5]:	https://hub.docker.com/r/multiarch/qemu-user-static/#binfmt_misc-register
+[6]:	https://cloud.docker.com/u/smockle/repository/docker/smockle/ddns53

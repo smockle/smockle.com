@@ -154,6 +154,17 @@ img.logo {
   display: block;
   filter: var(--filter-logo);
 }
+html[data-blog] img:not(.logo) {
+  background-color: var(--color-background-alternate); 
+  box-sizing: border-box;
+  display: block;
+  object-fit: cover;
+  padding: 0.25rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+@media (max-width: 50em) { html[data-blog] img:not(.logo) { max-height: 200px; } }
+@media (min-width: 50em) { html[data-blog] img:not(.logo) { max-height: 400px; } }
 blockquote {
   border-left: 0.25rem solid var(--color-background-alternate);
   font-style: italic;

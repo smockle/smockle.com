@@ -1,37 +1,51 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
+import { BlogLayout, Meta, PostMeta } from "../components";
 
-import Layout from "../../components/layout";
-import Meta from "../../components/meta";
+export type BlogPageProps = {
+  data: {
+    allMarkdownRemark: {
+      edges: {
+        node: {
+          id: string;
+          frontmatter: {
+            date: string;
+            title: string;
+          };
+          fields: {
+            string: string;
+            title: string;
+            slug: string;
+          };
+          excerpt: string;
+        };
+      }[];
+    };
+  };
+};
 
-import styles from "./index.module.css";
-
-const IndexPage = ({ data }) => {
+export default function BlogPage({ data }: BlogPageProps) {
   return (
-    <Layout>
+    <BlogLayout>
       <Meta title="Blog" />
       <main>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <article key={node.id}>
-            <p className={styles.postMeta}>
+            <PostMeta>
               <time>{node.frontmatter.date}</time>
-            </p>
+            </PostMeta>
 
             <h1>
-              <Link className={styles.postLink} to={node.fields.slug}>
-                {node.frontmatter.title}
-              </Link>
+              <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
             </h1>
 
             <p>{node.excerpt}</p>
           </article>
         ))}
       </main>
-    </Layout>
+    </BlogLayout>
   );
-};
-
-export default IndexPage;
+}
 
 export const query = graphql`
   query {
@@ -47,7 +61,7 @@ export const query = graphql`
           fields {
             slug
           }
-          excerpt
+          excerpt(pruneLength: 280)
         }
       }
     }

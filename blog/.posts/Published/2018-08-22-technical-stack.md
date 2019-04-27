@@ -1,4 +1,4 @@
----
+---  
 title: Technical Stack
 date: "2018-08-22"
 ---
@@ -18,11 +18,10 @@ As I edit Markdown files in Ulysses, Dropbox notifies an AWS API Gateway. A chai
 ³ [smockle/dropblog][1]
 
 ⁴ For example:
+* External Swagger files don’t support stage variables or pseudo parameters: [awslabs/serverless-application-model#345][2]
+* S3-Lambda permissions and policies that reference S3 bucket names are mutually-exclusive, [unable-validate-circular-dependency-cloudformation][3] notwithstanding
+* Neither `Fn::GetAtt` nor `Ref` return ARNs for all resources
 
-- External Swagger files don’t support stage variables or pseudo parameters: [awslabs/serverless-application-model#345][2]
-- S3-Lambda permissions and policies that reference S3 bucket names are mutually-exclusive, [unable-validate-circular-dependency-cloudformation][3] notwithstanding
-- Neither `Fn::GetAtt` nor `Ref` return ARNs for all resources
-
-[1]: https://github.com/smockle/dropblog
-[2]: https://github.com/awslabs/serverless-application-model/issues/345
-[3]: https://aws.amazon.com/premiumsupport/knowledge-center/unable-validate-circular-dependency-cloudformation/
+[1]:	https://github.com/smockle/dropblog
+[2]:	https://github.com/awslabs/serverless-application-model/issues/345
+[3]:	https://aws.amazon.com/premiumsupport/knowledge-center/unable-validate-circular-dependency-cloudformation/

@@ -1,23 +1,34 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { BlogLayout, Meta, PostMeta } from "../components";
 
-import Layout from "../../components/layout";
-import Meta from "../../components/meta";
+export type PostProps = {
+  data: {
+    markdownRemark: {
+      frontmatter: {
+        title: string;
+        date: string;
+      };
+      html: string;
+    };
+  };
+};
 
-const Post = ({ data }) => {
+export default function Post({ data }: PostProps) {
   const post = data.markdownRemark;
   return (
-    <Layout>
+    <BlogLayout>
       <Meta title={post.frontmatter.title} />
       <div>
+        <PostMeta>
+          <time>{post.frontmatter.date}</time>
+        </PostMeta>
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
-    </Layout>
+    </BlogLayout>
   );
-};
-
-export default Post;
+}
 
 export const query = graphql`
   query($slug: String!) {
@@ -25,6 +36,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date(formatString: "MMM D, YYYY")
       }
     }
   }

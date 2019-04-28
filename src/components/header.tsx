@@ -1,11 +1,10 @@
 import React from "react";
-import { Link } from "@reach/router";
 
 export function Header() {
   return (
     <header role="banner">
       <div>
-        <Link rel="author" to={process.env.BLOG_URL}>
+        <a rel="author" href={process.env.BLOG_URL}>
           <img
             className="logo"
             alt="logo"
@@ -13,7 +12,7 @@ export function Header() {
             height="48"
             width="48"
           />
-        </Link>
+        </a>
       </div>
     </header>
   );

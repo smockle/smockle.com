@@ -53,7 +53,7 @@ export default function HomePage() {
             I love long-term thinking, and I enjoy working on projects with
             lasting impact. To discern what lasts, I study ideas and behaviors
             that have persisted throughout history. I write about this at{" "}
-            <Link to={process.env.BLOG_URL}>blog.smockle.com</Link>.
+            <a href={process.env.BLOG_URL}>blog.smockle.com</a>.
           </p>
 
           <p>
@@ -73,11 +73,13 @@ export default function HomePage() {
 
           <p>
             Here is the{" "}
-            <Link
-              to={`${process.env.BLOG_URL}2018/09/08/philosophy-reading-list/`}
+            <a
+              href={`${
+                process.env.BLOG_URL
+              }2018/09/08/philosophy-reading-list/`}
             >
               complete reading list
-            </Link>
+            </a>
             .
           </p>
         </article>
@@ -85,13 +87,13 @@ export default function HomePage() {
         <article className={styles.alternate}>
           <h1>Thought-Haver.</h1>
           <div data-test-id="network-icons" className={styles.networkIcons}>
-            <Link to={process.env.BLOG_URL} title="Smockle Blog">
+            <a href={process.env.BLOG_URL} title="Smockle Blog">
               <img
                 alt="Smockle Blog"
                 className={styles.networkIcon}
                 src={require("../../images/rss.svg")}
               />
-            </Link>
+            </a>
             <a href="mailto:clay@smockle.com" title="Email">
               <img
                 alt="Email"

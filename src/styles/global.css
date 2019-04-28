@@ -149,7 +149,7 @@ img.logo {
   display: block;
   filter: var(--filter-logo);
 }
-img:not(.logo) {
+html[data-blog] img:not(.logo) {
   display: block;
   object-fit: cover;
   width: 100%;

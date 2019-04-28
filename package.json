@@ -1,19 +1,45 @@
 {
-  "name": "www.smockle.com",
+  "name": "smockle.com",
   "private": true,
-  "description": "Main website of Clay Miller (Smockle): https://smockle.com",
+  "description": "Main website of Clay Miller (Smockle): https://www.smockle.com",
   "version": "3.0.0",
   "author": "Clay Miller <clay@smockle.com> (http://www.smockle.com)",
-  "dependencies": {},
+  "dependencies": {
+    "gatsby": "^2.3.31",
+    "gatsby-image": "^2.0.40",
+    "gatsby-plugin-feed": "^2.1.1",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-remove-trailing-slashes": "^2.0.11",
+    "gatsby-plugin-sharp": "^2.0.35",
+    "gatsby-plugin-typescript": "^2.0.13",
+    "gatsby-plugin-typescript-checker": "^1.0.3",
+    "gatsby-remark-copy-linked-files": "^2.0.12",
+    "gatsby-remark-images": "^3.0.11",
+    "gatsby-source-filesystem": "^2.0.32",
+    "gatsby-transformer-remark": "^2.3.12",
+    "gatsby-transformer-sharp": "^2.1.18",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0",
+    "typescript": "^3.4.5"
+  },
   "devDependencies": {
-    "express": "^4.16.2",
+    "@types/node": "^11.13.8",
+    "@types/react": "^16.8.14",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-helmet": "^5.0.8",
+    "@typescript-eslint/eslint-plugin": "^1.7.0",
+    "@typescript-eslint/parser": "^1.7.0",
     "jest": "^24.1.0",
     "jest-puppeteer": "^4.0.0",
     "puppeteer": "^1.8.0"
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "scripts": {
-    "start": "node scripts/start.js",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
     "test": "NODE_ENV=development jest",
     "test:staging": "NODE_ENV=staging jest",
     "test:production": "NODE_ENV=production jest",
@@ -26,9 +52,9 @@
     "url": "git+https://github.com/smockle/www.git"
   },
   "bugs": {
-    "url": "https://github.com/smockle/www.smockle.com/issues"
+    "url": "https://github.com/smockle/www/issues"
   },
-  "homepage": "https://github.com/smockle/www.smockle.com#readme",
+  "homepage": "https://github.com/smockle/www#readme",
   "jest": {
     "preset": "jest-puppeteer"
   }

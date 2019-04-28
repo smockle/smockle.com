@@ -1,8 +1,8 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import { BlogLayout, Meta, PostMeta } from "../components";
+import { BlogLayout, Meta, PostMeta } from "../../components";
 
-export type BlogPageProps = {
+export type PostsPageProps = {
   data: {
     allMarkdownRemark: {
       edges: {
@@ -24,7 +24,7 @@ export type BlogPageProps = {
   };
 };
 
-export default function BlogPage({ data }: BlogPageProps) {
+export default function PostsPage({ data }: PostsPageProps) {
   return (
     <BlogLayout>
       <Meta title="Blog" />

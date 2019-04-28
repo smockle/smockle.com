@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { BlogLayout, Meta, PostMeta } from "../components";
 
-export type PostProps = {
+export type PostPageProps = {
   data: {
     markdownRemark: {
       frontmatter: {
@@ -14,18 +14,27 @@ export type PostProps = {
   };
 };
 
-export default function Post({ data }: PostProps) {
+export default function PostPage({ data }: PostPageProps) {
   const post = data.markdownRemark;
   return (
     <BlogLayout>
       <Meta title={post.frontmatter.title} />
-      <div>
-        <PostMeta>
-          <time>{post.frontmatter.date}</time>
-        </PostMeta>
-        <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+      <main>
+        <div>
+          <article itemScope itemType="http://schema.org/BlogPosting">
+            <header>
+              <PostMeta>
+                <time itemProp="datePublished">{post.frontmatter.date}</time>
+              </PostMeta>
+              <h1 itemProp="name headline">{post.frontmatter.title}</h1>
+            </header>
+            <div
+              dangerouslySetInnerHTML={{ __html: post.html }}
+              itemProp="articleBody"
+            />
+          </article>
+        </div>
+      </main>
     </BlogLayout>
   );
 }

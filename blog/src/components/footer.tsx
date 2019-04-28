@@ -13,9 +13,8 @@ export function Footer() {
             href="http://creativecommons.org/licenses/by/4.0/legalcode"
           >
             CC-BY-4.0
-          </a>
-          &#32;~&#32;
-          <a href="/feed.xml">RSS</a>
+          </a>{" "}
+          ~ <a href="/feed.xml">RSS</a>
         </PostMeta>
       </div>
     </footer>

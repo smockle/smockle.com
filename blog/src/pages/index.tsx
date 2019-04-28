@@ -1,6 +1,7 @@
 import React from "react";
 import { HomeLayout, Meta, PostMeta } from "../components";
-import styles from "./home.module.css";
+import styles from "./index.module.css";
+import { Link } from "@reach/router";
 
 export default function HomePage() {
   return (
@@ -52,7 +53,7 @@ export default function HomePage() {
             I love long-term thinking, and I enjoy working on projects with
             lasting impact. To discern what lasts, I study ideas and behaviors
             that have persisted throughout history. I write about this at{" "}
-            <a href={`${process.env.BLOG_URL}`}>blog.smockle.com</a>.
+            <Link to="/blog">blog.smockle.com</Link>.
           </p>
 
           <p>
@@ -72,14 +73,9 @@ export default function HomePage() {
 
           <p>
             Here is the{" "}
-            <a
-              href={`${
-                process.env.BLOG_URL
-              }/2018/09/08/philosophy-reading-list.html`}
-            >
-              {" "}
+            <Link to="/blog/2018/09/08/philosophy-reading-list">
               complete reading list
-            </a>
+            </Link>
             .
           </p>
         </article>
@@ -87,13 +83,13 @@ export default function HomePage() {
         <article className={styles.alternate}>
           <h1>Thought-Haver.</h1>
           <div className={styles.networkIcons}>
-            <a href={`${process.env.BLOG_URL}`} title="Smockle Blog">
+            <Link to="/blog" title="Smockle Blog">
               <img
                 alt="Smockle Blog"
                 className={styles.networkIcon}
                 src={require("../images/rss.svg")}
               />
-            </a>
+            </Link>
             <a href="mailto:clay@smockle.com" title="Email">
               <img
                 alt="Email"

@@ -6,5 +6,5 @@ export type PostMetaProps = {
 };
 
 export function PostMeta({ children }: PostMetaProps) {
-  return <div className={styles.postMeta}>{children}</div>;
+  return <p className={styles.postMeta}>{children}</p>;
 }

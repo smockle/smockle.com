@@ -81,7 +81,6 @@ html {
 @media (max-width: 50em) {
   main > :not(:only-child) > *,
   main > :only-child > * > *,
-  body > :not(main):not(#___gatsby) > *,
   #___gatsby > div[role="group"] > :not(main) > * {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -90,7 +89,6 @@ html {
 @media (min-width: 50em) {
   main > :not(:only-child) > *,
   main > :only-child > * > *,
-  body > :not(main):not(#___gatsby) > *,
   #___gatsby > div[role="group"] > :not(main) > * {
     max-width: 675px;
     margin-left: auto;
@@ -109,13 +107,10 @@ li {
 }
 main > :not(:only-child) > :first-child,
 main > :only-child > * > :first-child,
-body > :not(main):not(#___gatsby) > :first-child,
-#___gatsby > div[role="group"] > :not(main) > :first-child {
+#___gatsby > div[role="group"] > :not(main):not(:last-child) > :first-child {
   margin-top: 2rem;
 }
 main > :not(:only-child) > :last-child,
-main > :only-child > * > :last-child,
-body > :not(main):not(#___gatsby) > :last-child,
 #___gatsby > div[role="group"] > :not(main) > :last-child {
   margin-bottom: 2rem;
 }

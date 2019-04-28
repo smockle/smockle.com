@@ -27,13 +27,6 @@ export const handler = (event, _, callback) => {
       ]
     },
     ...((request.uri.endsWith(".html") || request.uri.endsWith("/")) && {
-      "content-security-policy": [
-        {
-          key: "Content-Security-Policy",
-          value:
-            "default-src 'none'; script-src 'none'; connect-src 'self'; worker-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self';"
-        }
-      ],
       "x-frame-options": [
         {
           key: "X-Frame-Options",

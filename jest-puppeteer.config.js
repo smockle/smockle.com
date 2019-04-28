@@ -2,7 +2,7 @@ const servers = {
   development: {
     server: {
       command: "npm start",
-      port: 3000
+      port: 8000
     }
   }
 };

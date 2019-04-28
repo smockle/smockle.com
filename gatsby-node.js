@@ -10,7 +10,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const [, year, month, day, title] = filename.match(
       /^\/([\d]{4})-([\d]{2})-([\d]{2})-{1}(.+)\/$/
     );
-    const slug = `/blog/${year}/${month}/${day}/${title}`;
+    const slug = `/blog/${year}/${month}/${day}/${title}/`;
 
     createNodeField({ node, name: "slug", value: slug });
 

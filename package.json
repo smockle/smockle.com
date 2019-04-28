@@ -9,7 +9,6 @@
     "gatsby-image": "^2.0.40",
     "gatsby-plugin-feed": "^2.1.1",
     "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-remove-trailing-slashes": "^2.0.11",
     "gatsby-plugin-sharp": "^2.0.35",
     "gatsby-plugin-typescript": "^2.0.13",
     "gatsby-plugin-typescript-checker": "^1.0.3",

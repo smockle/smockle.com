@@ -1,6 +1,5 @@
 ---
 title: Philosophy Reading List
-date: "2018-09-08"
 ---
 
 I’m studying ideas and behaviors that have persisted throughout history. For the next two years, I’m perusing classic works of philosophy.

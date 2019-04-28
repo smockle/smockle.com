@@ -7,6 +7,8 @@ export type PostPageProps = {
     markdownRemark: {
       frontmatter: {
         title: string;
+      };
+      fields: {
         date: string;
       };
       html: string;
@@ -24,7 +26,7 @@ export default function PostPage({ data }: PostPageProps) {
           <article itemScope itemType="http://schema.org/BlogPosting">
             <header>
               <PostMeta>
-                <time itemProp="datePublished">{post.frontmatter.date}</time>
+                <time itemProp="datePublished">{post.fields.date}</time>
               </PostMeta>
               <h1 itemProp="name headline">{post.frontmatter.title}</h1>
             </header>
@@ -45,6 +47,8 @@ export const query = graphql`
       html
       frontmatter {
         title
+      }
+      fields {
         date(formatString: "MMM D, YYYY")
       }
     }

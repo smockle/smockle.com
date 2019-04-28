@@ -1,6 +1,5 @@
 ---
 title: Keeping systems up-to-date
-date: "2019-04-21"
 ---
 
 When I set up a new home server, **[unattended-upgrades][1]** is one of the first packages I install¹. The service watches for package updates and installs them automatically. It makes keeping up with security patches and bug fixes easy, but only for system packages. If you run services inside Docker containers, you’ll need to look elsewhere.

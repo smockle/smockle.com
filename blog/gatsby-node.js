@@ -5,11 +5,20 @@ const { createFilePath } = require("gatsby-source-filesystem");
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === "MarkdownRemark") {
-    const slug = createFilePath({ node, getNode, basePath: "posts" });
+    const filename = createFilePath({ node, getNode, basePath: "posts" });
+
+    const [, year, month, day, title] = filename.match(
+      /^\/([\d]{4})-([\d]{2})-([\d]{2})-{1}(.+)\/$/
+    );
+    const slug = `/blog/${year}/${month}/${day}/${title}`;
+
+    createNodeField({ node, name: "slug", value: slug });
+
+    // save the date for later use
     createNodeField({
       node,
-      name: "slug",
-      value: `/blog${slug}`
+      name: "date",
+      value: new Date(`${year}-${month}-${day}`)
     });
   }
 };
@@ -36,7 +45,8 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           // Data passed to context is available
           // in page queries as GraphQL variables.
-          slug: node.fields.slug
+          slug: node.fields.slug,
+          date: node.fields.date
         }
       });
     });

@@ -9,13 +9,13 @@ export type PostsPageProps = {
         node: {
           id: string;
           frontmatter: {
-            date: string;
             title: string;
           };
           fields: {
             string: string;
             title: string;
             slug: string;
+            date: string;
           };
           excerpt: string;
         };
@@ -32,7 +32,7 @@ export default function PostsPage({ data }: PostsPageProps) {
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <article key={node.id}>
             <PostMeta>
-              <time>{node.frontmatter.date}</time>
+              <time>{node.fields.date}</time>
             </PostMeta>
 
             <h1>
@@ -49,17 +49,17 @@ export default function PostsPage({ data }: PostsPageProps) {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [fields___date], order: DESC }) {
       totalCount
       edges {
         node {
           id
           frontmatter {
             title
-            date(formatString: "MMM D, YYYY")
           }
           fields {
             slug
+            date(formatString: "MMM D, YYYY")
           }
           excerpt(pruneLength: 280)
         }

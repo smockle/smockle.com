@@ -39,9 +39,9 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "NODE_ENV=development jest",
-    "test:staging": "NODE_ENV=staging jest",
-    "test:production": "NODE_ENV=production jest",
+    "test": "NODE_ENV=development jest scripts/test.js",
+    "test:staging": "NODE_ENV=staging jest scripts/test.js",
+    "test:production": "NODE_ENV=production jest scripts/test.js",
     "deploy:staging": "bash scripts/deploy.sh . s3://staging.smockle.com",
     "promote": "bash scripts/deploy.sh s3://staging.smockle.com s3://www.smockle.com",
     "deploy:production": "bash scripts/deploy.sh . s3://www.smockle.com"

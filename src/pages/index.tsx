@@ -82,7 +82,7 @@ export default function HomePage() {
 
         <article className={styles.alternate}>
           <h1>Thought-Haver.</h1>
-          <div className={styles.networkIcons}>
+          <div data-test-id="network-icons" className={styles.networkIcons}>
             <Link to="/blog/" title="Smockle Blog">
               <img
                 alt="Smockle Blog"

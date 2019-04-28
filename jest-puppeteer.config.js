@@ -1,8 +1,9 @@
 const servers = {
   development: {
     server: {
-      command: "npm start",
-      port: 8000
+      command: "npm run build && npm run serve",
+      port: 9000,
+      launchTimeout: 20000
     }
   }
 };

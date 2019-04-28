@@ -1,5 +1,3 @@
-"use strict";
-
 export const handler = (event, _, callback) => {
   // Get contents of request & response
   const request = event.Records[0].cf.request;

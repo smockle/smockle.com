@@ -1,120 +1,69 @@
 import React from "react";
-import { HomeLayout, Meta, PostMeta } from "../components";
-import styles from "./index.module.css";
-import { Link } from "@reach/router";
+import { Link, graphql } from "gatsby";
+import { BlogLayout, Meta, PostMeta } from "../components";
 
-export default function HomePage() {
+export type PostsPageProps = {
+  data: {
+    allMarkdownRemark: {
+      edges: {
+        node: {
+          id: string;
+          frontmatter: {
+            title: string;
+          };
+          fields: {
+            string: string;
+            title: string;
+            slug: string;
+            date: string;
+          };
+          excerpt: string;
+        };
+      }[];
+    };
+  };
+};
+
+export default function PostsPage({ data }: PostsPageProps) {
   return (
-    <HomeLayout>
-      <Meta title="Home" />
-      <header className={styles.hero}>
-        <div>
-          <aside>
-            <h1 className={styles.h0}>SALUT!</h1>
-            <em>I’m</em>
-            <h1>Clay Miller.</h1>
-          </aside>
-          <picture>
-            <source
-              media="(min-width: 50em)"
-              srcSet={`${require("../images/silhouette.webp")} 485w, ${require("../images/silhouette@2x.webp")} 970w`}
-              sizes="(min-width: 50em) 485px, 0px"
-              type="image/webp"
-            />
-            <source
-              media="(min-width: 50em)"
-              srcSet={`${require("../images/silhouette.jpf")} 485w, ${require("../images/silhouette@2x.jpf")} 970w`}
-              sizes="(min-width: 50em) 485px, 0px"
-              type="image/jp2"
-            />
-            <source
-              media="(min-width: 50em)"
-              srcSet={`${require("../images/silhouette.png")} 485w, ${require("../images/silhouette@2x.png")} 970w`}
-              sizes="(min-width: 50em) 485px, 0px"
-              type="image/png"
-            />
-            <img
-              alt="Clay Miller"
-              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-            />
-          </picture>
-        </div>
-      </header>
+    <BlogLayout>
+      <Meta title="Blog" />
       <main>
-        <article className={styles.alternate}>
-          <h1>Builder.</h1>
-          <p>
-            Currently, I develop web-based projects at Microsoft. I focus on
-            human-computer interaction and assistive technologies. I write a lot
-            of TypeScript.
-          </p>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <article key={node.id}>
+            <PostMeta>
+              <time>{node.fields.date}</time>
+            </PostMeta>
 
-          <p>
-            I love long-term thinking, and I enjoy working on projects with
-            lasting impact. To discern what lasts, I study ideas and behaviors
-            that have persisted throughout history. I write about this at{" "}
-            <Link to="/blog/">blog.smockle.com</Link>.
-          </p>
+            <h1>
+              <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+            </h1>
 
-          <p>
-            Drop me a line, especially if you have a book or podcast
-            recommendation!
-          </p>
-        </article>
-
-        <article>
-          <h1>Explorer.</h1>
-          <p>
-            This year, I’m perusing classic works of philosophy, starting with
-            the ancient Greeks. My first purchase was{" "}
-            <i>The Collected Dialogues of Plato: Including the Letters</i> (eds.
-            Hamilton &amp; Cairns).
-          </p>
-
-          <p>
-            Here is the{" "}
-            <Link to="/blog/2018/09/08/philosophy-reading-list/">
-              complete reading list
-            </Link>
-            .
-          </p>
-        </article>
-
-        <article className={styles.alternate}>
-          <h1>Thought-Haver.</h1>
-          <div data-test-id="network-icons" className={styles.networkIcons}>
-            <Link to="/blog/" title="Smockle Blog">
-              <img
-                alt="Smockle Blog"
-                className={styles.networkIcon}
-                src={require("../images/rss.svg")}
-              />
-            </Link>
-            <a href="mailto:clay@smockle.com" title="Email">
-              <img
-                alt="Email"
-                className={styles.networkIcon}
-                src={require("../images/email.svg")}
-              />
-            </a>
-            <a href="https://github.com/smockle" title="GitHub">
-              <img
-                alt="GitHub"
-                className={styles.networkIcon}
-                src={require("../images/github.svg")}
-              />
-            </a>
-            <a href="https://linkedin.com/in/smockle" title="LinkedIn">
-              <img
-                alt="LinkedIn"
-                className={styles.networkIcon}
-                src={require("../images/linkedin.svg")}
-              />
-            </a>
-          </div>
-          <PostMeta>&copy; {new Date().getFullYear()} Clay Miller</PostMeta>
-        </article>
+            <p>{node.excerpt}</p>
+          </article>
+        ))}
       </main>
-    </HomeLayout>
+    </BlogLayout>
   );
 }
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: [fields___date], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+          }
+          fields {
+            slug
+            date(formatString: "MMM D, YYYY")
+          }
+          excerpt(pruneLength: 280)
+        }
+      }
+    }
+  }
+`;

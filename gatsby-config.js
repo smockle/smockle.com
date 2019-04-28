@@ -1,9 +1,12 @@
+const title = "Smockle Blog";
+const siteUrl = "https://blog.smockle.com";
+
 module.exports = {
   siteMetadata: {
-    title: "Smockle Blog",
+    title,
     description: "I’m Clay Miller. Builder. Explorer. Thought-Haver.",
     author: "@smockled",
-    siteUrl: "https://blog.smockle.com"
+    siteUrl
   },
   plugins: [
     "gatsby-plugin-typescript",
@@ -53,8 +56,8 @@ module.exports = {
                 ...{
                   description: node.excerpt,
                   date: node.fields.date,
-                  url: `${site.siteMetadata.siteUrl}${node.fields.slug}`,
-                  guid: `${site.siteMetadata.siteUrl}${node.fields.slug}`,
+                  url: `${siteUrl}${node.fields.slug}`,
+                  guid: `${siteUrl}${node.fields.slug}`,
                   custom_elements: [{ "content:encoded": node.html }]
                 }
               })),
@@ -79,8 +82,8 @@ module.exports = {
               }
             }
           `,
-            output: "/blog/feed.xml",
-            title: "Smockle Blog RSS Feed"
+            output: "/feed.xml",
+            title: `${title} RSS Feed`
           }
         ]
       }

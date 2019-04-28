@@ -5,7 +5,7 @@ export function Header() {
   return (
     <header role="banner">
       <div>
-        <Link rel="author" to="/blog/">
+        <Link rel="author" to={process.env.BLOG_URL}>
           <img
             className="logo"
             alt="logo"

@@ -1,4 +1,4 @@
-export const handler = (event, _, callback) => {
+exports.handler = (event, _, callback) => {
   // Get contents of request & response
   const request = event.Records[0].cf.request;
   const response = event.Records[0].cf.response;

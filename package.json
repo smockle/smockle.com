@@ -48,12 +48,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smockle/www.git"
+    "url": "git+https://github.com/smockle/smockle.com.git"
   },
   "bugs": {
-    "url": "https://github.com/smockle/www/issues"
+    "url": "https://github.com/smockle/smockle.com/issues"
   },
-  "homepage": "https://github.com/smockle/www#readme",
+  "homepage": "https://github.com/smockle/smockle.com#readme",
   "jest": {
     "preset": "jest-puppeteer"
   }

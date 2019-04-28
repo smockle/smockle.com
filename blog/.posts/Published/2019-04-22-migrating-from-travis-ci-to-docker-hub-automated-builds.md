@@ -10,7 +10,7 @@ The migration process was straightforward, with one complication—I build multi
 
 First, I configured Automated Builds in the Docker Hub UI. I changed the value of “Build Tag” from `latest` to `build` and added set the “Environment Variable” `DOCKER_CLI_EXPERIMENTAL` to `enabled`:
 
-/2019-04-22-migrating-from-travis-ci-to-docker-hub-automated-builds/build-settings.png
+![Build settings](/2019-04-22-migrating-from-travis-ci-to-docker-hub-automated-builds/build-settings.png)
 
 Next, I added a directory named `hooks` to the root of my project. Inside `hooks`, I created four files—`pre_build`, `build`, `pre_push` and `post_push`.
 
@@ -64,7 +64,7 @@ The non-overridable **`push`** step pushes the `build` tag². Finally, my **`pos
 
 I committed and pushed the `hooks` directory. Back in the Docker Hub UI, I set “Repository Links” to “Enable for Base Image” to rebuild whenever my base image is updated:
 
-/2019-04-22-migrating-from-travis-ci-to-docker-hub-automated-builds/repository-links.png
+![Repository Links](/2019-04-22-migrating-from-travis-ci-to-docker-hub-automated-builds/repository-links.png)
 
 I clicked “Save and Build” and waited for the build to complete. After a few minutes, my build succeeded—making my migration from Travis CI to Docker Hub Automated Builds a success³.
 

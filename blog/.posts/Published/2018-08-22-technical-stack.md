@@ -1,6 +1,5 @@
 ---  
 title: Technical Stack
-date: "2018-08-22"
 ---
 
 At a friend’s request, here is an overview of this blog’s technical stack.

@@ -149,17 +149,29 @@ img.logo {
   display: block;
   filter: var(--filter-logo);
 }
-html[data-blog] img:not(.logo) {
-  background-color: var(--color-background-alternate); 
-  box-sizing: border-box;
+img:not(.logo) {
   display: block;
   object-fit: cover;
-  padding: 0.25rem;
-  margin-top: 1rem;
   width: 100%;
 }
-@media (max-width: 50em) { html[data-blog] img:not(.logo) { max-height: 200px; } }
-@media (min-width: 50em) { html[data-blog] img:not(.logo) { max-height: 400px; } }
+.gatsby-resp-image-wrapper,
+html[data-blog] :not(.gatsby-resp-image-wrapper) > :not(picture) > img:not(.logo) {
+  border: 0.25rem solid var(--color-background-alternate);
+  box-sizing: border-box;
+  margin-top: 1rem;
+}
+@media (max-width: 50em) {
+  .gatsby-resp-image-wrapper
+  html[data-blog] :not(.gatsby-resp-image-wrapper) > :not(picture) > img:not(.logo) {
+    max-height: 200px;
+  }
+}
+@media (min-width: 50em) {
+  .gatsby-resp-image-wrapper
+  html[data-blog] :not(.gatsby-resp-image-wrapper) > :not(picture) > img:not(.logo) {
+    max-height: 400px;
+  }
+}
 blockquote {
   border-left: 0.25rem solid var(--color-background-alternate);
   font-style: italic;

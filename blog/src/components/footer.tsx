@@ -14,7 +14,7 @@ export function Footer() {
           >
             CC-BY-4.0
           </a>{" "}
-          ~ <a href="/feed.xml">RSS</a>
+          ~ <a href="/blog/feed.xml">RSS</a>
         </PostMeta>
       </div>
     </footer>

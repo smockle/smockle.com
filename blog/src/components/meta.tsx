@@ -28,6 +28,7 @@ export function Meta({
             title
             description
             author
+            siteUrl
           }
         }
       }
@@ -46,6 +47,12 @@ export function Meta({
           }}
           title={title}
           titleTemplate={`%s | ${site.siteMetadata.title}`}
+          link={[
+            {
+              rel: "apple-touch-icon",
+              href: "apple-touch-icon.png"
+            }
+          ]}
           meta={[
             {
               name: "description",
@@ -66,6 +73,10 @@ export function Meta({
             {
               property: "og:type",
               content: "website"
+            },
+            {
+              property: "og:site_url",
+              content: site.siteMetadata.siteUrl
             },
             {
               name: "twitter:card",

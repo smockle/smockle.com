@@ -23,7 +23,7 @@ I received a shipment of Philips Hue bulbs with broken glass diffusers. Unwillin
 The IKEA plastic diffuser from the bulb I linked above fits well and diffuses the Philips LED light well, in my opinion.
 
 Here is a photo of the finished result:
-/2018-12-30-replacing-the-diffuser-on-a-philips-hue-bulb/bulb.jpg
+![Philips Hue bulb with replaced diffuser](/2018-12-30-replacing-the-diffuser-on-a-philips-hue-bulb/bulb.jpg)
 
 [1]:	https://blog.smockle.com/2018/09/08/philosophy-reading-list.html
 [2]:	https://www.amazon.com/gp/aw/d/B01IX9NSEY

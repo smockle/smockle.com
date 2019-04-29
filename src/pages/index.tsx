@@ -52,8 +52,8 @@ export default function HomePage() {
           <p>
             I love long-term thinking, and I enjoy working on projects with
             lasting impact. To discern what lasts, I study ideas and behaviors
-            that have persisted throughout history. I write about this at{" "}
-            <Link to="/blog/">smockle.com/blog/</Link>.
+            that have persisted throughout history. I write about this on{" "}
+            <Link to="/blog/">my blog</Link>.
           </p>
 
           <p>

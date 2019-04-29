@@ -53,8 +53,8 @@ module.exports = {
                 ...{
                   description: node.excerpt,
                   date: node.fields.date,
-                  url: `https://www.smockle.com/blog/${node.fields.slug}`,
-                  guid: `https://www.smockle.com/blog/${node.fields.slug}`,
+                  url: `https://www.smockle.com${node.fields.slug}`,
+                  guid: `https://www.smockle.com${node.fields.slug}`,
                   custom_elements: [{ "content:encoded": node.html }]
                 }
               })),

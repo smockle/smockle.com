@@ -76,7 +76,7 @@ I clicked “Save and Build” and waited for the build to complete. After a few
 
 ³ As an added bonus, READMEs displayed in the Docker Hub are now updated automatically.
 
-[1]:	https://blog.smockle.com/2019/04/21/keeping-systems-up-to-date.html
+[1]:	https://www.smockle.com/blog/2019/04/21/keeping-systems-up-to-date/
 [2]:	https://docs.docker.com/docker-hub/builds/
 [3]:	https://docs.docker.com/engine/reference/commandline/manifest/
 [4]:	https://docs.docker.com/docker-hub/builds/advanced/#custom-build-phase-hooks

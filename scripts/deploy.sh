@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
+SOURCE=$1
+TARGET=$2
+
 # Change to directory containing files
-if [ -d "public" ]; then
+if [ "${SOURCE}" == "." ] && [ -d "public" ]; then
   cd public
 else
   exit 1
 fi
-
-SOURCE=$1
-TARGET=$2
 
 # Sync other files
 aws s3 sync "${SOURCE}" "${TARGET}" --region us-west-2 --acl public-read --cache-control 'max-age=31536000, immutable' --exclude '*.svg' --exclude '*.ico' --exclude '*.css' --exclude '*.html'

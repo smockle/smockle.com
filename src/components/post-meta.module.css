@@ -1,0 +1,9 @@
+.post-meta {
+  color: var(--color-text-alternate);
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.44;
+}
+main .post-meta {
+  margin-bottom: -1rem;
+}

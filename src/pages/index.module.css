@@ -1,5 +1,3 @@
-@import "normalize.css";
-
 /* @media (prefers-color-scheme: no-preference), (prefers-color-scheme: light) { */
   :root {
     --filter-profile: none;
@@ -17,7 +15,7 @@
   }
 }
 
-html { background-color: var(--color-section); }
+html:not([data-blog]) { background-color: var(--color-section); }
 .alternate {
   background-color: var(--color-section-alternate);
   overflow: auto;
@@ -86,12 +84,4 @@ html { background-color: var(--color-section); }
 @media (min-width: 50em) {
   .network-icons a { flex-basis: 20%; }
   .network-icon { width: 3.7rem; }
-}
-
-.site-meta {
-  color: var(--color-text-alternate);
-  font-size: 0.8rem;
-  font-style: italic;
-  line-height: 1.44;
-
 }

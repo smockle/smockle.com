@@ -2,8 +2,8 @@
 set -eo pipefail
 
 # Change to directory containing files
-if [ -d "src" ]; then
-  cd src
+if [ -d "public" ]; then
+  cd public
 fi
 
 SOURCE=$1

@@ -1,11 +1,11 @@
 const sites = {
-  development: "http://localhost:3000",
+  development: "http://localhost:9000",
   staging: "https://staging.smockle.com",
   production: "https://www.smockle.com"
 };
-const site = sites[process.env.NODE_ENV] || "http://localhost:3000";
+const site = sites[process.env.NODE_ENV] || "http://localhost:9000";
 
-describe("index.html", () => {
+describe("/", () => {
   beforeAll(async () => {
     await page.goto(site);
   });
@@ -19,7 +19,10 @@ describe("index.html", () => {
   });
 
   it("has links in the 'Networker.' section", async () => {
-    const length = await page.$$eval(".network-icons a", x => x.length);
+    const length = await page.$$eval(
+      "[data-test-id=network-icons] a",
+      x => x.length
+    );
     expect(length).toBe(4);
   });
 

@@ -81,7 +81,7 @@ html {
 @media (max-width: 50em) {
   main > :not(:only-child) > *,
   main > :only-child > * > *,
-  body > :not(main) > * {
+  #___gatsby > div[role="group"] > :not(main) > * {
     margin-left: 1rem;
     margin-right: 1rem;
   }
@@ -89,7 +89,7 @@ html {
 @media (min-width: 50em) {
   main > :not(:only-child) > *,
   main > :only-child > * > *,
-  body > :not(main) > * {
+  #___gatsby > div[role="group"] > :not(main) > * {
     max-width: 675px;
     margin-left: auto;
     margin-right: auto;
@@ -107,12 +107,11 @@ li {
 }
 main > :not(:only-child) > :first-child,
 main > :only-child > * > :first-child,
-body > :not(main) > :first-child {
+#___gatsby > div[role="group"] > :not(main):not(:last-child) > :first-child {
   margin-top: 2rem;
 }
 main > :not(:only-child) > :last-child,
-main > :only-child > * > :last-child,
-body > :not(main) > :last-child {
+#___gatsby > div[role="group"] > :not(main) > :last-child {
   margin-bottom: 2rem;
 }
 
@@ -149,6 +148,29 @@ hr::before {
 img.logo {
   display: block;
   filter: var(--filter-logo);
+}
+html[data-blog] img:not(.logo) {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+.gatsby-resp-image-wrapper,
+html[data-blog] :not(.gatsby-resp-image-wrapper) > :not(picture) > img:not(.logo) {
+  border: 0.25rem solid var(--color-background-alternate);
+  box-sizing: border-box;
+  margin-top: 1rem;
+}
+@media (max-width: 50em) {
+  .gatsby-resp-image-wrapper
+  html[data-blog] :not(.gatsby-resp-image-wrapper) > :not(picture) > img:not(.logo) {
+    max-height: 200px;
+  }
+}
+@media (min-width: 50em) {
+  .gatsby-resp-image-wrapper
+  html[data-blog] :not(.gatsby-resp-image-wrapper) > :not(picture) > img:not(.logo) {
+    max-height: 400px;
+  }
 }
 blockquote {
   border-left: 0.25rem solid var(--color-background-alternate);

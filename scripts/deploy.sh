@@ -4,6 +4,8 @@ set -eo pipefail
 # Change to directory containing files
 if [ -d "public" ]; then
   cd public
+else
+  exit 1
 fi
 
 SOURCE=$1

@@ -1,9 +1,9 @@
 const sites = {
-  development: "http://localhost:8000",
+  development: "http://localhost:9000",
   staging: "https://staging.smockle.com",
   production: "https://www.smockle.com"
 };
-const site = sites[process.env.NODE_ENV] || "http://localhost:8000";
+const site = sites[process.env.NODE_ENV] || "http://localhost:9000";
 
 describe("/", () => {
   beforeAll(async () => {

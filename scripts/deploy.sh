@@ -5,10 +5,10 @@ SOURCE=$1
 TARGET=$2
 
 # Change to directory containing files
-if [ "${SOURCE}" == "." ] && [ -d "public" ]; then
-  cd public
-else
+if [ "${SOURCE}" == "." ] && [ ! -d "public" ]; then
   exit 1
+elif [ "${SOURCE}" == "." ]; then
+  cd public
 fi
 
 # Sync other files

@@ -1,12 +1,9 @@
-const title = "Smockle Blog";
-const siteUrl = "https://blog.smockle.com";
-
 module.exports = {
   siteMetadata: {
-    title,
+    title: "Smockle",
     description: "I’m Clay Miller. Builder. Explorer. Thought-Haver.",
     author: "@smockled",
-    siteUrl
+    siteUrl: "https://www.smockle.com"
   },
   plugins: [
     "gatsby-plugin-typescript",
@@ -50,14 +47,14 @@ module.exports = {
       options: {
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) =>
+            serialize: ({ query: { allMarkdownRemark } }) =>
               allMarkdownRemark.edges.map(({ node }) => ({
                 ...node.frontmatter,
                 ...{
                   description: node.excerpt,
                   date: node.fields.date,
-                  url: `${siteUrl}${node.fields.slug}`,
-                  guid: `${siteUrl}${node.fields.slug}`,
+                  url: `https://blog.smockle.com${node.fields.slug}`,
+                  guid: `https://blog.smockle.com${node.fields.slug}`,
                   custom_elements: [{ "content:encoded": node.html }]
                 }
               })),
@@ -82,8 +79,8 @@ module.exports = {
               }
             }
           `,
-            output: "/feed.xml",
-            title: `${title} RSS Feed`
+            output: "/blog/feed.xml",
+            title: `Smockle Blog RSS Feed`
           }
         ]
       }

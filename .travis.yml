@@ -15,13 +15,13 @@ env:
 stages:
   - unit tests
   - name: deploy to staging
-    if: branch = master
+    if: if: branch = master AND repo = smockle/smockle.com
   - name: test staging
-    if: branch = master
+    if: branch = master AND repo = smockle/smockle.com
   - name: deploy to production
-    if: branch = master
+    if: branch = master AND repo = smockle/smockle.com
   - name: test production
-    if: branch = master
+    if: branch = master AND repo = smockle/smockle.com
 jobs:
   include:
     - stage: unit tests
@@ -35,8 +35,14 @@ jobs:
           skip_cleanup: true
           on:
             branch: master
+            repo: smockle/smockle.com		
+            tags: false
     - stage: test staging
       script: npm run test:staging
+      on:
+        branch: master
+        repo: smockle/smockle.com		
+        tags: false
     - stage: deploy to production
       script: skip
       before_deploy: pip install --user awscli
@@ -46,5 +52,11 @@ jobs:
           skip_cleanup: true
           on:
             branch: master
+            repo: smockle/smockle.com		
+            tags: false
     - stage: test production
       script: npm run test:production
+      on:
+        branch: master
+        repo: smockle/smockle.com		
+        tags: false

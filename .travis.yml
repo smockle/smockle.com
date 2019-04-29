@@ -13,7 +13,7 @@ env:
   global:
     - PATH=$HOME/.local/bin:$PATH
 stages:
-  - "Build and test local"
+  - "Test local"
   - name: "Deploy to staging"
     if: branch = master AND repo = smockle/smockle.com
   - name: "Test staging"
@@ -25,12 +25,12 @@ stages:
 jobs:
   include:
     # BUILD AND TEST LOCAL
-    - stage: "Build and test local"
-      script: npm run build && npm test
+    - stage: "Test local"
+      script: npm test
     # DEPLOY TO STAGING
     - stage: "Deploy to staging"
-      script: skip
-      before_deploy: ls -a && pip install --user awscli
+      script: npm run build
+      before_deploy: pip install --user awscli
       deploy:
         - provider: script
           script: npm run deploy:staging
@@ -45,7 +45,7 @@ jobs:
     # DEPLOY TO PRODUCTION
     - stage: "Deploy to production"
       script: skip
-      before_deploy: ls -a && pip install --user awscli
+      before_deploy: pip install --user awscli
       deploy:
         - provider: script
           script: npm run promote

@@ -20,12 +20,25 @@ export function Meta({
   keywords = [],
   title
 }: MetaProps) {
-  const { site } = useStaticQuery(
+  const {
+    site
+  }: {
+    site: {
+      siteMetadata: {
+        title: string;
+        blogTitle: string;
+        description: string;
+        author: string;
+        siteUrl: string;
+      };
+    };
+  } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             title
+            blogTitle
             description
             author
             siteUrl
@@ -37,16 +50,18 @@ export function Meta({
   const metaDescription = description || site.siteMetadata.description;
   return (
     <Location>
-      {({ location }) => (
+      {({ location: { pathname: path } }) => (
         <Helmet
           htmlAttributes={{
             lang,
-            ...(location.pathname.startsWith("/blog") && {
-              "data-blog": true
-            })
+            ...(path.startsWith("/blog") && { "data-blog": true })
           }}
           title={title}
-          titleTemplate={`%s | ${site.siteMetadata.title}`}
+          titleTemplate={`%s | ${
+            path.startsWith("/blog")
+              ? site.siteMetadata.blogTitle
+              : site.siteMetadata.title
+          }`}
           link={[
             {
               rel: "apple-touch-icon",

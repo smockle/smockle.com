@@ -27,7 +27,7 @@ export type PostsPageProps = {
 export default function PostsPage({ data }: PostsPageProps) {
   return (
     <BlogLayout>
-      <Meta title="Blog" />
+      <Meta title="Posts" />
       <main>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <article key={node.id}>

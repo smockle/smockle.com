@@ -11,7 +11,7 @@ export function BlogLayout({ children }: BlogLayoutProps) {
   return (
     <StaticQuery
       query={graphql`
-        query {
+        query BlogLayout {
           site {
             siteMetadata {
               title

@@ -9,7 +9,7 @@ export function HomeLayout({ children }: HomeLayoutProps) {
   return (
     <StaticQuery
       query={graphql`
-        query {
+        query HomeLayout {
           site {
             siteMetadata {
               title

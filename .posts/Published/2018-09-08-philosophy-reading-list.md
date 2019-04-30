@@ -15,7 +15,7 @@ I retained selections and editions that appeared in multiple lists, then filtere
 Here is the result:
 
 ## Ancient Philosophy
-* **Pre-Socratics**, [_Philosophy Before Socrates_][5], ed. McKirahan: _“Heraclitus of Ephesus”_, _“Paramenides of Elea”_
+* **Pre-Socratics**, [_Philosophy Before Socrates_][5], ed. McKirahan: _“Heraclitus of Ephesus”_, _“Parmenides of Elea”_
 * **Plato**, [_The Collected Dialogues of Plato_][6], eds. Hamilton, Cairns, Cooper: _“Euthyphro”_, _“Crito”_, _“Phaedo”_, _“Meno”_, _“Republic”_, _“Theaetetus”_, _“Sophist”_
 * **Aristotle**, [_The Basic Works of Aristotle_][7], ed. McKeon: _“Nicomachean Ethics”_, _“De Anima (On the Soul)” Book II, Book III_, _“Physics” Book II, Book III 1–3_, _“Metaphysics Book” I, VII_
 * **Plotinus**, [_The Essential Plotinus_][8], ed. O'Brien: _“Enneads” 1.2, 1.3, 1.6, 2.4, 3.7, 3.8, 4.3, 4.8, 5.1, 5.2, 5.9, 6.9_
@@ -31,7 +31,7 @@ Here is the result:
 ## Modern Philosophy
 * **Machiavelli**, [_The Prince_][14], 2nd ed., ed. Mansfield
 * **Hobbes**, [_Leviathan_][15], ed. Curley: _Book I, Book II_
-* **Decartes**, [_Discourse on Method and Meditations on First Philosophy_][16], 4th ed., ed. Cress
+* **Descartes**, [_Discourse on Method and Meditations on First Philosophy_][16], 4th ed., ed. Cress
 * **Spinoza** [_Ethics_][17], eds. Feldman, Shirley: _Book I, Book II_
 * **Leibniz**, [_Leibniz: Philosophical Essays_][18], eds. Ariew, Garber: _“Monadology”_
 * **Locke**, [_An Essay Concerning Human Understanding_][19], ed. Winkler: _Book I 1, Book II, 1–13, 19–27, 31–33_

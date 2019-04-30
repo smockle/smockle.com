@@ -8,7 +8,7 @@ I purchased three popular Z-Wave switches—the [GE 14294][1], the [Leviton DW6H
 
 ## GE 14294
 
-The **GE 14294** is sold through many online retailers, and is available in Lowe’s stores. Jasco makes a complete lineup of Z-Wave Plus products with the GE brand, including a non-dimming switch, a switch with built-in motion sensor, a fan control, an in-wall outlet receptacle, and an outdoor plug.
+The **GE 14294** is sold through many online retailers and is available in Lowe’s stores. Jasco makes a complete lineup of Z-Wave Plus products with the GE brand, including a non-dimming switch, a switch with built-in motion sensor, a fan control, an in-wall outlet receptacle, and an outdoor plug.
 
 ![GE 14294](/2019-04-28-comparing-z-wave-switches/ge-switch.jpeg)
 
@@ -16,7 +16,7 @@ The plastic paddle is a bright, shiny white (the box also contains an almond-col
 
 ## Leviton DW6HD
 
-The **Leviton DW6HD** is sold through many online retailers, and is available in Home Depot stores. Leviton has a more limited selection of Z-Wave Plus products—notably lacking a Z-Wave *Plus* fan control or in-wall outlet receptacle.
+The **Leviton DW6HD** is sold through many online retailers and is available in Home Depot stores. Leviton has a more limited selection of Z-Wave Plus products—notably lacking a Z-Wave *Plus* fan control or in-wall outlet receptacle.
 
 ![Leviton DW6HD](/2019-04-28-comparing-z-wave-switches/leviton-switch.jpeg)
 

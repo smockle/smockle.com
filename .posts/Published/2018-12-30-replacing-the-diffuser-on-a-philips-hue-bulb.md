@@ -25,6 +25,6 @@ The IKEA plastic diffuser from the bulb I linked above fits well and diffuses th
 Here is a photo of the finished result:
 ![Philips Hue bulb with replaced diffuser](/2018-12-30-replacing-the-diffuser-on-a-philips-hue-bulb/bulb.jpg)
 
-[1]:	https://www.smockle.com/blog/2018/09/08/philosophy-reading-list/
+[1]:	/blog/2018/09/08/philosophy-reading-list/
 [2]:	https://www.amazon.com/gp/aw/d/B01IX9NSEY
 [3]:	https://www.amazon.com/gp/aw/d/B00OAAUAX8

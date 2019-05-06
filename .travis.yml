@@ -4,56 +4,25 @@ node_js:
   - lts/*
 cache:
   directories:
+    - $HOME/.cache/pip
+    - .cache
     - node_modules
+    - public
 notifications:
   email:
     on_success: change
     on_failure: change
-env:
-  global:
-    - PATH=$HOME/.local/bin:$PATH
-stages:
-  - "Test local"
-  - name: "Deploy to staging"
-    if: branch = master AND repo = smockle/smockle.com
-  - name: "Test staging"
-    if: branch = master AND repo = smockle/smockle.com
-  - name: "Deploy to production"
-    if: branch = master AND repo = smockle/smockle.com
-  - name: "Test production"
-    if: branch = master AND repo = smockle/smockle.com
-jobs:
-  include:
-    # BUILD AND TEST LOCAL
-    - stage: "Test local"
-      script: npm test
-    # DEPLOY TO STAGING
-    - stage: "Deploy to staging"
-      script: npm run build
-      before_deploy: pip install --user awscli
-      deploy:
-        - provider: script
-          script: npm run deploy:staging
-          skip_cleanup: true
-          on:
-            branch: master
-            repo: smockle/smockle.com
-            tags: false
-    # TEST STAGING
-    - stage: "Test staging"
-      script: npm run test:staging
-    # DEPLOY TO PRODUCTION
-    - stage: "Deploy to production"
-      script: skip
-      before_deploy: pip install --user awscli
-      deploy:
-        - provider: script
-          script: npm run promote
-          skip_cleanup: true
-          on:
-            branch: master
-            repo: smockle/smockle.com
-            tags: false
-    # TEST PRODUCTION
-    - stage: "Test production"
-      script: npm run test:production
+git:
+  depth: 1
+before_install: npm i -g npm@latest
+install: npm i
+before_script: npm run build
+script: npm test
+before_deploy: pip install --user awscli
+deploy:
+  provider: script
+  script: npm run deploy:production
+  skip_cleanup: true
+  on:
+    repo: smockle/smockle.com
+    branch: master

@@ -97,7 +97,7 @@ html {
 }
 
 /* Spacing */
-h1, h2, h3, h4, p, i, ul, ol, blockquote, pre, table, figure, audio, video {
+h1, h2, h3, h4, :not(li) > p, i, :not(li) > ul, :not(li) > ol, blockquote, pre, table, figure, audio, video {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -177,6 +177,9 @@ blockquote {
   font-style: italic;
   padding-left: 1rem;
 }
+sub { font-variant-position: sub; }
+sup { font-variant-position: super; }
+.footnotes li p { display: inline; }
 pre, code, kbd { background-color: var(--color-background-alternate); }
 pre {
   padding: 0.5rem;

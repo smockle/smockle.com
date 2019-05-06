@@ -16,9 +16,9 @@ Federico Viticci writes articles in Markdown and publishes them using Git, the s
 
 I write in [iA Writer][8] on macOS and iOS. My posts are saved in the iA Writer folder in iCloud. Drafts are stored at the top-level. Publishing is a two-step process that begins by dragging a completed post from the top-level into the `Published` subdirectory. The second step is platform-dependent.
 
-On macOS, [Hazel][9] syncs the `iA Writer/Published` folder in iCloud to a hidden `.posts/Published` folder¹ in a local clone of my Git repository. 
+On macOS, [Hazel][9] syncs the `iA Writer/Published` folder in iCloud to a hidden `.posts/Published` folder[^1] in a local clone of my Git repository. 
 
-On iOS, [Working Copy][10] bi-directionally syncs the `iA Writer/Published` folder in iCloud and the `.posts/Published` folder in my Git repository². I can pull, commit and push via a Siri Shortcut.
+On iOS, [Working Copy][10] bi-directionally syncs the `iA Writer/Published` folder in iCloud and the `.posts/Published` folder in my Git repository[^2]. I can pull, commit and push via a Siri Shortcut.
 
 Committing and pushing to the GitHub remote will trigger a Travis CI build and deployment. When that completes, the latest files will be uploaded to S3, cached by CloudFront, and viewable here.
 
@@ -36,11 +36,9 @@ Previously, this site could be accessed without an Internet connection. This was
 
 Previously, I used a separate subdomain for this blog (blog.smockle.com). Now, the blog is served from a subdirectory (smockle.com/blog/). I’m still deciding which option better suits current and future content (e.g. apps, podcasts). If I opt to serve content from a subdomain, I’ll need to investigate rewrite rules via Lambda@Edge.
 
----
+[^1]: Hazel can’t sync deletions unless an entire directory is synced, as documented in [“Sync a Subfolder (Including Deletions)”][15].
 
-¹ Hazel can’t sync deletions unless an entire directory is synced, as documented in [“Sync a Subfolder (Including Deletions)”][15].
-
-² The iA Writer team blogged about this workflow in [“Word and GitHub”][16].
+[^2]: The iA Writer team blogged about this workflow in [“Word and GitHub”][16].
 
 [1]: /blog/2018/08/22/technical-stack/
 [2]: https://www.gatsbyjs.org

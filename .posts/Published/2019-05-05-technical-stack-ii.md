@@ -32,7 +32,7 @@ Travis CI builds this blog in stages. First, it builds and runs tests. Next, bui
 
 [`gatsby-remark-vscode`][13] is a Gatsby plugin for applying syntax highlighting to code blocks from Markdown. It’s very new, but thoughtfully-designed and built by a talented developer I know personally. Here is [the story behind the development of `gatsby-remark-vscode`][14].
 
-Previously, this site could be accessed without an Internet connection. This was accomplished with the `ServiceWorker` API. Gatsby provides an official plugin for this—[`gastby-plugin-offline`][11]—but I haven’t tried it yet.
+Previously, this site could be accessed without an Internet connection. This was accomplished with the `ServiceWorker` API. Gatsby provides an official plugin for this—[`gatsby-plugin-offline`][11]—but I haven’t tried it yet.
 
 Previously, I used a separate subdomain for this blog (blog.smockle.com). Now, the blog is served from a subdirectory (smockle.com/blog/). I’m still deciding which option better suits current and future content (e.g. apps, podcasts). If I opt to serve content from a subdomain, I’ll need to investigate rewrite rules via Lambda@Edge.
 

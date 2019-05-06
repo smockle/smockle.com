@@ -16,51 +16,59 @@ Next, I added a directory named `hooks` to the root of my project. Inside `hooks
 
 `docker-ee` version `17.x` is installed by default on Docker Hub build infrastructure. The `docker manifest` command was added in `docker-ee` version `18.x`. My **`pre_build`** hook updates `docker-ee` and [prepares for multi-arch builds][5]:
 
-	#!/bin/bash
-	apt-get -y update
-	apt-get -y --only-upgrade install docker-ee
-	docker run \
-	  --rm \
-	  --privileged \
-	  multiarch/qemu-user-static:register --reset
+```Bash
+#!/bin/bash
+apt-get -y update
+apt-get -y --only-upgrade install docker-ee
+docker run \
+  --rm \
+  --privileged \
+multiarch/qemu-user-static:register --reset
+```
 
 My **`build`** hook builds and tags images for `armhf` and `amd64` processors. A `build` tag is also created, to support the “Build Tag” option set in the Docker Hub UI:
 
-	#!/bin/bash
-	docker build \
-	  --build-arg ARCH="armhf" \
-	  -t smockle/ddns53:arm \
-	  -f $DOCKERFILE_PATH .
-	
-	docker build \
-	  --build-arg ARCH="amd64" \
-	  -t smockle/ddns53:amd64 \
-	  -t smockle/ddns53:$DOCKER_TAG \
-	  -f $DOCKERFILE_PATH .
+```Bash
+#!/bin/bash
+docker build \
+  --build-arg ARCH="armhf" \
+  -t smockle/ddns53:arm \
+  -f $DOCKERFILE_PATH .
+
+docker build \
+  --build-arg ARCH="amd64" \
+  -t smockle/ddns53:amd64 \
+  -t smockle/ddns53:$DOCKER_TAG \
+  -f $DOCKERFILE_PATH .
+```
 
 My **`pre_push`** hook pushes the architecture-specific images:
 
-	#!/bin/bash
-	docker push smockle/ddns53:arm
-	docker push smockle/ddns53:amd64
+```Bash
+#!/bin/bash
+docker push smockle/ddns53:arm
+docker push smockle/ddns53:amd64
+```
 
 The non-overridable **`push`** step pushes the `build` tag[^2]. Finally, my **`post_push`** hook creates a Docker image manifest and publishes it as `latest`:
 
-	#!/bin/bash
-	docker manifest create \
-	  smockle/ddns53:latest \
-	  smockle/ddns53:amd64 \
-	  smockle/ddns53:arm
-	
-	docker manifest annotate \
-	  smockle/ddns53:latest \
-	  smockle/ddns53:arm --os linux --arch arm
-	
-	docker manifest annotate \
-	  smockle/ddns53:latest \
-	  smockle/ddns53:amd64 --os linux --arch amd64
-	
-	docker manifest push --purge smockle/ddns53:latest
+```Bash
+#!/bin/bash
+docker manifest create \
+	smockle/ddns53:latest \
+  smockle/ddns53:amd64 \
+  smockle/ddns53:arm
+
+docker manifest annotate \
+  smockle/ddns53:latest \
+  smockle/ddns53:arm --os linux --arch arm
+
+docker manifest annotate \
+  smockle/ddns53:latest \
+  smockle/ddns53:amd64 --os linux --arch amd64
+
+docker manifest push --purge smockle/ddns53:latest
+```
 
 I committed and pushed the `hooks` directory. Back in the Docker Hub UI, I set “Repository Links” to “Enable for Base Image” to rebuild whenever my base image is updated:
 

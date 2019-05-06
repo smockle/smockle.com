@@ -181,6 +181,7 @@ sub { font-variant-position: sub; }
 sup { font-variant-position: super; }
 .footnotes li p { display: inline; }
 pre, code, kbd { background-color: var(--color-background-alternate); }
+.gatsby-remark-vscode-wrapper { background-color: var(--color-background-alternate) !important; }
 pre {
   padding: 0.5rem;
 }

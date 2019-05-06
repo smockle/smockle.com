@@ -8,7 +8,6 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-typescript",
-    // "gatsby-plugin-typescript-checker",
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-filesystem",
@@ -32,6 +31,18 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: "gatsby-remark-vscode",
+            options: {
+              colorTheme: {
+                defaultTheme: "Light+ (default light)",
+                prefersDarkTheme: "Dark+ (default dark)",
+                prefersLightTheme: "Light+ (default light)"
+              },
+              injectStyles: false,
+              wrapperClassName: "gatsby-remark-vscode-wrapper"
+            }
+          },
+          {
             resolve: "gatsby-remark-images",
             options: {
               maxWidth: 675,
@@ -40,7 +51,6 @@ module.exports = {
               wrapperStyle: "overflow: hidden; max-height: 400px;"
             }
           }
-          // { resolve: "gatsby-remark-copy-linked-files" }
         ]
       }
     },

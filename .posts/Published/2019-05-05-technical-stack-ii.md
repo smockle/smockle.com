@@ -42,7 +42,7 @@ Previously, I used a separate subdomain for this blog (blog.smockle.com). Now, t
 
 ² The iA Writer team blogged about this workflow in [“Word and GitHub”][16].
 
-[1]: /2018/08/22/technical-stack/
+[1]: /blog/2018/08/22/technical-stack/
 [2]: https://www.gatsbyjs.org
 [3]: https://greenkeeper.io
 [4]: https://depfu.com

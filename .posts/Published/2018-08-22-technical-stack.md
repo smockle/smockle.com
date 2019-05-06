@@ -2,6 +2,8 @@
 title: Technical Stack
 ---
 
+_NB: [“Technical Stack II”](/blog/2019/05/05/technical-stack-ii) is a newer post on this topic. The post below is outdated._
+
 At a friend’s request, here is an overview of this blog’s technical stack.
 
 This blog is hosted on GitHub Pages. Jekyll transforms Markdown files into a static website. An AWS CloudFront distribution provides HTTPS support as, unaffected by DNS record edits¹, GitHub Pages will not serve content over HTTPS².

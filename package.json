@@ -10,6 +10,8 @@
     "gatsby-plugin-catch-links": "^2.0.13",
     "gatsby-plugin-csp": "^1.0.1",
     "gatsby-plugin-feed": "^2.1.1",
+    "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-offline": "^2.1.0",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sharp": "^2.0.35",
     "gatsby-plugin-typescript": "^2.0.13",
@@ -32,7 +34,7 @@
     "@typescript-eslint/parser": "^1.7.0",
     "jest": "^24.1.0",
     "jest-puppeteer": "^4.0.0",
-    "puppeteer": "^1.8.0"
+    "puppeteer": "npm:puppeteer-core@^1.15.0"
   },
   "license": "SEE LICENSE IN LICENSE.md",
   "scripts": {
@@ -40,7 +42,7 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "NODE_ENV=development jest scripts/test.js",
+    "test": "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true NODE_ENV=development jest scripts/test.js",
     "test:staging": "NODE_ENV=staging jest scripts/test.js",
     "test:production": "NODE_ENV=production jest scripts/test.js",
     "deploy:staging": "bash scripts/deploy.sh . s3://staging.smockle.com",

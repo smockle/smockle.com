@@ -107,6 +107,19 @@ module.exports = {
           "style-src": "'self' 'unsafe-inline'"
         }
       }
-    }
+    },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "GatsbyJS",
+        short_name: "GatsbyJS",
+        start_url: "/",
+        background_color: "#ffffff",
+        theme_color: "#26856d",
+        display: "standalone",
+        icon: "src/images/logo.svg"
+      }
+    },
+    "gatsby-plugin-offline"
   ]
 };

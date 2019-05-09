@@ -9,8 +9,8 @@
   --color-background: white;
   --color-background-alternate: #F8F8F8;
   --color-text: #222;
-  --color-text-alternate: #858590;
-  --color-accent: #26856d;
+  --color-text-alternate: #222222AA;
+  --color-accent: #2C7D69FC;
   --color-accent-alternate: #5CBBA3;
   --filter-logo: none;
 }
@@ -19,10 +19,10 @@
   :root {
     --color-background: #1F2023;
     --color-background-alternate: #081010;
-    --color-text: #ddd;
-    --color-text-alternate: #858590;
-    --color-accent: #5CBBA3;
-    --color-accent-alternate: #84dcc6;
+    --color-text: #DDD;
+    --color-text-alternate: #DDDDDD88;
+    --color-accent: #5CBBA3FC;
+    --color-accent-alternate: #84DCC6;
     --filter-logo: saturate(1000%) hue-rotate(-15deg) brightness(0.55);
   }
 }

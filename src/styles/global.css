@@ -8,7 +8,6 @@
 :root {
   --color-background: white;
   --color-background-alternate: #F8F8F8;
-  --color-text: #222;
   --color-text-alternate: #222222AA;
   --color-accent: #2C7D69FC;
   --color-accent-alternate: #5CBBA3;
@@ -19,8 +18,7 @@
   :root {
     --color-background: #1F2023;
     --color-background-alternate: #081010;
-    --color-text: #DDD;
-    --color-text-alternate: #DDDDDD88;
+    --color-text-alternate: #DDDDDD90;
     --color-accent: #5CBBA3FC;
     --color-accent-alternate: #84DCC6;
     --filter-logo: saturate(1000%) hue-rotate(-15deg) brightness(0.55);
@@ -125,6 +123,18 @@ h2 { font-size: 1.25em; }
 pre, code, kbd { font-size: 0.75rem; }
 
 /* Color & Style */
+html { background-color: var(--color-background); }
+@supports (color: text) {
+  html { color: text; }
+}
+@supports not (color: text) {
+  @media (prefers-color-scheme: light) {
+    html { color: black; }
+  }
+  @media (prefers-color-scheme: dark) {
+    html { color: white; }
+  }
+}
 a, a:hover {
   color: unset;
 }

@@ -4,7 +4,6 @@ node_js:
   - lts/*
 cache:
   directories:
-    - $HOME/.cache/pip
     - .cache
     - node_modules
     - public
@@ -18,10 +17,9 @@ before_install: npm i -g npm@latest
 install: npm i
 before_script: npm run build
 script: npm test
-before_deploy: pip install --user awscli
 deploy:
   provider: script
-  script: npm run deploy:production
+  script: npm run deploy
   skip_cleanup: true
   on:
     repo: smockle/smockle.com

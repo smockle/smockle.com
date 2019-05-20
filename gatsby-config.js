@@ -35,6 +35,14 @@ module.exports = {
       }
     },
     {
+      resolve: "gatsby-plugin-s3",
+      options: {
+        bucketName: "www.smockle.com",
+        protocol: siteUrl.protocol.slice(0, -1),
+        hostname: siteUrl.hostname
+      }
+    },
+    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [

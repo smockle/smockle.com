@@ -1,10 +1,12 @@
+const siteUrl = new URL("https://www.smockle.com");
+
 module.exports = {
   siteMetadata: {
     title: "Smockle",
     blogTitle: "Smockle Blog",
     description: "I’m Clay Miller. Builder. Explorer. Thought-Haver.",
     author: "@smockled",
-    siteUrl: "https://www.smockle.com"
+    siteUrl: siteUrl.href.slice(0, -1)
   },
   plugins: [
     "gatsby-plugin-typescript",
@@ -26,6 +28,12 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     "gatsby-plugin-catch-links",
+    {
+      resolve: "gatsby-plugin-canonical-urls",
+      options: {
+        siteUrl: siteUrl.href.slice(0, -1)
+      }
+    },
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -65,8 +73,8 @@ module.exports = {
                 ...{
                   description: node.excerpt,
                   date: node.fields.date,
-                  url: `https://www.smockle.com${node.fields.slug}`,
-                  guid: `https://www.smockle.com${node.fields.slug}`,
+                  url: `${siteUrl.href.slice(0, -1)}${node.fields.slug}`,
+                  guid: `${siteUrl.href.slice(0, -1)}${node.fields.slug}`,
                   custom_elements: [{ "content:encoded": node.html }]
                 }
               })),

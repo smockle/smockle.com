@@ -44,7 +44,7 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true jest __tests__",
+    "test": "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true jest __tests__/index.js",
     "deploy": "gatsby-plugin-s3 deploy --yes"
   },
   "repository": {

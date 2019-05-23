@@ -189,6 +189,7 @@ blockquote {
 }
 sub { font-variant-position: sub; }
 sup { font-variant-position: super; }
+li { font-variant-numeric: tabular-nums; }
 .footnotes li p { display: inline; }
 pre, code, kbd { background-color: var(--color-background-alternate); }
 .gatsby-remark-vscode-wrapper { background-color: var(--color-background-alternate) !important; }

@@ -2,8 +2,20 @@ import React from "react";
 import { HomeLayout, Meta, PostMeta } from "../components";
 import styles from "./index.module.css";
 import { Link } from "@reach/router";
+import { graphql } from "gatsby";
+import Img, { FixedObject } from "gatsby-image";
 
-export default function HomePage() {
+type HomePageQuery = {
+  data: {
+    profile: {
+      childImageSharp: {
+        fixed: FixedObject;
+      };
+    };
+  };
+};
+
+export default function HomePage({ data }: HomePageQuery) {
   return (
     <HomeLayout>
       <Meta title="Home" />
@@ -14,18 +26,7 @@ export default function HomePage() {
             <em>I’m</em>
             <h1>Clay Miller.</h1>
           </aside>
-          <picture>
-            <source
-              media="(min-width: 50em)"
-              srcSet={`${require("../images/profile.png")} 485w, ${require("../images/profile@2x.png")} 970w`}
-              sizes="(min-width: 50em) 485px, 0px"
-              type="image/png"
-            />
-            <img
-              alt="Clay Miller"
-              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-            />
-          </picture>
+          <Img alt="Clay Miller" fixed={data.profile.childImageSharp.fixed} />
         </div>
       </header>
       <main>
@@ -113,3 +114,17 @@ export default function HomePage() {
     </HomeLayout>
   );
 }
+
+export const query = graphql`
+  query {
+    profile: file(relativePath: { eq: "profile@2x.png" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width: 392, height: 418) {
+          ...GatsbyImageSharpFixed_withWebp_tracedSVG
+        }
+      }
+    }
+  }
+`;

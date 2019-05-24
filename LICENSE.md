@@ -18,4 +18,4 @@
 
 ### All Rights Reserved
 
-- [`src/images/profile.png`](src/images/profile.png), [`src/images/profile@2x.png`](src/images/profile@2x.png), [`static/apple-touch-icon.png`](static/apple-touch-icon.png), [`static/favicon.ico`](static/favicon.ico), [`static/tile-wide.png`](static/tile-wide.png) and [`static/tile.png`](static/tile.png) are copyrighted (c) 2016-2019 Clay Miller, All Rights Reserved.
+- [`src/images/profile.png`](src/images/profile.png), [`src/images/profile@2x.png`](src/images/profile@2x.png), [`src/images/logo.svg`](src/images/logo.svg), [`src/images/apple-touch-icon.svg`](src/images/apple-touch-icon.svg), [`static/favicon.ico`](static/favicon.ico), [`static/og-image.png`](static/og-image.png), [`static/tile-wide.png`](static/tile-wide.png), [`static/tile.png`](static/tile.png) and [`static/twitter-image.png`](static/twitter-image.png) are copyrighted (c) 2016-2019 Clay Miller, All Rights Reserved.

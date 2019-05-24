@@ -5,7 +5,7 @@ module.exports = {
     title: "Smockle",
     blogTitle: "Smockle Blog",
     description: "I’m Clay Miller. Builder. Explorer. Thought-Haver.",
-    author: "@smockled",
+    author: "@yeahthatclay",
     siteUrl: siteUrl.href.slice(0, -1)
   },
   plugins: [
@@ -133,7 +133,7 @@ module.exports = {
         background_color: "#ffffff",
         theme_color: "#26856d",
         display: "standalone",
-        icon: "src/images/logo.svg"
+        icon: "src/images/apple-touch-icon.svg"
       }
     },
     "gatsby-plugin-offline"

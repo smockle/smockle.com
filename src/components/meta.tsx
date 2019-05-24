@@ -62,12 +62,6 @@ export function Meta({
               ? site.siteMetadata.blogTitle
               : site.siteMetadata.title
           }`}
-          link={[
-            {
-              rel: "apple-touch-icon",
-              href: "apple-touch-icon.png"
-            }
-          ]}
           meta={[
             {
               name: "description",
@@ -84,6 +78,10 @@ export function Meta({
             {
               property: "og:description",
               content: metaDescription
+            },
+            {
+              property: "og:image",
+              content: "og-image.png"
             },
             {
               property: "og:type",
@@ -108,6 +106,10 @@ export function Meta({
             {
               name: "twitter:description",
               content: metaDescription
+            },
+            {
+              property: "twitter:image",
+              content: "twitter-image.png"
             }
           ]
             .concat(

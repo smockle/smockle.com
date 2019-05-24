@@ -10,7 +10,7 @@
 
 ### SPDX-License-Identifier: CC-BY-4.0
 
-- [`src/images/email.svg`](src/images/email.svg), [`src/images/rss.svg`](src/images/rss.svg), [`src/images/github.svg`](src/images/github.svg) and [`src/images/linkedin.svg`](src/images/linkedin.svg) are licensed under a [Creative Commons Attribution 4.0 International License](LICENSE-CC-BY-4.0) ([online](https://creativecommons.org/licenses/by/4.0/legalcode)).
+- [`src/images/email.svg`](src/images/email.svg), [`src/images/rss.svg`](src/images/rss.svg), [`src/images/github.svg`](src/images/github.svg), [`src/images/twitter.svg`](src/images/twitter.svg) and [`src/images/linkedin.svg`](src/images/linkedin.svg) are licensed under a [Creative Commons Attribution 4.0 International License](LICENSE-CC-BY-4.0) ([online](https://creativecommons.org/licenses/by/4.0/legalcode)).
 
 - Content in [`src/posts`](src/posts) is licensed under a [Creative Commons Attribution 4.0 International License](LICENSE-CC-BY-4.0) ([online](https://creativecommons.org/licenses/by/4.0/legalcode)).
 
@@ -18,4 +18,4 @@
 
 ### All Rights Reserved
 
-- [`src/images/silhouette.jpf`](src/images/silhouette.jpf), [`src/images/silhouette.png`](src/images/silhouette.png), [`src/images/silhouette.webp`](src/images/silhouette.webp), [`src/images/silhouette@2x.jpf`](src/images/silhouette@2x.jpf), [`src/images/silhouette@2x.png`](src/images/silhouette@2x.png), [`src/images/silhouette@2x.webp`](src/images/silhouette@2x.webp), [`static/apple-touch-icon.png`](static/apple-touch-icon.png), [`static/favicon.ico`](static/favicon.ico), [`static/tile-wide.png`](static/tile-wide.png) and [`static/tile.png`](static/tile.png) are copyrighted (c) 2016-2019 Clay Miller, All Rights Reserved.
+- [`src/images/profile.png`](src/images/profile.png), [`src/images/profile@2x.png`](src/images/profile@2x.png), [`static/apple-touch-icon.png`](static/apple-touch-icon.png), [`static/favicon.ico`](static/favicon.ico), [`static/tile-wide.png`](static/tile-wide.png) and [`static/tile.png`](static/tile.png) are copyrighted (c) 2016-2019 Clay Miller, All Rights Reserved.

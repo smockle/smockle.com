@@ -1,6 +1,5 @@
 /* @media (prefers-color-scheme: no-preference), (prefers-color-scheme: light) { */
   :root {
-    --filter-profile: none;
     --filter-icon: none;
     --color-section: var(--color-background);
     --color-section-alternate: var(--color-background-alternate);
@@ -8,7 +7,6 @@
 /* } */
 @media (prefers-color-scheme: dark) {
   :root {
-    --filter-profile: brightness(0.9);
     --filter-icon: brightness(10);
     --color-section: var(--color-background-alternate);
     --color-section-alternate: var(--color-background);
@@ -57,7 +55,6 @@ html:not([data-blog]) { background-color: var(--color-section); }
   margin-bottom: -0.75rem;
 }
 .hero picture {
-  filter: var(--filter-profile);
   margin-bottom: -2rem;
 }
 .hero picture img {

@@ -17,19 +17,7 @@ export default function HomePage() {
           <picture>
             <source
               media="(min-width: 50em)"
-              srcSet={`${require("../images/silhouette.webp")} 485w, ${require("../images/silhouette@2x.webp")} 970w`}
-              sizes="(min-width: 50em) 485px, 0px"
-              type="image/webp"
-            />
-            <source
-              media="(min-width: 50em)"
-              srcSet={`${require("../images/silhouette.jpf")} 485w, ${require("../images/silhouette@2x.jpf")} 970w`}
-              sizes="(min-width: 50em) 485px, 0px"
-              type="image/jp2"
-            />
-            <source
-              media="(min-width: 50em)"
-              srcSet={`${require("../images/silhouette.png")} 485w, ${require("../images/silhouette@2x.png")} 970w`}
+              srcSet={`${require("../images/profile.png")} 485w, ${require("../images/profile@2x.png")} 970w`}
               sizes="(min-width: 50em) 485px, 0px"
               type="image/png"
             />
@@ -102,6 +90,13 @@ export default function HomePage() {
                 alt="GitHub"
                 className={styles.networkIcon}
                 src={require("../images/github.svg")}
+              />
+            </a>
+            <a href="https://twitter.com/yeahthatclay" title="Twitter">
+              <img
+                alt="Twitter"
+                className={styles.networkIcon}
+                src={require("../images/twitter.svg")}
               />
             </a>
             <a href="https://linkedin.com/in/smockle" title="LinkedIn">

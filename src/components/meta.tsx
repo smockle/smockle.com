@@ -81,7 +81,7 @@ export function Meta({
             },
             {
               property: "og:image",
-              content: "og-image.png"
+              content: `${site.siteMetadata.siteUrl}/og-image.png`
             },
             {
               property: "og:type",
@@ -109,7 +109,7 @@ export function Meta({
             },
             {
               property: "twitter:image",
-              content: "twitter-image.png"
+              content: `${site.siteMetadata.siteUrl}/twitter-image.png`
             }
           ]
             .concat(

@@ -23,7 +23,7 @@ describe("/", () => {
       "[data-test-id=network-icons] a",
       x => x.length
     );
-    expect(length).toBe(4);
+    expect(length).toBe(5);
   });
 
   it("has no missing 'alt' attributes", async () => {

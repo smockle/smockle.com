@@ -1,7 +1,7 @@
 /* Variables */
 :root {
-  --font-title: "Lato", sans-serif;
-  --font-body: "Crimson Pro S", serif;
+  --font-title: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --font-body: "Crimson Pro S", "Georgia", serif;
   --font-code: "SF Mono", Menlo, monospace;
 }
 /* @media (prefers-color-scheme: no-preference), (prefers-color-scheme: light) { */
@@ -32,6 +32,7 @@
     url("fonts/lato-black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Crimson Pro S";
@@ -39,6 +40,7 @@
     url("fonts/crimsonpros-regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Crimson Pro S";
@@ -46,6 +48,7 @@
     url("fonts/crimsonpros-italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: "Crimson Pro S";
@@ -53,6 +56,7 @@
     url("fonts/crimsonpros-bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Base */
@@ -66,6 +70,28 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, p, blockquote, pre, a, ad
 }
 pre, code, kbd { font-family: var(--font-code); }
 pre { white-space: pre-wrap; }
+html:not(.wf-crimsonpros-n4-active) :not(li) > p,
+html:not(.wf-crimsonpros-n4-active) i,
+html:not(.wf-crimsonpros-n4-active) :not(li) > ul,
+html:not(.wf-crimsonpros-n4-active) :not(li) > ol,
+html:not(.wf-crimsonpros-n4-active) blockquote,
+html:not(.wf-crimsonpros-n4-active) table,
+html:not(.wf-crimsonpros-n4-active) figure {
+  font-size: 17px;
+  line-height: 1.75;
+  letter-spacing: 0.4px;
+}
+@media (min-width: 50em) {
+  html:not(.wf-crimsonpros-n4-active) :not(li) > p,
+  html:not(.wf-crimsonpros-n4-active) i,
+  html:not(.wf-crimsonpros-n4-active) :not(li) > ul,
+  html:not(.wf-crimsonpros-n4-active) :not(li) > ol,
+  html:not(.wf-crimsonpros-n4-active) blockquote,
+  html:not(.wf-crimsonpros-n4-active) table,
+  html:not(.wf-crimsonpros-n4-active) figure {
+    font-size: 19px;
+  }
+}
 html {
   font-family: var(--font-body);
   font-size: 20px;
@@ -114,6 +140,14 @@ main > :not(:only-child) > :last-child,
 }
 
 /* Font Size */
+html:not(.wf-lato-n4-active) h1,
+html:not(.wf-lato-n4-active) h2,
+html:not(.wf-lato-n4-active) h3,
+html:not(.wf-lato-n4-active) h4 {
+  font-weight: 700;
+  letter-spacing: -1px;
+  word-spacing: -0.5px;
+}
 h1, h2, h3, h4 {
   font-family: var(--font-title);
   line-height: 1.05;

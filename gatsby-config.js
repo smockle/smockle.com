@@ -27,6 +27,14 @@ module.exports = {
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["Lato", "Crimson Pro S"]
+        }
+      }
+    },
     "gatsby-plugin-catch-links",
     {
       resolve: "gatsby-plugin-canonical-urls",

@@ -6,7 +6,7 @@ I audited this site with [Google Lighthouse][lighthouse]. The utility flagged we
 
 I could display a fallback font while my web font downloads using [`font-display`][fontdisplay]. Unfortunately, `serif` (my fallback font) does not have the same x-height and width as [`'Crimson Pro S'`][crimsonpros] (my web font). Monica Dinculescu created a [“Font Style Matcher”][fsm] tool that overlaps two fonts so appropriate CSS adjustments (e.g. `letter-spacing`) can be identified. But CSS adjustments would affect both my fallback font _and my web font_.
 
-I could use the JavaScript [Font Loading API][fontapi] to load a web font and then append a `.font-loaded` class to the `html` or `body` element. This approach would facilitate separate CSS rules for fallback and web fonts. But browser support is limited, and I feared using the Font Loading API alongside `@font-face` declarations would cause duplicate downloads.
+I could use the JavaScript [Font Loading API][fontapi] to load a web font and then append a `.font-loaded` class to the `html` or `body` element[^2]. This approach would facilitate separate CSS rules for fallback and web fonts. But browser support is limited, and I feared using the Font Loading API alongside `@font-face` declarations would cause duplicate downloads.
 
 So I took a different approach. Web fonts with smaller file sizes download and display more quickly. Rather than adjusting my fallback font, I used the Python library `pyftsubset` to remove OpenType features and unused characters from my web font[^1]. Andrew Brampton describes this in [“Google Font Features”][bramp].
 
@@ -35,6 +35,8 @@ The result was a 40% smaller font. I verified the included characters and OpenTy
 
 [^1]: [Font Squirrel’s Webfont Generator][fontsquirrel] is popular and arguably easier to use. Unfortunately, no matter which options I selected, `liga` and all ligatures were always stripped out. According to [a 2010 tweet][tweet], the Font Squirrel OpenType “Keep All Features” option “works for most fonts, but not all.” Crimson Pro S is one of the unlucky few.
 
+[^2]: Update: I’m now using [`gatsby-plugin-web-font-loader`][gatsbyplugin] to add a CSS class to `html` when my web fonts load. See [this commit][commit]. Fonts are not downloaded twice. This was easy after all!
+
 [comprehensive]: https://www.zachleat.com/web/comprehensive-webfonts/
 [lighthouse]: https://developers.google.com/web/tools/lighthouse/#devtools
 [fontdisplay]: https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display
@@ -46,3 +48,5 @@ The result was a 40% smaller font. I verified the included characters and OpenTy
 [fontdrop]: https://fontdrop.info
 [fontsquirrel]: https://www.fontsquirrel.com/tools/webfont-generator
 [tweet]: https://twitter.com/FontSquirrel/status/14854008143
+[gatsbyplugin]: https://www.gatsbyjs.org/packages/gatsby-plugin-web-font-loader/
+[commit]: https://github.com/smockle/smockle.com/commit/7efeff6f76e65c57711f31d63ac191b35c64cedf

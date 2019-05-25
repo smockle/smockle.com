@@ -26,7 +26,12 @@ export default function HomePage({ data }: HomePageQuery) {
             <em>I’m</em>
             <h1>Clay Miller.</h1>
           </aside>
-          <Img alt="Clay Miller" fixed={data.profile.childImageSharp.fixed} />
+          <Img
+            alt="Clay Miller"
+            className={styles.profile}
+            style={{ display: "inherit" }}
+            fixed={data.profile.childImageSharp.fixed}
+          />
         </div>
       </header>
       <main>

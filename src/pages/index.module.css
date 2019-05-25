@@ -54,8 +54,11 @@ html:not([data-blog]) { background-color: var(--color-section); }
   margin-top: -0.75rem;
   margin-bottom: -0.75rem;
 }
-.hero :global(.gatsby-image-wrapper) {
+.profile {
   margin-bottom: -2rem;
+}
+@media (max-width: 50em) {
+  .profile { display: none; }
 }
 
 .network-icons {

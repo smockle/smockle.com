@@ -14,6 +14,7 @@ WWDC, Apple’s annual developer conference, starts this week. The [keynote][key
 - Multi-user support for the HomePod
 - [Google Assistant support for Apple Music][applemusic]
 - Siri on third-party devices, like the Sonos One
+- Dynamic complications on watchOS
 
 ## HomeKit
 

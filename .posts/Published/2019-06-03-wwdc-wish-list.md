@@ -15,6 +15,7 @@ WWDC, Apple’s annual developer conference, starts this week. The [keynote][key
 - [Google Assistant support for Apple Music][applemusic]
 - Siri on third-party devices, like the Sonos One
 - Dynamic complications on watchOS
+- Reduced brightness at night in watchOS
 
 ## HomeKit
 

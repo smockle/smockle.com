@@ -5,7 +5,7 @@
   "version": "3.0.0",
   "author": "Clay Miller <clay@smockle.com> (http://www.smockle.com)",
   "dependencies": {
-    "gatsby": "^2.8.8",
+    "gatsby": "^2.9.0",
     "gatsby-image": "^2.1.3",
     "gatsby-plugin-canonical-urls": "^2.0.13",
     "gatsby-plugin-catch-links": "^2.0.15",

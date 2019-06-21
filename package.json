@@ -16,7 +16,7 @@
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-s3": "^0.3.0",
     "gatsby-plugin-sharp": "^2.1.9",
-    "gatsby-plugin-typescript": "^2.0.15",
+    "gatsby-plugin-typescript": "^2.1.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-images": "^3.0.16",
     "gatsby-remark-vscode": "^1.0.6",

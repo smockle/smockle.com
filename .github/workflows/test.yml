@@ -1,5 +1,13 @@
 name: Workflows
-on: [push]
+on:
+  push:
+    branches:
+      - [a-ln-zA-Z0-9\-_]*
+      - m[b-zA-Z0-9\-_]*
+      - ma[a-rt-zA-Z0-9\-_]*
+      - mas[a-su-zA-Z0-9\-_]*
+      - mast[a-df-zA-Z0-9\-_]*
+      - maste[a-qs-zA-Z0-9\-_]*
 
 jobs:
   build:

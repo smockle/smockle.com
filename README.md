@@ -1,6 +1,6 @@
 # www.smockle.com
 
-[![Build Status](https://travis-ci.com/smockle/smockle.com.svg?branch=master)](https://travis-ci.com/smockle/smockle.com)
+[![Workflow Status](https://github.com/smockle/smockle.com/workflows/Workflows/badge.svg)](https://github.com/smockle/smockle.com/actions)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=smockle/smockle.com)](https://dependabot.com)
 
 Main website of Clay Miller ([Smockle](https://www.smockle.com))

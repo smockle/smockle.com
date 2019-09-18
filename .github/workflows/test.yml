@@ -2,7 +2,13 @@ name: Workflows
 on:
   pull_request: ~
   push:
-    branches: ["*", "!master"]
+    branches:
+      - '[^m]*'
+      - 'm[^a]*'
+      - 'ma[^s]*'
+      - 'mas[^t]*'
+      - 'mast[^e]*'
+      - 'maste[^r]*'
 
 jobs:
   build:

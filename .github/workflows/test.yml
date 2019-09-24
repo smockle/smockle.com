@@ -1,12 +1,9 @@
-name: Workflows
-on:
-  pull_request: ~
-  push:
-    branches: ["*", "!master"]
+name: Test
+on: [pull_request]
 
 jobs:
-  build:
-    name: "Test"
+  test:
+    name: Test
     runs-on: ubuntu-latest
     steps:
       - name: Get sources

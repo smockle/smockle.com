@@ -1,12 +1,11 @@
-name: Workflows
+name: Deploy
 on:
   push:
-    branches:
-      - master
+    branches: ["master"]
 
 jobs:
-  build:
-    name: "Deploy"
+  deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Get sources

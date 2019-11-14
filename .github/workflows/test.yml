@@ -40,7 +40,7 @@ jobs:
             ${{ runner.os }}-public-
 
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --ignore-optional
 
       - name: Build
         run: yarn run build

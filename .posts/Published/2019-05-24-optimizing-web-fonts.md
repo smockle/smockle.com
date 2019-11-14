@@ -21,7 +21,7 @@ $ pip install brotli
 Next, I installed Filament Group’s [`glyphhanger`][glyphhanger] utility and crawled my website to obtain a list of the Unicode characters I use:
 
 ```Bash
-$ npm install -g glyphhanger
+$ yarn global add glyphhanger
 $ glyphhanger https://www.smockle.com --spider-limit=10
 ```
 

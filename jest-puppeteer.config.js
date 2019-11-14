@@ -6,7 +6,7 @@ const executablePaths = {
 };
 module.exports = {
   server: {
-    command: "npm run serve",
+    command: "yarn run serve",
     port: 9000,
     launchTimeout: 120000
   },

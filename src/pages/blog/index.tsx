@@ -9,7 +9,7 @@ export type PostsPageProps = {
         node: {
           id: string;
           frontmatter: {
-            title: string;
+            title?: string;
           };
           fields: {
             string: string;
@@ -17,6 +17,7 @@ export type PostsPageProps = {
             slug: string;
             date: string;
           };
+          htmlExcerpt: string;
           excerpt: string;
         };
       }[];
@@ -32,14 +33,25 @@ export default function PostsPage({ data }: PostsPageProps) {
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <article key={node.id}>
             <PostMeta>
-              <time>{node.fields.date}</time>
+              <Link
+                to={node.fields.slug}
+                style={{ color: "var(--color-text-alternate)" }}
+              >
+                <time>{node.fields.date}</time>
+              </Link>
             </PostMeta>
 
-            <h1>
-              <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-            </h1>
+            {node.frontmatter.title && (
+              <h1>
+                <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+              </h1>
+            )}
 
-            <p>{node.excerpt}</p>
+            {node.frontmatter.title ? (
+              <p>{node.excerpt}</p>
+            ) : (
+              <p dangerouslySetInnerHTML={{ __html: node.htmlExcerpt }}></p>
+            )}
           </article>
         ))}
       </main>
@@ -61,7 +73,8 @@ export const query = graphql`
             slug
             date(formatString: "MMM D, YYYY")
           }
-          excerpt(pruneLength: 280)
+          htmlExcerpt: excerpt(pruneLength: 280, format: HTML)
+          excerpt(pruneLength: 280, format: PLAIN)
         }
       }
     }

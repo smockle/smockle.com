@@ -8,7 +8,8 @@ export type MetaProps = {
   lang?: string;
   meta?: (
     | { name: string; content: string }
-    | { property: string; content: string })[];
+    | { property: string; content: string }
+  )[];
   keywords?: string[];
   title: string;
 };
@@ -54,7 +55,7 @@ export function Meta({
         <Helmet
           htmlAttributes={{
             lang,
-            ...(path.startsWith("/blog") && { "data-blog": true })
+            ...(path.startsWith("/blog") && { "data-blog": "true" })
           }}
           title={title}
           titleTemplate={`%s | ${

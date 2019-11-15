@@ -171,6 +171,7 @@ html { background-color: var(--color-background); }
 }
 a, a:hover {
   color: unset;
+  overflow-wrap: break-word;
 }
 a:not(:hover) { text-decoration: none; }
 :not(h1):not(h2):not(h3):not(h4) > a:not(:hover) { color: var(--color-accent); }

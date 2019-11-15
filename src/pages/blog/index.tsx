@@ -50,7 +50,7 @@ export default function PostsPage({ data }: PostsPageProps) {
             {node.frontmatter.title ? (
               <p>{node.excerpt}</p>
             ) : (
-              <p dangerouslySetInnerHTML={{ __html: node.htmlExcerpt }}></p>
+              <div dangerouslySetInnerHTML={{ __html: node.htmlExcerpt }} />
             )}
           </article>
         ))}

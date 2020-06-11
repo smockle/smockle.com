@@ -8,7 +8,7 @@ publish_blog() {
   cd "${HOME}/.hazel/smockle.com"
   git add . && \
   git stash; \
-  git switch master; \
+  git switch main; \
   git pull; \
   $(git stash pop || exit 0)
   if [ -z "$(git status --porcelain)" ]; then

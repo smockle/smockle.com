@@ -1,0 +1,7 @@
+baseURL = "https://www.smockle.com/"
+languageCode = "en-us"
+title = "Smockle"
+theme = "smockle"
+paginate = 1000
+[permalinks]
+  posts = "/:year/:month/:day/:slug/"

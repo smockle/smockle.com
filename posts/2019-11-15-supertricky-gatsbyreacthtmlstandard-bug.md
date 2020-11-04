@@ -1,1 +1,0 @@
-Super-tricky Gatsby/React/HTML-standard bug. Don’t nest `p` tags! https://github.com/gatsbyjs/gatsby/issues/11108

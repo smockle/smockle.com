@@ -1,7 +1,6 @@
 ---
 slug: a-wwdc-wish-list-update
-date: 2019-11-12T19:00:00-05:00
-draft: false
+date: 2019-11-12
 --- 
 
 A “WWDC Wish List”¹ update:

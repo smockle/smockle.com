@@ -1,7 +1,6 @@
 ---
 title: "Editor and Environment Setup for Ruby"
-date: 2020-06-25T10:59:00-05:00
-draft: false
+date: 2020-06-25
 ---
 
 About fifteen years ago, I read [“Why’s (Poignant) Guide to Ruby”](https://poignant.guide), a bizarre introduction to Ruby which featured cartoon foxes. I immediately identified with its commingling of art and code, and its existence made Ruby feel organic and approachable in a way that Java or .NET—with their dry, glossy tomes—did not. Consequently, the first version of [smockle.com](https://www.smockle.com) was built on Rails.

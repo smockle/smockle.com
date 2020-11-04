@@ -1,7 +1,6 @@
 ---
 title: "Technical Stack"
-date: 2018-08-22T19:00:00-05:00
-draft: false
+date: 2018-08-22
 ---
 
 _NB: [“Technical Stack II”](https://blog.smockle.com/2019/05/05/technical-stack-ii/) is a newer post on this topic. The post below is outdated._

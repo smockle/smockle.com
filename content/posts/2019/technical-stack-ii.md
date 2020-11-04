@@ -1,7 +1,6 @@
 ---
 title: "Technical Stack II"
-date: 2019-05-05T19:00:00-05:00
-draft: false
+date: 2019-05-05
 ---
 
 I wrote about the technology used to publish and host this blog in [“Technical Stack”][1]. In the last week, I’ve moved from building with Jekyll and deploying to GitHub Pages to building with [Gatsby][2] and deploying to AWS S3.

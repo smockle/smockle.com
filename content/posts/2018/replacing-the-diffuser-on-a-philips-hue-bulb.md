@@ -1,7 +1,6 @@
 ---
 title: "Replacing the diffuser on a Philips Hue bulb"
-date: 2018-12-30T19:00:00-05:00
-draft: false
+date: 2018-12-30
 ---
 
 _Author’s Note: This is not [a philosophy-related post][1]. The self-imposed pressure to write something unique and insightful kept me from writing at all. I want to write, so I’m temporarily suspending my philosophy project and writing about my other projects._

@@ -1,7 +1,6 @@
 ---
 title: "Optimizing Web Fonts"
-date: 2019-05-24T19:00:00-05:00
-draft: false
+date: 2019-05-24
 ---
 
 I audited this site with [Google Lighthouse][lighthouse]. The utility flagged web font load times (specifically the “Flash of Invisible Text” or “FOIT”). There are many ways to improve web font performance. Zach Leatherman’s [“A Comprehensive Guide to Font Loading Strategies”][comprehensive] is an excellent resource. I’ll describe the options I considered below.

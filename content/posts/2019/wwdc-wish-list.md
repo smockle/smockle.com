@@ -1,7 +1,6 @@
 ---
 title: "WWDC Wish List"
-date: 2019-06-03T19:00:00-05:00
-draft: false
+date: 2019-06-03
 ---
 
 WWDC, Apple’s annual developer conference, starts this week. The [keynote][keynote] is today at 10 AM PT. In no particular order, here are a few announcements I’d like to see:

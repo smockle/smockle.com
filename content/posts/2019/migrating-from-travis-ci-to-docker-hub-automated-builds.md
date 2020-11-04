@@ -1,7 +1,6 @@
 ---
 title: "Migrating from Travis CI to Docker Hub Automated Builds"
-date: 2019-04-22T19:00:00-05:00
-draft: false
+date: 2019-04-22
 ---
 
 Historically, I’ve used Travis CI to build and push new versions of my Docker images. In [“Keeping systems up-to-date”][1], I describe a feature missing from Travis CI that prompted me to try Docker Hub [Automated Builds][2]:

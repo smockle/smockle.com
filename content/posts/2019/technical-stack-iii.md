@@ -1,7 +1,6 @@
 ---
 title: "Technical Stack III"
-date: 2019-11-19T23:04:00-05:00
-draft: false
+date: 2019-11-19
 ---
 
 To support my goal of writing 52 posts in 2020, I’ve migrated [smockle.com](https://www.smockle.com) (including my blog) to [micro.blog](https://micro.blog).

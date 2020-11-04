@@ -1,7 +1,6 @@
 ---
 slug: finally-finished-foucaults-pendulum
-date: 2020-01-25T15:56:00-05:00
-draft: false
+date: 2020-01-25
 ---
 
 ‪Finally finished _Foucault’s Pendulum_! _The Name of the Rose_ is vastly more accessible (and more enjoyable). Still, it was an easier read than _The Island of the Day Before_.‬

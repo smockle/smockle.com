@@ -1,7 +1,6 @@
 ---
 title: "Comparing Z-Wave Switches"
-date: 2019-04-28T19:00:00-05:00
-draft: false
+date: 2019-04-28
 ---
 
 I purchased three popular Z-Wave switches—the [GE 14294][1], the [Leviton DW6HD][2] and the [HomeSeer HS-WD100+][3]. All three support Z-Wave Plus, are rated for a 600W (incandescent) max load, can dim LEDs, and require a neutral wire for installation. Each switch has a unique sound and feel when pressed. Unlike a traditional light switch, the paddle returns to a neutral position when released.

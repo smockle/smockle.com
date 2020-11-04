@@ -1,7 +1,6 @@
 ---
 title: "Ben Thompson on new middlemen"
-date: 2020-02-26T14:48:00-05:00
-draft: false
+date: 2020-02-26
 ---
 
 Ben Thompson [contends the Internet did not do away with middlemen](https://stratechery.com/2020/email-addresses-and-razor-blades/). Instead, he argues, direct-to-consumer companies (e.g. Harry’s) pay Google and Facebook (the leaders in targeted advertising) for customer attention in the same way consumer goods companies have historically paid brick-and-mortar retailers for shelf space.

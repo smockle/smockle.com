@@ -31,4 +31,4 @@ Here is a photo of the finished result:
 [2]:	https://www.amazon.com/gp/aw/d/B01IX9NSEY
 [3]:	https://www.amazon.com/gp/aw/d/B00OAAUAX8
 
-![Philips Hue bulb with replaced diffuser](/uploads/2019/1e50c3af15.jpg)
+![Philips Hue bulb with replaced diffuser](./uploads/2019/1e50c3af15.jpg)

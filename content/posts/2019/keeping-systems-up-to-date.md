@@ -11,7 +11,7 @@ When I set up a new home server, **[unattended-upgrades][1]** is one of the firs
 
 If you maintain Docker images, you’ll want to rebuild them when their base images are updated. This will produce a new image that includes security patches and bug fixes available in the base image. Docker Hub’s [Automated Builds][3] service supports this via a feature called “Repository Links”[^3]:
 
-![Repository Links](/uploads/2019/89a0bf8d2a.jpg)
+![Repository Links](./uploads/2019/89a0bf8d2a.jpg)
 
 [^1]: Here’s an example configuration for Raspberry Pi: **[smockle/pifiles][4]**
 

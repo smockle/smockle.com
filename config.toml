@@ -1,4 +1,4 @@
-baseURL = "https://www.smockle.com"
+baseURL = "https://www.smockle.com/"
 languageCode = "en-us"
 title = "Smockle"
 theme = "smockle"

@@ -5,3 +5,7 @@ theme = "smockle"
 paginate = 1000
 [permalinks]
   blog = "/blog/:year/:month/:day/:slug/"
+[outputFormats]
+[outputFormats.RSS]
+  mediatype = "application/rss"
+  baseName = "feed"

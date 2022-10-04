@@ -12,4 +12,4 @@
 
 ### All Rights Reserved
 
-- [`static/assets/images/hero.png`](static/assets/images/hero.png) is copyrighted (c) 2016-2022 Clay Miller, All Rights Reserved.
+- [`static/assets/images/hero.jpg`](static/assets/images/hero.jpg) is copyrighted (c) 2016-2022 Clay Miller, All Rights Reserved.

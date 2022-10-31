@@ -1,7 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/github-workflow.json
 name: Publish
 on:
   push:
     branches: ["main"]
+
+permissions:
+  contents: write
 
 jobs:
   deploy:
@@ -16,5 +20,5 @@ jobs:
       - name: Publish Site
         uses: chabad360/hugo-gh-pages@master
         with:
-          githubToken: ${{ secrets.PERSONAL_TOKEN }}
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
           cname: www.smockle.com

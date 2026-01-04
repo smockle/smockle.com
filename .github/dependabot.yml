@@ -1,6 +1,12 @@
 version: 2
 updates:
-  - package-ecosystem: github-actions
-    directory: "/"
+  - package-ecosystem: "github-actions"
+    directories:
+      - "/"
+    groups:
+      # Open an aggregate PR for all GitHub Actions updates
+      github-actions:
+        patterns:
+          - "*"
     schedule:
-      interval: weekly
+      interval: "weekly"
